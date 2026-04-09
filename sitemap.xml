@@ -1,1 +1,27 @@
-{"id":"/sitemap.xml","path":"/sitemap.xml","sha":"d31cad3467a2f89735fd244bdede4cdfe5ea59a4","mime_type":"application/xml","size":770,"site_id":"18ef654b-b2a8-4b5a-ba57-a3f583912792","deploy_id":"69d6fc8bfc44e93bcb46b0fe"}
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://sellersonlyagent.com/</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://sellersonlyagent.com/why</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://sellersonlyagent.com/privacy</loc>
+    <lastmod>2026-03-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://sellersonlyagent.com/terms</loc>
+    <lastmod>2026-03-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+</urlset>

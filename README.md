@@ -1,2 +1,0 @@
-# sellersonlyagent.com
-SellersOnlyAgent.com

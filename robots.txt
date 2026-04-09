@@ -1,1 +1,4 @@
-{"id":"/robots.txt","path":"/robots.txt","sha":"33000584731acb944c27c2d469fcae884a650243","mime_type":"text/plain","size":74,"site_id":"18ef654b-b2a8-4b5a-ba57-a3f583912792","deploy_id":"69d6fc8bfc44e93bcb46b0fe"}
+User-agent: *
+Allow: /
+
+Sitemap: https://sellersonlyagent.com/sitemap.xml
