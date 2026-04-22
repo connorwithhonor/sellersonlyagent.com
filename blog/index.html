@@ -3,206 +3,380 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blog | Sellers Only Agent™ | Seller Strategy and Real Estate Insights</title>
-<meta name="description" content="Real estate insights for home sellers. Commission strategies, sellers-only representation, fixed fee vs. percentage, and Santa Clarita market analysis from Connor MacIvor.">
+<title>Blog | Sellers Only Agent&trade; &middot; Connor MacIvor</title>
+<meta name="description" content="Evergreen seller strategy, fiduciary duty, commission structures, and Santa Clarita market analysis. Written by Connor MacIvor, Sellers Only Agent&trade;.">
 <link rel="canonical" href="https://sellersonlyagent.com/blog/">
-<link rel="icon" href="https://assets.cdn.filesafe.space/wGQNykcwXU4XZhG6toH7/media/69d4269da7dcb4cff0f0099a.svg" type="image/svg+xml">
+
+<meta property="og:title" content="Blog | Sellers Only Agent&trade;">
+<meta property="og:description" content="Evergreen seller strategy, fiduciary duty, commission structures, and Santa Clarita market analysis.">
+<meta property="og:url" content="https://sellersonlyagent.com/blog/">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="icon" type="image/svg+xml" href="https://assets.cdn.filesafe.space/wGQNykcwXU4XZhG6toH7/media/69d4269da7dcb4cff0f0099a.svg">
+
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap');
-*{margin:0;padding:0;box-sizing:border-box}
-:root{
-  --bg:#0b0b0f;--bg2:#111118;--bg3:#18181f;--card:#141420;
-  --text:#e8e6e3;--text2:#a09e9a;--text3:#6b6966;
-  --accent:#c9a84c;--accent2:#d4b65a;
-  --border:#2a2a35;--border2:#1e1e28;
-  --max:780px;
+:root {
+  --bg: #0b0b0f;
+  --bg-raised: #14141a;
+  --bg-card: #1a1a22;
+  --gold: #c9a84c;
+  --gold-bright: #e8c76a;
+  --gold-dim: #8a7230;
+  --text: #eae7de;
+  --text-dim: #a8a498;
+  --text-muted: #706c60;
+  --border: #2a2a35;
+  --serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --sans: 'Source Sans 3', -apple-system, BlinkMacSystemFont, sans-serif;
+  --macivor-font: Georgia, 'Times New Roman', serif;
 }
-html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--text);font-family:'Source Sans 3',sans-serif;font-weight:400;line-height:1.75;font-size:17px;-webkit-font-smoothing:antialiased}
-a{color:var(--accent);text-decoration:none;transition:color .2s}
-a:hover{color:var(--accent2)}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg); color: var(--text); font-family: var(--sans);
+  font-size: 18px; line-height: 1.65; -webkit-font-smoothing: antialiased;
+}
+.macivor { font-family: var(--macivor-font); font-style: normal; letter-spacing: 0.01em; }
 
 /* NAV */
-.blog-nav{position:sticky;top:0;z-index:100;background:rgba(11,11,15,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border2);padding:14px 0}
-.blog-nav-inner{max-width:1100px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
-.blog-nav-brand{display:flex;align-items:center;gap:12px;text-decoration:none}
-.blog-nav-brand img{height:36px;width:auto}
-.blog-nav-brand span{color:var(--text2);font-size:13px;letter-spacing:.5px;text-transform:uppercase}
-.blog-nav-links{display:flex;gap:20px;align-items:center}
-.blog-nav-links a{color:var(--text2);font-size:14px;letter-spacing:.3px}
-.blog-nav-links a:hover{color:var(--accent)}
-.blog-nav-cta{background:var(--accent);color:#0b0b0f;padding:8px 18px;border-radius:4px;font-weight:600;font-size:13px;letter-spacing:.4px;text-transform:uppercase}
-.blog-nav-cta:hover{background:var(--accent2);color:#0b0b0f}
+.nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(11,11,15,0.92); backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border); padding: 16px 24px;
+}
+.nav-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.nav-brand {
+  font-family: var(--serif); font-weight: 700; font-size: 22px;
+  color: var(--gold); text-decoration: none; letter-spacing: 0.02em;
+}
+.nav-brand sup { font-size: 11px; top: -0.8em; }
+.nav-links { display: flex; gap: 28px; }
+.nav-links a {
+  color: var(--text-dim); text-decoration: none; font-size: 15px;
+  font-weight: 500; transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--gold); }
+.nav-links a.book-cta {
+  background: var(--gold); color: #0b0b0f;
+  padding: 8px 18px; border-radius: 2px;
+  font-weight: 700; font-size: 14px; letter-spacing: 0.02em;
+}
+.nav-links a.book-cta:hover { background: var(--gold-bright); color: #0b0b0f; }
 
-/* ARTICLE */
-.blog-hero{max-width:var(--max);margin:0 auto;padding:80px 24px 40px}
-.blog-hero .category{color:var(--accent);font-size:12px;letter-spacing:2px;text-transform:uppercase;font-weight:600;margin-bottom:16px}
-.blog-hero h1{font-family:'Playfair Display',serif;font-size:clamp(28px,5vw,42px);font-weight:700;line-height:1.2;color:#fff;margin-bottom:20px}
-.blog-hero .meta{color:var(--text3);font-size:14px;display:flex;gap:16px;flex-wrap:wrap}
-.blog-hero .meta span{display:flex;align-items:center;gap:4px}
+@media (max-width: 720px) {
+  .nav-links { gap: 16px; }
+  .nav-links a:not(.book-cta) { display: none; }
+}
 
-.blog-body{max-width:var(--max);margin:0 auto;padding:0 24px 60px}
-.blog-body h2{font-family:'Playfair Display',serif;font-size:clamp(22px,3.5vw,28px);font-weight:600;color:#fff;margin:48px 0 16px;line-height:1.3}
-.blog-body h3{font-size:18px;font-weight:600;color:var(--accent);margin:32px 0 12px;letter-spacing:.3px}
-.blog-body p{margin-bottom:16px;color:var(--text)}
-.blog-body ul,.blog-body ol{margin:0 0 16px 20px;color:var(--text)}
-.blog-body li{margin-bottom:8px}
-.blog-body blockquote{border-left:3px solid var(--accent);padding:16px 20px;margin:24px 0;background:var(--bg2);border-radius:0 6px 6px 0;font-style:italic;color:var(--text2)}
-.blog-body strong{color:#fff;font-weight:600}
-.blog-body .internal-link{color:var(--accent);border-bottom:1px solid rgba(201,168,76,.3);padding-bottom:1px}
-.blog-body .internal-link:hover{border-bottom-color:var(--accent)}
+/* HERO */
+.blog-hero {
+  padding: 72px 24px 32px; text-align: center;
+  max-width: 900px; margin: 0 auto;
+}
+.blog-hero .kicker {
+  font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--gold); font-weight: 600; margin-bottom: 20px;
+}
+.blog-hero h1 {
+  font-family: var(--serif); font-weight: 700;
+  font-size: clamp(36px, 5vw, 54px); color: var(--text);
+  margin-bottom: 18px; letter-spacing: -0.01em;
+}
+.blog-hero p {
+  font-size: 19px; color: var(--text-dim); line-height: 1.55;
+  max-width: 680px; margin: 0 auto;
+}
 
-/* VIDEO EMBED */
-.video-embed{margin:32px 0;border-radius:8px;overflow:hidden;border:1px solid var(--border)}
-.video-embed .video-wrap{position:relative;padding-bottom:56.25%;height:0}
-.video-embed .video-wrap iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
-.video-context{font-size:15px;color:var(--text2);margin-bottom:8px;font-style:italic}
+/* FILTERS */
+.blog-filters {
+  max-width: 1100px; margin: 32px auto 24px;
+  padding: 0 24px; display: flex; flex-wrap: wrap;
+  justify-content: center; gap: 10px;
+}
+.filter-btn {
+  background: transparent; border: 1px solid var(--border);
+  color: var(--text-dim); padding: 10px 20px;
+  font-family: var(--sans); font-size: 13px; font-weight: 600;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  border-radius: 2px; cursor: pointer; transition: all 0.2s;
+}
+.filter-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.filter-btn.active {
+  background: var(--gold); color: #0b0b0f; border-color: var(--gold);
+}
 
-/* FAQ */
-.faq-section{margin:48px 0;padding:40px 0;border-top:1px solid var(--border)}
-.faq-section h2{margin-top:0}
-.faq-item{border:1px solid var(--border);border-radius:6px;margin-bottom:12px;background:var(--bg2);overflow:hidden}
-.faq-q{padding:16px 20px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-weight:500;color:#fff;font-size:16px}
-.faq-q::after{content:'+';color:var(--accent);font-size:20px;font-weight:300;transition:transform .2s}
-.faq-item.open .faq-q::after{transform:rotate(45deg)}
-.faq-a{padding:0 20px 16px;color:var(--text2);font-size:15px;line-height:1.7;display:none}
-.faq-item.open .faq-a{display:block}
+/* GRID */
+.blog-grid {
+  max-width: 1100px; margin: 24px auto 64px;
+  padding: 0 24px;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  gap: 24px;
+}
+.blog-card {
+  display: block; background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 3px; overflow: hidden;
+  transition: all 0.25s; text-decoration: none;
+}
+.blog-card:hover {
+  border-color: var(--gold-dim);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 32px rgba(201, 168, 76, 0.08);
+}
+.blog-card.featured {
+  grid-column: 1 / -1;
+  display: grid; grid-template-columns: 1fr 1fr;
+  min-height: 320px;
+}
+.blog-card.featured .featured-visual {
+  background: linear-gradient(135deg, #1a1a22 0%, #0b0b0f 60%, #14141a 100%);
+  position: relative; overflow: hidden;
+  display: flex; align-items: center; justify-content: center;
+}
+.blog-card.featured .featured-visual::before {
+  content: ''; position: absolute; inset: 0;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(201,168,76,0.12) 0%, transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(201,168,76,0.08) 0%, transparent 50%);
+}
+.blog-card.featured .featured-badge {
+  position: absolute; top: 20px; left: 20px;
+  background: var(--gold); color: #0b0b0f;
+  padding: 5px 14px; font-size: 11px; font-weight: 700;
+  letter-spacing: 0.15em; text-transform: uppercase; border-radius: 2px;
+  z-index: 2;
+}
+.blog-card.featured .featured-glyph {
+  font-family: var(--serif); font-size: 180px;
+  color: var(--gold); opacity: 0.15; font-weight: 900;
+  line-height: 1; z-index: 1;
+}
+.blog-card-body {
+  padding: 28px 28px 26px;
+  display: flex; flex-direction: column; height: 100%;
+}
+.blog-card.featured .blog-card-body { padding: 40px; justify-content: center; }
+.card-cat {
+  font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--gold); font-weight: 700; margin-bottom: 14px;
+}
+.blog-card h2 {
+  font-family: var(--serif); font-weight: 700;
+  font-size: 22px; line-height: 1.3; color: var(--text);
+  margin-bottom: 14px;
+}
+.blog-card.featured h2 { font-size: 32px; }
+.blog-card p {
+  color: var(--text-dim); font-size: 15px; line-height: 1.6;
+  margin-bottom: 20px; flex-grow: 1;
+}
+.blog-card.featured p { font-size: 17px; }
+.read-more {
+  color: var(--gold); font-weight: 600; font-size: 14px;
+  letter-spacing: 0.03em; margin-top: auto;
+}
+.blog-card:hover .read-more { color: var(--gold-bright); }
 
-/* CTA */
-.blog-cta{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:40px;text-align:center;margin:48px 0}
-.blog-cta h3{font-family:'Playfair Display',serif;font-size:24px;color:#fff;margin-bottom:12px}
-.blog-cta p{color:var(--text2);margin-bottom:20px;font-size:15px}
-.blog-cta .cta-btn{display:inline-block;background:var(--accent);color:#0b0b0f;padding:14px 32px;border-radius:4px;font-weight:600;font-size:14px;letter-spacing:.5px;text-transform:uppercase;transition:background .2s}
-.blog-cta .cta-btn:hover{background:var(--accent2);color:#0b0b0f}
-.blog-cta .cta-phone{color:var(--text3);font-size:14px;margin-top:12px}
-
-/* CROSS LINKS */
-.cross-links{margin:40px 0;padding:24px;background:var(--bg2);border:1px solid var(--border);border-radius:6px}
-.cross-links h4{font-size:13px;color:var(--accent);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:16px}
-.cross-links a{display:block;padding:8px 0;color:var(--text);border-bottom:1px solid var(--border2);font-size:15px}
-.cross-links a:last-child{border-bottom:none}
-.cross-links a:hover{color:var(--accent)}
-
-/* AUTHOR */
-.author-box{display:flex;gap:16px;align-items:flex-start;margin:40px 0;padding:24px;background:var(--bg2);border:1px solid var(--border);border-radius:6px}
-.author-box img{width:56px;height:56px;border-radius:50%;border:2px solid var(--accent)}
-.author-box .author-info h4{color:#fff;font-size:16px;margin-bottom:4px}
-.author-box .author-info p{color:var(--text3);font-size:14px;line-height:1.5}
+@media (max-width: 720px) {
+  .blog-card.featured { grid-template-columns: 1fr; min-height: auto; }
+  .blog-card.featured .featured-visual { min-height: 180px; }
+  .blog-card.featured h2 { font-size: 24px; }
+  .blog-card.featured .blog-card-body { padding: 28px; }
+}
 
 /* FOOTER */
-.blog-footer{border-top:1px solid var(--border2);padding:40px 24px;text-align:center;max-width:1100px;margin:0 auto}
-.blog-footer .footer-brand{color:var(--text3);font-size:13px;margin-bottom:8px}
-.blog-footer .footer-legal{color:var(--text3);font-size:12px;line-height:1.6}
-.blog-footer a{color:var(--text3)}
-.blog-footer a:hover{color:var(--accent)}
-
-/* BLOG INDEX */
-.blog-index-hero{max-width:1100px;margin:0 auto;padding:80px 24px 40px;text-align:center}
-.blog-index-hero h1{font-family:'Playfair Display',serif;font-size:clamp(32px,5vw,48px);color:#fff;margin-bottom:12px}
-.blog-index-hero p{color:var(--text2);font-size:18px;max-width:600px;margin:0 auto}
-.blog-grid{max-width:1100px;margin:0 auto;padding:0 24px 80px;display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:24px}
-.blog-card{background:var(--bg2);border:1px solid var(--border);border-radius:8px;overflow:hidden;transition:border-color .2s,transform .2s}
-.blog-card:hover{border-color:var(--accent);transform:translateY(-2px)}
-.blog-card-body{padding:24px}
-.blog-card .card-cat{color:var(--accent);font-size:11px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;margin-bottom:10px}
-.blog-card h2{font-family:'Playfair Display',serif;font-size:20px;color:#fff;line-height:1.3;margin-bottom:10px}
-.blog-card p{color:var(--text2);font-size:14px;line-height:1.6;margin-bottom:16px}
-.blog-card .read-more{color:var(--accent);font-size:13px;font-weight:600;letter-spacing:.5px;text-transform:uppercase}
-
-/* DISCLOSURE */
-.disclosure{margin:32px 0;padding:16px 20px;background:rgba(201,168,76,.06);border:1px solid rgba(201,168,76,.15);border-radius:6px;font-size:13px;color:var(--text3);line-height:1.7}
-
-@media(max-width:600px){
-  .blog-nav-links{display:none}
-  .blog-hero{padding:60px 16px 32px}
-  .blog-body{padding:0 16px 40px}
-  .blog-cta{padding:28px 20px}
+footer.blog-footer {
+  background: #07070a; border-top: 1px solid var(--border);
+  padding: 48px 24px 32px; margin-top: 40px;
+  text-align: center;
 }
+.footer-brand {
+  font-family: var(--serif); font-weight: 700;
+  font-size: 15px; color: var(--gold-dim); margin-bottom: 16px;
+}
+.footer-brand a { color: var(--gold-dim); text-decoration: none; }
+.footer-brand a:hover { color: var(--gold); }
+.footer-legal {
+  max-width: 720px; margin: 0 auto;
+  color: var(--text-muted); font-size: 13px; line-height: 1.8;
+}
+.footer-legal a { color: var(--gold-dim); text-decoration: none; }
+.footer-legal a:hover { color: var(--gold); }
 </style>
-<link rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"><link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png"><meta property="og:image" content="https://sellersonlyagent.com/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://sellersonlyagent.com/og-image.png"><link rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"><link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png"><meta property="og:image" content="https://sellersonlyagent.com/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://sellersonlyagent.com/og-image.png"></head>
+</head>
 <body>
 
-<nav class="blog-nav">
-  <div class="blog-nav-inner">
-    <a href="https://sellersonlyagent.com" class="blog-nav-brand">
-      <img src="https://assets.cdn.filesafe.space/A3obe1MUpPzAdHhfzx3I/media/69a39808167da44f788ab7db.png" alt="Sellers Only Agent logo">
-      <span>SellersOnlyAgent.com</span>
-    </a>
-    <div class="blog-nav-links">
-      <a href="https://sellersonlyagent.com/why">Philosophy</a>
-      <a href="https://sellersonlyagent.com/blog/">Blog</a>
-      <a href="https://sellersonlyagent.com/#consult" class="blog-nav-cta">Book Strategy Call</a>
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-brand">Sellers Only Agent<sup>&trade;</sup></a>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/why">Why</a>
+      <a href="/blog/">Blog</a>
+      <a href="/#contact" class="book-cta">Book Seller Strategy Call</a>
     </div>
   </div>
 </nav>
 
-<div class="blog-index-hero">
-  <h1>Seller Strategy Blog</h1>
-  <p>Real estate insights for home sellers. No buyer-side bias. No generic advice. Just strategy built from the seller's side.</p>
+<section class="blog-hero">
+  <div class="kicker">The Blog</div>
+  <h1>Seller Strategy, Fiduciary Duty, and the Real Math of Representation</h1>
+  <p>Evergreen analysis for Santa Clarita and Los Angeles County sellers. Written by Connor <span class="macivor">MacIvor</span>, DRE #01238257.</p>
+</section>
+
+<div class="blog-filters">
+  <button class="filter-btn active" data-filter="all">All</button>
+  <button class="filter-btn" data-filter="weekly">Weekly Data</button>
+  <button class="filter-btn" data-filter="representation">Representation</button>
+  <button class="filter-btn" data-filter="strategy">Seller Strategy</button>
+  <button class="filter-btn" data-filter="commission">Commission & Fees</button>
 </div>
 
-<div class="blog-grid">
-<a class='blog-card' href='/blog/2026-098-interest-rates-10-year-bond'>
-<span class="blog-ep">From CWH-2026-098 // April 8, 2026</span>
-<h4>Interest Rates Follow the 10-Year Bond. Not the Fed.</h4>
-<p class="blog-excerpt">The Strait of Hormuz, oil flow, and geopolitical stability directly impact what you pay to borrow money.</p>
-</a>
+<div class="blog-grid" id="blog-grid">
 
-  <a href="/blog/why-same-percentage-sell-million-dollar-home" class="blog-card" style="text-decoration:none">
+  <!-- FEATURED: NEW POST -->
+  <a href="/blog/five-questions-expose-listing-agent-network.html" class="blog-card featured" data-cat="representation">
+    <div class="featured-visual">
+      <div class="featured-badge">New &middot; Featured</div>
+      <div class="featured-glyph">05</div>
+    </div>
+    <div class="blog-card-body">
+      <div class="card-cat">Fiduciary Duty &middot; Listing Agent Vetting</div>
+      <h2>Five Questions That Expose Whether Your Listing Agent's Network Works For You</h2>
+      <p>Your agent's loyalty should be measurable, not assumed. These five questions are the ones most sellers never think to ask, and they are the ones that reveal whether your listing is being protected or routed through a private network. Print them, bring them to every interview, watch the response.</p>
+      <span class="read-more">Read Article &rarr;</span>
+    </div>
+  </a>
+
+  <a href="/blog/50-homes-sold-22-quit-santa-clarita-sfv-april-21-2026.html" class="blog-card" data-cat="weekly">
+    <div class="blog-card-body">
+      <div class="card-cat">Weekly Market Data</div>
+      <h2>50 Homes Sold, 22 Quit: Santa Clarita & SFV &middot; April 21 2026</h2>
+      <p>The weekly data snapshot. Sales volume, cancellation rate, inventory trend, and what it means for sellers pricing this week.</p>
+      <span class="read-more">Read Article &rarr;</span>
+    </div>
+  </a>
+
+  <a href="/blog/5-things-sellers-need-to-know-april-2026.html" class="blog-card" data-cat="strategy">
     <div class="blog-card-body">
       <div class="card-cat">Seller Strategy</div>
-      <h2>Why Does It Cost the Same Percentage to Sell a Million-Dollar Home as a $400K Home?</h2>
-      <p>The percentage commission model charges sellers more for the same work. Here is why a fixed fee model protects your equity.</p>
-      <span class="read-more">Read Article →</span>
+      <h2>Five Things Santa Clarita Sellers Need To Know &middot; April 2026</h2>
+      <p>Current market realities, buyer behavior shifts, and the five moves that separate successful April listings from the ones that sit.</p>
+      <span class="read-more">Read Article &rarr;</span>
     </div>
   </a>
 
-  <a href="/blog/buyer-agent-commission-after-nar-settlement" class="blog-card" style="text-decoration:none">
+  <a href="/blog/2026-sniper-report-april-16-scv-real-estate.html" class="blog-card" data-cat="weekly">
     <div class="blog-card-body">
-      <div class="card-cat">Commission Changes</div>
-      <h2>Do I Still Have to Pay the Buyer's Agent After the NAR Settlement?</h2>
-      <p>Sellers now control buyer agent compensation. Learn what changed and how to make the smartest decision for your sale.</p>
-      <span class="read-more">Read Article →</span>
+      <div class="card-cat">Weekly Market Data</div>
+      <h2>2026 Sniper Report &middot; April 16 SCV Real Estate</h2>
+      <p>Precision data on active listings, price movement, days on market, and the deals getting done across Santa Clarita.</p>
+      <span class="read-more">Read Article &rarr;</span>
     </div>
   </a>
 
-  <a href="/blog/what-is-sellers-only-agent" class="blog-card" style="text-decoration:none">
+  <a href="/blog/43-homes-sold-21-quit-santa-clarita-april-12-19-2026.html" class="blog-card" data-cat="weekly">
     <div class="blog-card-body">
-      <div class="card-cat">Seller Representation</div>
-      <h2>What Is a Sellers-Only Agent and Why Would I Want One?</h2>
-      <p>A sellers-only agent represents sellers exclusively, never buyers. Learn why this model creates undivided loyalty.</p>
-      <span class="read-more">Read Article →</span>
+      <div class="card-cat">Weekly Market Data</div>
+      <h2>43 Homes Sold, 21 Quit: Santa Clarita &middot; April 12-19 2026</h2>
+      <p>Mid-April sales and cancellation analysis. What the quit rate tells us about buyer confidence and pricing discipline.</p>
+      <span class="read-more">Read Article &rarr;</span>
     </div>
   </a>
 
-  <a href="/blog/dual-agency-one-agent-both-sides" class="blog-card" style="text-decoration:none">
+  <a href="/blog/why-same-percentage-sell-million-dollar-home.html" class="blog-card" data-cat="commission">
     <div class="blog-card-body">
-      <div class="card-cat">Agency and Representation</div>
-      <h2>Dual Agency Explained: What Happens When One Agent Represents Both Sides</h2>
-      <p>Nine U.S. states ban it. Learn why the conflict matters and what the alternative looks like for sellers.</p>
-      <span class="read-more">Read Article →</span>
+      <div class="card-cat">Commission & Fees</div>
+      <h2>Why Should You Pay the Same Percentage to Sell a Million Dollar Home?</h2>
+      <p>The percentage commission model creates a compounding cost on higher-value homes without proportional service. Here is the math.</p>
+      <span class="read-more">Read Article &rarr;</span>
     </div>
   </a>
 
-  <a href="/blog/fixed-fee-vs-percentage-commission" class="blog-card" style="text-decoration:none">
+  <a href="/blog/fixed-fee-vs-percentage-commission.html" class="blog-card" data-cat="commission">
     <div class="blog-card-body">
-      <div class="card-cat">Seller Costs</div>
-      <h2>Fixed Fee vs. Percentage Commission: A Side-by-Side Cost Comparison</h2>
-      <p>See real dollar comparisons at multiple price points and learn which model keeps more equity in your pocket.</p>
-      <span class="read-more">Read Article →</span>
+      <div class="card-cat">Commission & Fees</div>
+      <h2>Fixed Fee vs Percentage Commission: A Side-by-Side Comparison</h2>
+      <p>Real dollar comparisons at multiple price points. See which model keeps more equity in your pocket at sale.</p>
+      <span class="read-more">Read Article &rarr;</span>
     </div>
   </a>
+
+  <a href="/blog/buyer-agent-commission-after-nar-settlement.html" class="blog-card" data-cat="commission">
+    <div class="blog-card-body">
+      <div class="card-cat">Commission & Fees</div>
+      <h2>Buyer Agent Commission After the NAR Settlement</h2>
+      <p>What the 2024 settlement changed, what it did not, and how sellers should think about cooperative compensation in 2026.</p>
+      <span class="read-more">Read Article &rarr;</span>
+    </div>
+  </a>
+
+  <a href="/blog/what-is-sellers-only-agent.html" class="blog-card" data-cat="representation">
+    <div class="blog-card-body">
+      <div class="card-cat">Representation</div>
+      <h2>What Is a Sellers-Only Agent&trade; and Why Would I Want One?</h2>
+      <p>A sellers-only agent represents sellers exclusively, never buyers. Learn why the model creates undivided loyalty.</p>
+      <span class="read-more">Read Article &rarr;</span>
+    </div>
+  </a>
+
+  <a href="/blog/dual-agency-one-agent-both-sides.html" class="blog-card" data-cat="representation">
+    <div class="blog-card-body">
+      <div class="card-cat">Representation</div>
+      <h2>Dual Agency: What Happens When One Agent Represents Both Sides</h2>
+      <p>Nine U.S. states ban it. Learn why the structural conflict matters and what the alternative looks like for sellers.</p>
+      <span class="read-more">Read Article &rarr;</span>
+    </div>
+  </a>
+
+  <a href="/blog/2026-098-interest-rates-10-year-bond.html" class="blog-card" data-cat="weekly">
+    <div class="blog-card-body">
+      <div class="card-cat">Market Pulse</div>
+      <h2>Interest Rates & the 10-Year Bond &middot; 2026</h2>
+      <p>Quick-read market pulse on rate moves and what they signal for Santa Clarita pricing and buyer affordability.</p>
+      <span class="read-more">Read Article &rarr;</span>
+    </div>
+  </a>
+
 </div>
 
 <footer class="blog-footer">
-  <div class="footer-brand"><a href="https://honorelevate.com">Coded by Connor with Honor</a> | AI Growth Architect</div>
+  <div class="footer-brand"><a href="https://honorelevate.com">Coded by Connor with Honor</a></div>
   <div class="footer-legal">
-    Connor T. MacIvor · The Seller's Agent · SellersOnlyAgent.com<br>
-    25060 Avenue Stanford, Suite 150, Santa Clarita CA 91355<br>
-    CA DRE #01238257 · SYNC Brokerage · <a href="tel:+16614001720">661-400-1720</a><br>
+    Connor T. <span class="macivor">MacIvor</span> &middot; Sellers Only Agent&trade; &middot; SellersOnlyAgent.com<br>
+    25060 Avenue Stanford, Suite 150, Valencia CA 91355<br>
+    CA DRE #01238257 &middot; SYNC Brokerage &middot; <a href="tel:+16614001720">661-400-1720</a><br>
     Seller representation only. No buyer agency.<br><br>
-    <a href="https://sellersonlyagent.com/privacy">Privacy</a> · <a href="https://sellersonlyagent.com/terms">Terms</a>
+    <a href="/privacy">Privacy</a> &middot; <a href="/terms">Terms</a>
   </div>
 </footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const btns = document.querySelectorAll('.filter-btn');
+  const cards = document.querySelectorAll('#blog-grid .blog-card');
+  btns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      btns.forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      const f = btn.dataset.filter;
+      cards.forEach(function(c) {
+        if (f === 'all' || c.dataset.cat === f) {
+          c.style.display = '';
+        } else {
+          c.style.display = 'none';
+        }
+      });
+    });
+  });
+});
+</script>
 </body>
 </html>
