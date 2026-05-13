@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Active Listings | Sellers Only Agent | SCV + SFV Real Estate</title>
+  <meta name="description" content="Active and recent listings represented by Connor MacIvor, founder of the Fair Fixed Fee model and the Sellers Only Agent designation. Every listing runs through the 19-component listing system." />
+  <link rel="canonical" href="https://sellersonlyagent.com/listings/" />
+  <meta name="theme-color" content="#071019" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://sellersonlyagent.com/listings/" />
+  <meta property="og:title" content="Active Listings | Sellers Only Agent" />
+  <meta property="og:description" content="Active and recent SCV and SFV listings. Every home runs the 19-component Listing System." />
+  <meta property="og:image" content="https://sellersonlyagent.com/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png" />
+  <style>
+    :root {
+      --bg: #071019;
+      --bg-2: #0c1824;
+      --panel: rgba(255,255,255,0.06);
+      --line: rgba(255,255,255,0.12);
+      --text: #edf3f8;
+      --muted: #a7b5c2;
+      --gold: #d4af37;
+      --gold-soft: rgba(212,175,55,0.14);
+      --cyan: #7be7ff;
+      --red: #ff5666;
+      --green: #8af0bd;
+      --radius: 24px;
+      --radius-sm: 16px;
+      --max: 1260px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; color: var(--text);
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+      background:
+        radial-gradient(circle at top left, rgba(212,175,55,0.10), transparent 32%),
+        radial-gradient(circle at top right, rgba(123,231,255,0.07), transparent 24%),
+        linear-gradient(180deg, #061019 0%, #09131d 48%, #07111a 100%);
+      min-height: 100vh;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(100% - 32px, var(--max)); margin: 0 auto; }
+    h1, h2, h3 { line-height: 1.18; margin: 0 0 16px; letter-spacing: -0.015em; }
+    h1 { font-size: clamp(2rem, 4.6vw, 3.2rem); font-weight: 900; font-family: 'Playfair Display', Georgia, serif; }
+    h2 { font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 800; }
+    h3 { font-size: 1.1rem; font-weight: 800; }
+    p { margin: 0 0 14px; }
+    .gold { color: var(--gold); }
+    .muted { color: var(--muted); }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 8px 14px; border-radius: 999px;
+      border: 1px solid var(--line); background: rgba(255,255,255,0.04);
+      color: var(--gold); font-size: 11px; font-weight: 800;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .nav {
+      position: sticky; top: 0; z-index: 50;
+      backdrop-filter: blur(14px);
+      background: rgba(7,16,25,0.78);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .nav-inner {
+      min-height: 64px;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 22px;
+    }
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: 900; }
+    .brand img { width: 38px; height: 38px; object-fit: contain; border-radius: 10px; }
+    .brand small {
+      display: block; color: var(--muted);
+      font-size: 10px; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+    }
+    .nav-links { display: flex; align-items: center; gap: 18px; color: var(--muted); font-size: 14px; font-weight: 700; }
+    .nav-links a.current { color: var(--gold); }
+    .nav-cta {
+      padding: 10px 20px; border-radius: 999px;
+      background: linear-gradient(135deg, #f4d56f 0%, #d4af37 100%);
+      color: #081018; font-weight: 900; font-size: 13px;
+    }
+
+    .hero { padding: 88px 0 36px; text-align: center; }
+    .hero p.lead {
+      font-size: 1.05rem; color: var(--muted);
+      max-width: 720px; margin: 18px auto 0; line-height: 1.75;
+    }
+
+    .filter-bar {
+      margin-top: 32px;
+      display: inline-flex; gap: 4px; padding: 4px;
+      border: 1px solid var(--line); border-radius: 999px;
+      background: rgba(255,255,255,0.03);
+    }
+    .filter-pill {
+      padding: 10px 22px; border-radius: 999px;
+      font-size: 13px; font-weight: 800;
+      letter-spacing: 0.04em;
+      color: var(--muted); cursor: pointer;
+      transition: background 0.18s, color 0.18s;
+      border: none; background: transparent;
+    }
+    .filter-pill.active {
+      background: var(--gold-soft); color: var(--gold);
+    }
+
+    .section { padding: 48px 0; }
+    .section-head {
+      display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between;
+      gap: 16px; margin-bottom: 28px;
+    }
+    .section-head .count {
+      font-size: 13px; color: var(--muted); font-weight: 700;
+      letter-spacing: 0.06em;
+    }
+
+    .listing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 22px;
+    }
+    .listing-card {
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.03);
+      overflow: hidden;
+      transition: border-color 0.2s, transform 0.2s;
+      display: flex; flex-direction: column;
+    }
+    .listing-card:hover {
+      border-color: var(--gold-soft);
+      transform: translateY(-3px);
+    }
+    .listing-card .photo {
+      aspect-ratio: 16 / 10;
+      background: linear-gradient(135deg, rgba(212,175,55,0.06), rgba(123,231,255,0.04));
+      border-bottom: 1px solid var(--line);
+      position: relative;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--muted);
+      font-size: 12px; font-weight: 700;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      gap: 8px;
+    }
+    .listing-card .photo::before {
+      content: ""; position: absolute; inset: 0;
+      background-image:
+        radial-gradient(circle at 30% 40%, rgba(212,175,55,0.18), transparent 35%),
+        radial-gradient(circle at 75% 60%, rgba(123,231,255,0.12), transparent 40%);
+    }
+    .listing-card .photo span {
+      position: relative; z-index: 1;
+      display: flex; align-items: center; gap: 6px;
+    }
+    .badge {
+      position: absolute; top: 14px; left: 14px;
+      padding: 4px 12px; border-radius: 999px;
+      font-size: 10px; font-weight: 800; letter-spacing: 0.12em;
+      text-transform: uppercase; z-index: 2;
+    }
+    .badge-active { background: var(--green); color: #062818; }
+    .badge-coming { background: var(--cyan); color: #032030; }
+    .badge-sold { background: var(--muted); color: #0a1018; }
+    .badge-example { background: var(--gold); color: #081018; }
+
+    .card-body { padding: 22px 24px; flex: 1; display: flex; flex-direction: column; }
+    .card-body .address-line {
+      font-size: 11px; color: var(--muted);
+      letter-spacing: 0.1em; text-transform: uppercase;
+      font-weight: 700; margin-bottom: 8px;
+    }
+    .card-body h3 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 700; font-size: 1.15rem;
+      color: var(--text); margin-bottom: 4px;
+    }
+    .card-body .price {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.6rem; font-weight: 700;
+      color: var(--gold); margin: 6px 0 14px;
+    }
+    .card-stats {
+      display: flex; gap: 18px;
+      margin-bottom: 16px;
+      font-size: 13px; color: var(--muted);
+      font-weight: 700;
+    }
+    .card-stats strong { color: var(--text); font-weight: 800; }
+    .card-body .view-link {
+      margin-top: auto;
+      font-size: 13px; font-weight: 800;
+      color: var(--gold);
+      letter-spacing: 0.04em;
+      display: inline-flex; align-items: center; gap: 6px;
+    }
+
+    .empty-state {
+      padding: 60px 32px; text-align: center;
+      border: 1px dashed var(--line); border-radius: var(--radius-sm);
+      background: rgba(255,255,255,0.02);
+    }
+    .empty-state h3 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 700; color: var(--text);
+      margin-bottom: 10px;
+    }
+    .empty-state p { color: var(--muted); max-width: 540px; margin: 0 auto 22px; font-size: 0.95rem; }
+
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      gap: 10px; padding: 14px 26px;
+      border-radius: 999px; font-weight: 900; font-size: 14px;
+      transition: transform 0.18s;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-gold {
+      background: linear-gradient(135deg, #f4d56f 0%, #d4af37 100%);
+      color: #081018;
+      box-shadow: 0 14px 32px rgba(212,175,55,0.18);
+    }
+    .btn-outline {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--line);
+      color: var(--text);
+    }
+
+    .system-strip {
+      margin-top: 56px;
+      padding: 32px 36px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--gold-soft);
+      background: linear-gradient(135deg, rgba(212,175,55,0.08) 0%, rgba(255,255,255,0.02) 100%);
+      display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: center;
+    }
+    .system-strip h3 { margin-bottom: 6px; }
+    .system-strip p { color: var(--muted); margin: 0; font-size: 0.95rem; }
+
+    .footer {
+      padding: 56px 0 40px; margin-top: 48px;
+      border-top: 1px solid var(--line);
+      color: var(--muted); font-size: 0.85rem;
+    }
+    .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 32px; }
+    .footer a { color: var(--muted); }
+    .footer a:hover { color: var(--gold); }
+
+    @media (max-width: 820px) {
+      .nav-links { display: none; }
+      .system-strip { grid-template-columns: 1fr; text-align: center; }
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="/" aria-label="SellersOnlyAgent home">
+      <img src="https://assets.cdn.filesafe.space/A3obe1MUpPzAdHhfzx3I/media/69a39808167da44f788ab7db.png" alt="Sellers Only Agent logo" />
+      <div>
+        SellersOnlyAgent.com
+        <small>Connor MacIvor &middot; The Seller's Agent</small>
+      </div>
+    </a>
+    <nav class="nav-links">
+      <a href="/">Home</a>
+      <a href="/#dual-agency">Dual Agency</a>
+      <a href="/the-system/">The System</a>
+      <a href="/listings/" class="current">Listings</a>
+      <a href="/blog/">Blog</a>
+    </nav>
+    <a class="nav-cta" href="/#consult">Book Strategy Call</a>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="container">
+    <div class="eyebrow">Active &middot; Coming Soon &middot; Recently Sold</div>
+    <h1>SCV and SFV listings, represented by <span class="gold">the seller side only.</span></h1>
+    <p class="lead">
+      Every home below runs through the 19-component Listing System: dedicated landing page, daily multi-platform content, 24/7 voice AI showing-booking, and a weekly seller dashboard. No dual agency. No buyer-side conflict. $17,000 Fair Fixed Fee on every one.
+    </p>
+    <div class="filter-bar" role="tablist">
+      <button class="filter-pill active" data-filter="all">All</button>
+      <button class="filter-pill" data-filter="active">Active</button>
+      <button class="filter-pill" data-filter="coming">Coming Soon</button>
+      <button class="filter-pill" data-filter="sold">Recently Sold</button>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+
+    <div class="section-head">
+      <div>
+        <h2>Active &amp; Coming Soon</h2>
+      </div>
+      <div class="count" id="activeCount"></div>
+    </div>
+
+    <div class="listing-grid" id="activeGrid">
+
+      <!--
+      Active listings render here. Pattern per card:
+
+      <a class="listing-card" data-status="active" href="/listings/<slug>/">
+        <div class="photo">
+          <span class="badge badge-active">Active</span>
+          <span>Hero photo</span>
+        </div>
+        <div class="card-body">
+          <div class="address-line">[NEIGHBORHOOD] · [CITY]</div>
+          <h3>[STREET ADDRESS]</h3>
+          <div class="price">$XXX,XXX</div>
+          <div class="card-stats">
+            <span><strong>4</strong> bd</span>
+            <span><strong>3</strong> ba</span>
+            <span><strong>2,684</strong> sqft</span>
+          </div>
+          <span class="view-link">View listing &rarr;</span>
+        </div>
+      </a>
+      -->
+
+      <div class="empty-state" style="grid-column: 1 / -1;">
+        <h3>No active listings at this exact moment.</h3>
+        <p>
+          The listing pipeline is intentionally tight. The next listing launches through the 19-component system. If you are thinking about selling in the SCV or SFV in the next 90 days, that listing could be yours.
+        </p>
+        <a class="btn btn-gold" href="/#consult">Book my seller strategy review</a>
+      </div>
+
+    </div>
+
+    <div class="system-strip">
+      <div>
+        <h3>Want to see what your home's listing page would look like?</h3>
+        <p>Every listing gets a dedicated landing page. Here is the template, fully populated, marked as example: address, photos, three-variant buyer narratives, video walkthroughs in three formats, comp analysis, live mortgage calculator, 24/7 voice AI booking.</p>
+      </div>
+      <a class="btn btn-gold" href="/listings/example/">See the example &rarr;</a>
+    </div>
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+
+    <div class="section-head">
+      <div>
+        <h2>Recently sold</h2>
+        <p class="muted" style="margin: 6px 0 0; font-size: 14px;">Case studies of homes sold under the Fair Fixed Fee model.</p>
+      </div>
+      <div class="count" id="soldCount"></div>
+    </div>
+
+    <div class="listing-grid" id="soldGrid">
+
+      <!--
+      Recently sold listings render here. Pattern:
+
+      <a class="listing-card" data-status="sold" href="/listings/<slug>/">
+        <div class="photo">
+          <span class="badge badge-sold">Sold</span>
+          <span>Hero photo</span>
+        </div>
+        <div class="card-body">
+          <div class="address-line">[NEIGHBORHOOD] · Sold [Month YYYY]</div>
+          <h3>[STREET ADDRESS]</h3>
+          <div class="price">$XXX,XXX</div>
+          <div class="card-stats">
+            <span><strong>4</strong> bd</span>
+            <span><strong>3</strong> ba</span>
+            <span><strong>2,684</strong> sqft</span>
+          </div>
+          <span class="view-link">Case study &rarr;</span>
+        </div>
+      </a>
+      -->
+
+      <div class="empty-state" style="grid-column: 1 / -1;">
+        <h3>Sold case studies launching soon.</h3>
+        <p>
+          As listings close, each becomes a public case study: what we netted, what we saved versus 2.5%, what marketing produced the buyer. The Listing System produces verifiable outcomes, not anecdotes.
+        </p>
+        <a class="btn btn-outline" href="/the-system/">See the 19-component system &rarr;</a>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="container" style="text-align: center; max-width: 760px;">
+    <div class="eyebrow">Be the next listing</div>
+    <h2>The next home to go through the Listing System <span class="gold">could be yours.</span></h2>
+    <p class="muted" style="font-size: 1.02rem; margin: 14px 0 28px;">
+      A strategy review takes 60 minutes. You will see the dashboard template, the voice AI demo, the comp analysis output, and the math on what your home would net under the $17,000 Fair Fixed Fee model. No obligation. No pressure. Just the system.
+    </p>
+    <a class="btn btn-gold" href="/#consult">Book the seller strategy review</a>
+    <p style="margin-top: 22px; font-size: 13px;">
+      Or run the math first: <a href="https://scv123.com" target="_blank" rel="noopener" style="color: var(--gold); font-weight: 700; border-bottom: 1px solid var(--gold-soft);">SCV123.com savings slider</a>
+    </p>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <strong style="color: var(--text);">Connor T. MacIvor</strong> &middot; The Seller's Agent &middot; SellersOnlyAgent.com<br>
+      25060 Avenue Stanford, Suite 150, Santa Clarita CA 91355<br>
+      CalDRE #01238257 &middot; SYNC Brokerage<br>
+      <a href="mailto:connor@sellersonlyagent.com">connor@sellersonlyagent.com</a> &middot; <a href="tel:+16614001720">661-400-1720</a>
+    </div>
+    <div>
+      Seller representation only. No buyer agency. No dual agency.<br><br>
+      <a href="/the-system/" style="margin-right: 12px;">The Listing System</a>
+      <a href="/blog/" style="margin-right: 12px;">Blog</a>
+      <a href="/">Home</a>
+    </div>
+  </div>
+</footer>
+
+</main>
+
+<script>
+  (function() {
+    // Filter pills (active state + filter listings by data-status)
+    const pills = document.querySelectorAll('.filter-pill');
+    const grids = [document.getElementById('activeGrid'), document.getElementById('soldGrid')];
+
+    pills.forEach(p => {
+      p.addEventListener('click', () => {
+        pills.forEach(x => x.classList.remove('active'));
+        p.classList.add('active');
+        const f = p.dataset.filter;
+        grids.forEach(g => {
+          if (!g) return;
+          g.querySelectorAll('.listing-card').forEach(card => {
+            const s = card.dataset.status;
+            const show = f === 'all' || s === f || (f === 'coming' && s === 'coming') ;
+            card.style.display = show ? '' : 'none';
+          });
+        });
+      });
+    });
+
+    // Count active + sold cards (excluding empty states)
+    function updateCounts() {
+      const a = document.querySelectorAll('#activeGrid .listing-card').length;
+      const s = document.querySelectorAll('#soldGrid .listing-card').length;
+      const ae = document.getElementById('activeCount');
+      const se = document.getElementById('soldCount');
+      if (ae) ae.textContent = a === 0 ? '' : (a + ' listing' + (a === 1 ? '' : 's'));
+      if (se) se.textContent = s === 0 ? '' : (s + ' case stud' + (s === 1 ? 'y' : 'ies'));
+    }
+    updateCounts();
+  })();
+</script>
+
+</body>
+</html>
