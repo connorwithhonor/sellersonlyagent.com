@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Example Listing Page Template | SellersOnlyAgent.com</title>
+  <meta name="description" content="Example of the custom landing page every Sellers Only Agent listing receives. Photo gallery, walkthrough video, neighborhood data, buyer net sheet, and 24/7 voice AI showing-booking, all on a dedicated URL for the home." />
+  <link rel="canonical" href="https://sellersonlyagent.com/listings/example/" />
+  <meta name="robots" content="noindex, follow" />
+  <meta name="theme-color" content="#071019" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://sellersonlyagent.com/listings/example/" />
+  <meta property="og:title" content="Example Listing Page | The Listing System Component #2" />
+  <meta property="og:description" content="A template demonstrating what your home's dedicated listing page looks like. Every Sellers Only Agent listing gets one of these." />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png" />
+  <style>
+    :root {
+      --bg: #071019;
+      --bg-2: #0c1824;
+      --panel: rgba(255,255,255,0.06);
+      --panel-2: rgba(255,255,255,0.09);
+      --line: rgba(255,255,255,0.12);
+      --text: #edf3f8;
+      --muted: #a7b5c2;
+      --gold: #d4af37;
+      --gold-soft: rgba(212,175,55,0.14);
+      --cyan: #7be7ff;
+      --red: #ff5666;
+      --green: #8af0bd;
+      --shadow: 0 24px 64px rgba(0,0,0,0.36);
+      --radius: 24px;
+      --radius-sm: 16px;
+      --max: 1260px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; color: var(--text);
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+      background:
+        radial-gradient(circle at top left, rgba(212,175,55,0.10), transparent 32%),
+        radial-gradient(circle at top right, rgba(123,231,255,0.07), transparent 24%),
+        linear-gradient(180deg, #061019 0%, #09131d 48%, #07111a 100%);
+      min-height: 100vh;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(100% - 32px, var(--max)); margin: 0 auto; }
+    h1, h2, h3 { line-height: 1.18; margin: 0 0 16px; letter-spacing: -0.015em; }
+    h1 { font-size: clamp(2rem, 4.6vw, 3.2rem); font-weight: 900; }
+    h2 { font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 800; }
+    h3 { font-size: 1.1rem; font-weight: 800; }
+    p { margin: 0 0 14px; }
+    .gold { color: var(--gold); }
+    .muted { color: var(--muted); }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 8px 14px; border-radius: 999px;
+      border: 1px solid var(--line); background: rgba(255,255,255,0.04);
+      color: var(--gold); font-size: 11px; font-weight: 800;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    /* Banner — clearly marks this as an example */
+    .example-banner {
+      background: linear-gradient(90deg, rgba(212,175,55,0.16), rgba(123,231,255,0.08));
+      border-bottom: 1px solid var(--gold-soft);
+      padding: 14px 20px;
+      text-align: center;
+      font-size: 13px; font-weight: 700;
+      color: var(--gold);
+      letter-spacing: 0.04em;
+    }
+    .example-banner a { color: var(--text); border-bottom: 1px solid var(--gold-soft); margin-left: 6px; }
+
+    /* Nav */
+    .nav {
+      position: sticky; top: 0; z-index: 50;
+      backdrop-filter: blur(14px);
+      background: rgba(7,16,25,0.78);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .nav-inner {
+      min-height: 64px;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 22px;
+    }
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: 900; }
+    .brand img { width: 38px; height: 38px; object-fit: contain; border-radius: 10px; }
+    .brand small {
+      display: block; color: var(--muted);
+      font-size: 10px; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+    }
+    .nav-cta {
+      padding: 10px 20px; border-radius: 999px;
+      background: linear-gradient(135deg, #f4d56f 0%, #d4af37 100%);
+      color: #081018; font-weight: 900; font-size: 13px;
+    }
+
+    /* Hero */
+    .listing-hero { padding: 56px 0 36px; }
+    .listing-hero .address-line {
+      font-size: 14px; color: var(--muted);
+      letter-spacing: 0.08em; text-transform: uppercase;
+      font-weight: 700; margin-bottom: 10px;
+    }
+    .listing-hero h1 { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; }
+    .listing-hero .tagline {
+      font-size: 1.05rem; color: var(--muted);
+      max-width: 640px; margin: 14px 0 28px;
+    }
+    .price-bar {
+      display: flex; flex-wrap: wrap; align-items: center; gap: 32px;
+      padding: 24px 32px;
+      border: 1px solid var(--gold-soft);
+      background: linear-gradient(135deg, rgba(212,175,55,0.08) 0%, rgba(255,255,255,0.03) 100%);
+      border-radius: var(--radius-sm);
+      margin-bottom: 32px;
+    }
+    .price-bar .price {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-weight: 700; color: var(--gold);
+    }
+    .price-bar .stats { display: flex; flex-wrap: wrap; gap: 24px; }
+    .price-bar .stat { text-align: left; }
+    .price-bar .stat strong {
+      display: block; font-size: 1.4rem; font-weight: 800;
+      color: var(--text);
+    }
+    .price-bar .stat span {
+      font-size: 11px; color: var(--muted);
+      letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700;
+    }
+
+    /* Photo grid (placeholder) */
+    .photo-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 8px;
+      height: 460px;
+      margin-bottom: 48px;
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+    }
+    .photo-grid > div {
+      background: linear-gradient(135deg, rgba(212,175,55,0.06), rgba(123,231,255,0.04));
+      border: 1px dashed rgba(255,255,255,0.12);
+      display: flex; align-items: center; justify-content: center;
+      flex-direction: column; gap: 6px;
+      color: var(--muted); font-size: 12px; font-weight: 700;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      padding: 20px;
+      text-align: center;
+    }
+    .photo-grid > div:first-child {
+      grid-row: 1 / span 2;
+    }
+    .photo-grid > div::before {
+      content: "📷"; font-size: 28px; opacity: 0.7;
+    }
+
+    /* Generic section */
+    .section { padding: 56px 0; border-top: 1px solid var(--line); }
+    .section-head { margin-bottom: 32px; max-width: 720px; }
+    .section-head p { color: var(--muted); font-size: 1.02rem; }
+
+    /* Narrative section */
+    .narrative-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+    }
+    .narrative {
+      padding: 28px 30px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.025);
+    }
+    .narrative .variant-label {
+      display: inline-block;
+      font-size: 10px; font-weight: 800;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      padding: 4px 10px; border-radius: 999px;
+      background: var(--gold-soft); color: var(--gold);
+      margin-bottom: 14px;
+    }
+    .narrative p { color: var(--muted); font-size: 0.95rem; line-height: 1.75; }
+
+    /* Facts grid */
+    .facts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+    }
+    .fact {
+      padding: 20px 22px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      background: rgba(255,255,255,0.025);
+    }
+    .fact .key {
+      font-size: 11px; color: var(--muted);
+      letter-spacing: 0.08em; text-transform: uppercase;
+      font-weight: 700; margin-bottom: 6px;
+    }
+    .fact .val { font-size: 1.05rem; font-weight: 800; color: var(--text); }
+
+    /* Video placeholder */
+    .video-row {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .video-card {
+      aspect-ratio: 16 / 10;
+      border-radius: var(--radius-sm);
+      border: 1px dashed rgba(255,255,255,0.14);
+      background: linear-gradient(135deg, rgba(212,175,55,0.04), rgba(123,231,255,0.04));
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 8px;
+      padding: 20px;
+      text-align: center;
+    }
+    .video-card .duration {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.6rem; font-weight: 700; color: var(--gold);
+    }
+    .video-card .platform {
+      font-size: 11px; color: var(--muted);
+      letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700;
+    }
+    .video-card .icon { font-size: 28px; opacity: 0.7; }
+
+    /* Neighborhood + schools */
+    .two-col {
+      display: grid; grid-template-columns: 1.4fr 1fr; gap: 24px;
+    }
+    .panel {
+      padding: 28px 30px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      background: rgba(255,255,255,0.025);
+    }
+    .panel ul { padding-left: 18px; margin: 0; color: var(--muted); font-size: 0.95rem; line-height: 1.85; }
+
+    /* Comps table */
+    .comp-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.92rem;
+    }
+    .comp-table th, .comp-table td {
+      text-align: left;
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--line);
+    }
+    .comp-table th {
+      font-size: 11px; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--muted);
+      font-weight: 800;
+    }
+    .comp-table td.price { color: var(--gold); font-weight: 700; font-family: 'Playfair Display', Georgia, serif; font-size: 1.05rem; }
+
+    /* Calculator + net sheet */
+    .calc-pair {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+    }
+    .calc-card {
+      padding: 28px 30px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      background: rgba(255,255,255,0.025);
+    }
+    .input-group { margin-bottom: 14px; }
+    .input-group label {
+      display: block;
+      font-size: 11px; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--muted);
+      font-weight: 700; margin-bottom: 6px;
+    }
+    .input-group input {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: rgba(0,0,0,0.2);
+      color: var(--text); font-size: 1rem; font-weight: 700;
+    }
+    .calc-result {
+      margin-top: 16px;
+      padding: 16px 18px;
+      border-radius: 12px;
+      background: var(--gold-soft);
+      border: 1px solid var(--gold-soft);
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .calc-result strong {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.4rem; color: var(--gold);
+    }
+    .calc-result span { font-size: 12px; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700; }
+
+    /* CTA section */
+    .cta-section {
+      padding: 72px 0;
+      border-top: 1px solid var(--line);
+      text-align: center;
+    }
+    .cta-row {
+      display: flex; flex-wrap: wrap; gap: 16px;
+      justify-content: center; margin-top: 28px;
+    }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      gap: 10px; padding: 16px 28px;
+      border-radius: 999px; font-weight: 900;
+      transition: transform 0.18s;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-gold {
+      background: linear-gradient(135deg, #f4d56f 0%, #d4af37 100%);
+      color: #081018;
+      box-shadow: 0 16px 36px rgba(212,175,55,0.18);
+    }
+    .btn-outline {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--line);
+      color: var(--text);
+    }
+
+    /* Voice AI strip */
+    .voice-strip {
+      margin-top: 36px;
+      padding: 28px 32px;
+      border-radius: var(--radius-sm);
+      border: 1px solid rgba(123,231,255,0.2);
+      background: linear-gradient(135deg, rgba(123,231,255,0.06), rgba(255,255,255,0.02));
+      display: flex; flex-wrap: wrap; align-items: center; gap: 20px; justify-content: space-between;
+    }
+    .voice-strip .icon { font-size: 36px; }
+    .voice-strip h3 { color: var(--cyan); margin-bottom: 4px; }
+    .voice-strip p { color: var(--muted); margin: 0; font-size: 0.92rem; }
+
+    /* Footer */
+    .footer {
+      padding: 48px 0 32px;
+      border-top: 1px solid var(--line);
+      color: var(--muted); font-size: 0.85rem;
+    }
+    .footer-grid {
+      display: grid; grid-template-columns: 1.4fr 1fr; gap: 32px;
+    }
+    .footer a { color: var(--muted); }
+    .footer a:hover { color: var(--gold); }
+
+    @media (max-width: 880px) {
+      .photo-grid { grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr 1fr; height: 600px; }
+      .photo-grid > div:first-child { grid-row: 1 / span 1; grid-column: 1 / span 2; }
+      .narrative-grid, .two-col, .calc-pair, .video-row { grid-template-columns: 1fr; }
+      .price-bar { flex-direction: column; align-items: flex-start; gap: 18px; }
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="example-banner">
+  EXAMPLE LISTING TEMPLATE &middot; Your home would have this exact layout with your photos, your address, your story.
+  <a href="/the-system/">See The Listing System &rarr;</a>
+</div>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="/" aria-label="SellersOnlyAgent home">
+      <img src="https://assets.cdn.filesafe.space/A3obe1MUpPzAdHhfzx3I/media/69a39808167da44f788ab7db.png" alt="Sellers Only Agent logo" />
+      <div>
+        SellersOnlyAgent.com
+        <small>Connor MacIvor &middot; The Seller's Agent</small>
+      </div>
+    </a>
+    <a class="nav-cta" href="/#consult">Book Strategy Call</a>
+  </div>
+</header>
+
+<main>
+
+<section class="listing-hero">
+  <div class="container">
+    <div class="eyebrow">Active &middot; Listing System Component #2</div>
+    <div class="address-line">25600 Bridgeport Lane &middot; Stevenson Ranch &middot; CA 91381</div>
+    <h1>Elevated Mediterranean above the canyon, <span class="gold">private gate, top-tier schools.</span></h1>
+    <p class="tagline">
+      A 2008-built four-bedroom Mediterranean at the end of a quiet Stevenson Ranch loop, gated entry, three-car garage, walk to Pico Canyon Elementary, fifteen minutes to Six Flags Magic Mountain, twenty-five to Burbank. The home most SCV buyers say they wish was available when they were looking.
+    </p>
+
+    <div class="price-bar">
+      <div class="price">$1,189,000</div>
+      <div class="stats">
+        <div class="stat"><strong>4</strong><span>Bedrooms</span></div>
+        <div class="stat"><strong>3.5</strong><span>Bathrooms</span></div>
+        <div class="stat"><strong>2,684</strong><span>Square feet</span></div>
+        <div class="stat"><strong>7,210</strong><span>Lot sqft</span></div>
+        <div class="stat"><strong>2008</strong><span>Year built</span></div>
+        <div class="stat"><strong>3</strong><span>Car garage</span></div>
+      </div>
+    </div>
+
+    <div class="photo-grid" aria-label="Property photo gallery — example placeholders">
+      <div>Hero photo<br><span style="opacity:0.6;font-weight:500;letter-spacing:0;text-transform:none;font-size:11px;margin-top:6px">Twilight exterior, professional photography</span></div>
+      <div>Kitchen<br><span style="opacity:0.6;font-weight:500;letter-spacing:0;text-transform:none;font-size:11px;margin-top:6px">Wide-angle hero shot</span></div>
+      <div>Primary suite</div>
+      <div>Backyard / pool</div>
+      <div>Drone overview</div>
+    </div>
+    <p class="muted" style="text-align:center; font-size:12px; margin-bottom:0;">
+      Your listing's photo grid would feature 30 to 60 professional photographs, plus drone overhead and twilight exterior.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Phase 1 &middot; Component #3</div>
+      <h2>The home, told three ways. <span class="gold">One narrative for each buyer type.</span></h2>
+      <p>The same home reads differently depending on who is reading. Lifestyle buyers, investor buyers, and relocation buyers each scan for different signal. The MLS gets the strongest variant. The ads run all three.</p>
+    </div>
+    <div class="narrative-grid" style="grid-template-columns: 1fr 1fr 1fr; gap: 16px;">
+      <div class="narrative">
+        <span class="variant-label">Lifestyle</span>
+        <p>
+          Wake up to the canyon, walk the kids to Pico Canyon Elementary in eight minutes, return to a kitchen built for hosting Sunday dinners. The backyard pool catches afternoon light from May through October. The primary suite balcony looks east at the Santa Clarita range. This is the home you grew up describing.
+        </p>
+      </div>
+      <div class="narrative">
+        <span class="variant-label">Investor</span>
+        <p>
+          Stevenson Ranch 91381 has appreciated 21.7% over the past five years. This corner lot sits 14% below recent comparable sales in the gated community. Built 2008 with original-owner maintenance records. Rental comp on the street: $5,400 per month. The hold-and-rent math is in the seller package on request.
+        </p>
+      </div>
+      <div class="narrative">
+        <span class="variant-label">Relocation</span>
+        <p>
+          Twenty-five minutes to Burbank, twelve minutes to the I-5 connection, fifteen minutes to the new Henry Mayo Newhall hospital expansion. Pico Canyon Elementary is a California Distinguished School. Stevenson Ranch Park is two blocks. The HOA covers the front landscape so your weekends are not yard work.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Phase 2 &middot; Component #9</div>
+      <h2>Three videos. Three formats. <span class="gold">Three platforms.</span></h2>
+      <p>Buyers scroll different platforms with different attention budgets. The 60-second reel hooks them on Instagram. The 3-minute tour holds them on YouTube. The 8-minute deep-dive lives on this page for the seller-side qualified buyer.</p>
+    </div>
+    <div class="video-row">
+      <div class="video-card">
+        <div class="icon">▶</div>
+        <div class="duration">0:60</div>
+        <div class="platform">Instagram &middot; TikTok &middot; Shorts</div>
+      </div>
+      <div class="video-card">
+        <div class="icon">▶</div>
+        <div class="duration">3:00</div>
+        <div class="platform">YouTube tour</div>
+      </div>
+      <div class="video-card">
+        <div class="icon">▶</div>
+        <div class="duration">8:00</div>
+        <div class="platform">This page &middot; deep dive</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Property facts</div>
+      <h2>The complete record.</h2>
+      <p>Every field a buyer's agent asks for, in one place, before they have to ask.</p>
+    </div>
+    <div class="facts-grid">
+      <div class="fact"><div class="key">MLS #</div><div class="val">SR26-EXAMPLE</div></div>
+      <div class="fact"><div class="key">Status</div><div class="val">Active</div></div>
+      <div class="fact"><div class="key">Year built</div><div class="val">2008</div></div>
+      <div class="fact"><div class="key">Lot size</div><div class="val">7,210 sqft</div></div>
+      <div class="fact"><div class="key">Home size</div><div class="val">2,684 sqft</div></div>
+      <div class="fact"><div class="key">Bedrooms</div><div class="val">4</div></div>
+      <div class="fact"><div class="key">Bathrooms</div><div class="val">3 full, 1 half</div></div>
+      <div class="fact"><div class="key">Garage</div><div class="val">3-car attached</div></div>
+      <div class="fact"><div class="key">Pool</div><div class="val">In-ground, gas heat</div></div>
+      <div class="fact"><div class="key">Stories</div><div class="val">2</div></div>
+      <div class="fact"><div class="key">Heating</div><div class="val">Forced air, dual zone</div></div>
+      <div class="fact"><div class="key">Cooling</div><div class="val">Central AC, dual zone</div></div>
+      <div class="fact"><div class="key">HOA</div><div class="val">$142 / month</div></div>
+      <div class="fact"><div class="key">Property tax</div><div class="val">1.13% effective</div></div>
+      <div class="fact"><div class="key">Mello Roos</div><div class="val">$1,840 / year</div></div>
+      <div class="fact"><div class="key">Elementary</div><div class="val">Pico Canyon</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Neighborhood + Commute</div>
+      <h2>Stevenson Ranch.</h2>
+      <p>The where, the why, and the commute math.</p>
+    </div>
+    <div class="two-col">
+      <div class="panel">
+        <h3 style="margin-bottom:14px;">The neighborhood</h3>
+        <ul>
+          <li>Walk to Pico Canyon Elementary (California Distinguished School)</li>
+          <li>Stevenson Ranch Park: 0.4 miles. Trails, playground, dog area.</li>
+          <li>The Plaza at Golden Valley: 2.1 miles. Trader Joe's, Vons, Sprouts.</li>
+          <li>Six Flags Magic Mountain: 15 minutes.</li>
+          <li>Henry Mayo Newhall Hospital expansion: 12 minutes.</li>
+          <li>Movie theaters, Costco, Home Depot: under 10 minutes.</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3 style="margin-bottom:14px;">Commute math</h3>
+        <ul>
+          <li>Burbank: 25 minutes (off-peak)</li>
+          <li>Glendale: 28 minutes</li>
+          <li>Downtown LA: 38 minutes</li>
+          <li>Beverly Hills: 35 minutes</li>
+          <li>I-5 entrance: 4 minutes</li>
+          <li>Metrolink Santa Clarita station: 12 minutes</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Phase 1 &middot; Component #1</div>
+      <h2>Recent comparable sales. <span class="gold">Hundreds analyzed. These are the closest.</span></h2>
+      <p>Sample of recent Stevenson Ranch sales weighted by lot, finish level, and proximity. Full analysis available on request.</p>
+    </div>
+    <div class="panel" style="padding:0; overflow:hidden;">
+      <table class="comp-table">
+        <thead>
+          <tr>
+            <th>Address</th>
+            <th>Sold</th>
+            <th>Beds / Baths</th>
+            <th>Sqft</th>
+            <th style="text-align:right;">Sold Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>25540 Bridgeport Lane</td>
+            <td>Mar 2026</td>
+            <td>4 / 3</td>
+            <td>2,604</td>
+            <td class="price" style="text-align:right;">$1,165,000</td>
+          </tr>
+          <tr>
+            <td>25660 Wilshire Ridge</td>
+            <td>Feb 2026</td>
+            <td>4 / 3.5</td>
+            <td>2,792</td>
+            <td class="price" style="text-align:right;">$1,225,000</td>
+          </tr>
+          <tr>
+            <td>25710 Stonecliff Court</td>
+            <td>Jan 2026</td>
+            <td>4 / 3</td>
+            <td>2,548</td>
+            <td class="price" style="text-align:right;">$1,140,000</td>
+          </tr>
+          <tr>
+            <td>25490 Foxglove Lane</td>
+            <td>Dec 2025</td>
+            <td>5 / 4</td>
+            <td>3,012</td>
+            <td class="price" style="text-align:right;">$1,310,000</td>
+          </tr>
+          <tr>
+            <td>25620 Bridgeport Lane</td>
+            <td>Nov 2025</td>
+            <td>4 / 3</td>
+            <td>2,684</td>
+            <td class="price" style="text-align:right;">$1,178,000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="muted" style="font-size: 13px; margin-top: 16px;">
+      Sample data. The actual analysis on your home would include every sale within a 2-mile radius going back 24 months, AI-weighted by ten variables.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Buyer math</div>
+      <h2>What a buyer's monthly payment looks like.</h2>
+      <p>Live calculation. Adjust the numbers, the payment updates instantly.</p>
+    </div>
+    <div class="calc-pair">
+      <div class="calc-card">
+        <h3 style="margin-bottom: 18px;">Mortgage payment</h3>
+        <div class="input-group">
+          <label for="price">Purchase price</label>
+          <input type="number" id="price" value="1189000" step="10000" />
+        </div>
+        <div class="input-group">
+          <label for="down">Down payment</label>
+          <input type="number" id="down" value="237800" step="10000" />
+        </div>
+        <div class="input-group">
+          <label for="rate">Interest rate %</label>
+          <input type="number" id="rate" value="6.75" step="0.125" />
+        </div>
+        <div class="calc-result">
+          <span>Estimated monthly P+I</span>
+          <strong id="payment">$6,170</strong>
+        </div>
+      </div>
+      <div class="calc-card">
+        <h3 style="margin-bottom: 18px;">Total monthly cost</h3>
+        <div class="input-group">
+          <label>Mortgage (P+I)</label>
+          <input type="number" id="mort" value="6170" disabled />
+        </div>
+        <div class="input-group">
+          <label>Property tax estimate</label>
+          <input type="number" id="tax" value="1119" step="50" />
+        </div>
+        <div class="input-group">
+          <label>HOA + Mello Roos</label>
+          <input type="number" id="hoa" value="295" step="10" />
+        </div>
+        <div class="input-group">
+          <label>Insurance + maintenance</label>
+          <input type="number" id="ins" value="220" step="20" />
+        </div>
+        <div class="calc-result">
+          <span>Total monthly estimate</span>
+          <strong id="total">$7,804</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Schedule a private showing</div>
+      <h2>See the home. <span class="gold">No buyer-agent gatekeeper needed.</span></h2>
+      <p>Unrepresented buyers can request a showing directly. Represented buyers, have your agent submit a showing request. Voice AI captures both, day or night.</p>
+    </div>
+
+    <div class="voice-strip">
+      <div style="display:flex;align-items:center;gap:18px;">
+        <div class="icon">📞</div>
+        <div>
+          <h3>24/7 Voice AI showing booking</h3>
+          <p>Call 661-400-1720. Even at 11 PM. The AI books the showing and texts you back in 60 seconds.</p>
+        </div>
+      </div>
+      <a href="tel:+16614001720" class="btn btn-gold">Call to book</a>
+    </div>
+
+    <div class="cta-row">
+      <a class="btn btn-gold" href="/#consult">Request showing online</a>
+      <a class="btn btn-outline" href="/the-system/">How this listing was prepared</a>
+      <a class="btn btn-outline" href="/">About the Sellers Only Agent model</a>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <div class="eyebrow">For sellers reading this</div>
+    <h2>This is what your home's listing page would look like. <span class="gold">Yours runs through 19 components.</span></h2>
+    <p class="muted" style="max-width: 720px; margin: 0 auto 8px; font-size: 1rem;">
+      Every Sellers Only Agent listing gets a dedicated page like this. Your photos. Your address. Your story. Your buyer narratives. Your comp analysis. Your 24/7 voice AI booking. Plus the other 18 components from The Listing System.
+    </p>
+    <div class="cta-row">
+      <a class="btn btn-gold" href="/#consult">Book my seller strategy review</a>
+      <a class="btn btn-outline" href="/the-system/">See all 19 system components</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <strong style="color: var(--text);">Connor T. MacIvor</strong> &middot; The Seller's Agent &middot; SellersOnlyAgent.com<br>
+      25060 Avenue Stanford, Suite 150, Santa Clarita CA 91355<br>
+      CalDRE #01238257 &middot; SYNC Brokerage<br>
+      <a href="mailto:connor@sellersonlyagent.com">connor@sellersonlyagent.com</a> &middot; <a href="tel:+16614001720">661-400-1720</a>
+    </div>
+    <div>
+      Seller representation only. No buyer agency. No dual agency.<br><br>
+      <a href="/the-system/" style="margin-right: 12px;">The Listing System</a>
+      <a href="/blog/" style="margin-right: 12px;">Blog</a>
+      <a href="/">Home</a>
+    </div>
+  </div>
+</footer>
+
+</main>
+
+<script>
+  (function() {
+    const price = document.getElementById('price');
+    const down = document.getElementById('down');
+    const rate = document.getElementById('rate');
+    const payment = document.getElementById('payment');
+    const mort = document.getElementById('mort');
+    const tax = document.getElementById('tax');
+    const hoa = document.getElementById('hoa');
+    const ins = document.getElementById('ins');
+    const total = document.getElementById('total');
+
+    function fmt(n) { return '$' + Math.round(n).toLocaleString(); }
+
+    function recalc() {
+      const p = parseFloat(price.value) || 0;
+      const d = parseFloat(down.value) || 0;
+      const r = (parseFloat(rate.value) || 0) / 100 / 12;
+      const n = 360;
+      const loan = Math.max(p - d, 0);
+      let pi = 0;
+      if (r > 0 && loan > 0) {
+        pi = loan * (r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
+      }
+      payment.textContent = fmt(pi);
+      mort.value = Math.round(pi);
+      const t = (parseFloat(tax.value) || 0) + (parseFloat(hoa.value) || 0) + (parseFloat(ins.value) || 0) + pi;
+      total.textContent = fmt(t);
+    }
+    [price, down, rate, tax, hoa, ins].forEach(el => el && el.addEventListener('input', recalc));
+    recalc();
+  })();
+</script>
+
+</body>
+</html>
