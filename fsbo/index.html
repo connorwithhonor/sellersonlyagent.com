@@ -331,11 +331,13 @@ footer .disclosure{margin-top:18px;font-size:12px;color:var(--muted);max-width:8
       <div class="form-panel">
         <h3>Get the FSBO Guide</h3>
         <p class="subtitle">Free, no obligation, no spam. Reply &ldquo;stop&rdquo; and you're off the list.</p>
-        <form id="lead-form" method="POST" action="https://lead-intake.connormacivor.workers.dev/submit">
-          <input type="hidden" name="source" value="sellersonlyagent-fsbo">
+        <form id="lead-form" method="POST" action="https://formspree.io/f/xykdaewr">
+          <input type="hidden" name="_subject" value="FSBO lead — sellersonlyagent.com/fsbo">
+          <input type="hidden" name="_source" value="sellersonlyagent-fsbo">
+          <input type="hidden" name="_next" value="https://sellersonlyagent.com/fsbo/thank-you/">
           <div class="honeypot" aria-hidden="true">
             <label for="website">Website (leave blank)</label>
-            <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+            <input type="text" id="website" name="_gotcha" tabindex="-1" autocomplete="off">
           </div>
           <div class="form-row">
             <div class="input-group">
