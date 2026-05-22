@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why the Highest Offer Often Isn't the Winning Offer | Sellers Only Agent&trade;</title>
+<meta name="description" content="The headline number on an offer is not the cash that ends up in the seller's bank account. Why probability of closing dominates price in nearly every comparison &mdash; with the expected-value math sellers should run on every offer.">
+<meta name="author" content="Connor MacIvor">
+<meta property="og:title" content="Why the Highest Offer Often Isn't the Winning Offer">
+<meta property="og:description" content="Probability of closing dominates price. The expected-value math behind choosing the right offer.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://sellersonlyagent.com/blog/highest-offer-not-winning-offer-explained">
+<meta property="og:image" content="https://assets.cdn.filesafe.space/A3obe1MUpPzAdHhfzx3I/media/69a39808167da44f788ab7db.png">
+<link rel="canonical" href="https://sellersonlyagent.com/blog/highest-offer-not-winning-offer-explained">
+<link rel="icon" href="https://assets.cdn.filesafe.space/wGQNykcwXU4XZhG6toH7/media/69d4269da7dcb4cff0f0099a.svg" type="image/svg+xml">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0b0b0f;--bg2:#111118;--bg3:#18181f;--text:#e8e6e3;--text2:#a09e9a;--text3:#6b6966;--accent:#c9a84c;--accent2:#d4b65a;--border:#2a2a35;--border2:#1e1e28;--max:780px}
+html{scroll-behavior:smooth}body{background:var(--bg);color:var(--text);font-family:'Source Sans 3',sans-serif;line-height:1.75;font-size:17px;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none;transition:color .2s}a:hover{color:var(--accent2)}
+.blog-nav{position:sticky;top:0;z-index:100;background:rgba(11,11,15,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border2);padding:14px 0}
+.blog-nav-inner{max-width:1100px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
+.blog-nav-brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.blog-nav-brand img{height:36px;width:auto}
+.blog-nav-brand span{color:var(--text2);font-size:13px;letter-spacing:.5px;text-transform:uppercase}
+.blog-nav-links{display:flex;gap:20px;align-items:center}
+.blog-nav-links a{color:var(--text2);font-size:14px;letter-spacing:.3px}
+.blog-nav-links a:hover{color:var(--accent)}
+.blog-nav-cta{background:var(--accent);color:#0b0b0f;padding:8px 18px;border-radius:4px;font-weight:600;font-size:13px;letter-spacing:.4px;text-transform:uppercase}
+.blog-nav-cta:hover{background:var(--accent2);color:#0b0b0f}
+.blog-hero{max-width:var(--max);margin:0 auto;padding:80px 24px 40px}
+.blog-hero .category{color:var(--accent);font-size:12px;letter-spacing:2px;text-transform:uppercase;font-weight:600;margin-bottom:16px}
+.blog-hero h1{font-family:'Playfair Display',serif;font-size:clamp(28px,5vw,42px);font-weight:700;line-height:1.2;color:#fff;margin-bottom:20px}
+.blog-hero .meta{color:var(--text3);font-size:14px;display:flex;gap:16px;flex-wrap:wrap}
+.blog-body{max-width:var(--max);margin:0 auto;padding:0 24px 60px}
+.blog-body h2{font-family:'Playfair Display',serif;font-size:clamp(22px,3.5vw,28px);font-weight:600;color:#fff;margin:48px 0 16px;line-height:1.3}
+.blog-body h3{font-size:18px;font-weight:600;color:var(--accent);margin:32px 0 12px;letter-spacing:.3px}
+.blog-body p{margin-bottom:16px;color:var(--text)}
+.blog-body ul,.blog-body ol{margin:0 0 16px 20px;color:var(--text)}
+.blog-body li{margin-bottom:8px}
+.blog-body blockquote{border-left:3px solid var(--accent);padding:16px 20px;margin:24px 0;background:var(--bg2);border-radius:0 6px 6px 0;font-style:italic;color:var(--text2)}
+.blog-body strong{color:#fff;font-weight:600}
+.faq-section{margin:48px 0;padding:40px 0;border-top:1px solid var(--border)}
+.faq-section h2{margin-top:0}
+.faq-item{border:1px solid var(--border);border-radius:6px;margin-bottom:12px;background:var(--bg2);overflow:hidden}
+.faq-q{padding:16px 20px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-weight:500;color:#fff;font-size:16px}
+.faq-q::after{content:'+';color:var(--accent);font-size:20px;font-weight:300;transition:transform .2s}
+.faq-item.open .faq-q::after{transform:rotate(45deg)}
+.faq-a{padding:0 20px 16px;color:var(--text2);font-size:15px;line-height:1.7;display:none}
+.faq-item.open .faq-a{display:block}
+.blog-cta{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:40px;text-align:center;margin:48px 0}
+.blog-cta h3{font-family:'Playfair Display',serif;font-size:24px;color:#fff;margin-bottom:12px}
+.blog-cta p{color:var(--text2);margin-bottom:20px;font-size:15px}
+.blog-cta .cta-btn{display:inline-block;background:var(--accent);color:#0b0b0f;padding:14px 32px;border-radius:4px;font-weight:600;font-size:14px;letter-spacing:.5px;text-transform:uppercase}
+.blog-cta .cta-btn:hover{background:var(--accent2);color:#0b0b0f}
+.blog-cta .cta-phone{color:var(--text3);font-size:14px;margin-top:12px}
+.cross-links{margin:40px 0;padding:24px;background:var(--bg2);border:1px solid var(--border);border-radius:6px}
+.cross-links h4{font-size:13px;color:var(--accent);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:16px}
+.cross-links a{display:block;padding:8px 0;color:var(--text);border-bottom:1px solid var(--border2);font-size:15px}
+.cross-links a:last-child{border-bottom:none}
+.cross-links a:hover{color:var(--accent)}
+.author-box{display:flex;gap:16px;align-items:flex-start;margin:40px 0;padding:24px;background:var(--bg2);border:1px solid var(--border);border-radius:6px}
+.author-box img{width:56px;height:56px;border-radius:50%;border:2px solid var(--accent)}
+.author-box .author-info h4{color:#fff;font-size:16px;margin-bottom:4px}
+.author-box .author-info p{color:var(--text3);font-size:14px;line-height:1.5}
+.blog-footer{border-top:1px solid var(--border2);padding:40px 24px;text-align:center;max-width:1100px;margin:0 auto}
+.blog-footer .footer-brand{color:var(--text3);font-size:13px;margin-bottom:8px}
+.blog-footer .footer-legal{color:var(--text3);font-size:12px;line-height:1.6}
+.blog-footer a{color:var(--text3)}
+.blog-footer a:hover{color:var(--accent)}
+.disclosure{margin:32px 0;padding:16px 20px;background:rgba(201,168,76,.06);border:1px solid rgba(201,168,76,.15);border-radius:6px;font-size:13px;color:var(--text3);line-height:1.7}
+.scenario-box{background:var(--bg2);border:1px solid var(--border);border-radius:6px;padding:24px;margin:24px 0;font-size:15px}
+.scenario-box h4{color:var(--accent);font-size:13px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:12px}
+.scenario-box table{width:100%;border-collapse:collapse;color:var(--text);font-size:14px}
+.scenario-box th,.scenario-box td{padding:8px 12px;border-bottom:1px solid var(--border2);text-align:left}
+.scenario-box th{color:var(--accent2);font-weight:600;font-size:12px;letter-spacing:.5px;text-transform:uppercase}
+.scenario-box .winner{color:#fff;font-weight:600}
+@media(max-width:600px){.blog-nav-links{display:none}.blog-hero{padding:60px 16px 32px}.blog-body{padding:0 16px 40px}.blog-cta{padding:28px 20px}.scenario-box{padding:16px}.scenario-box th,.scenario-box td{padding:6px 8px;font-size:13px}}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why isn't the highest offer always the winning offer?","acceptedAnswer":{"@type":"Answer","text":"Because the cash that lands in the seller's bank account at close is determined by price multiplied by probability of closing. A higher offer with weak financing, long contingencies, and an inexperienced buyer agent can have a 60-70% close probability, while a slightly lower offer with cash or strong financing, tight contingencies, and a credible team can have a 95-98% close probability. The expected value &mdash; price times probability &mdash; almost always favors the higher-probability offer."}},{"@type":"Question","name":"What happens when the highest offer falls out?","acceptedAnswer":{"@type":"Answer","text":"The listing returns to active after 25-45 days off-market, the property carries days-on-market that buyers and agents notice, the original offer pool has dispersed, and the next round of offers typically comes in lower. The seller's net is materially worse than if a more certain offer had been accepted in the first round."}},{"@type":"Question","name":"How do you estimate the probability of closing?","acceptedAnswer":{"@type":"Answer","text":"By scoring buyer financial strength (proof of funds, pre-approval quality), loan type (cash strongest, conventional middle, FHA/VA more sensitive), lender reputation, buyer agent quality, contingency posture, deposit size, and any unusual circumstances like contingent-on-sale provisions. The score is qualitative but reasonably consistent in Connor's experience."}},{"@type":"Question","name":"Should you ever accept a lower price for terms?","acceptedAnswer":{"@type":"Answer","text":"Yes, regularly. A cash offer at $30,000 below the top number, with no appraisal risk, no financing risk, and a 14-day close, often produces more net cash to the seller than a stretched financed offer at the top number that has a 30% chance of falling out."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Why the Highest Offer Often Isn't the Winning Offer","author":{"@type":"Person","name":"Connor MacIvor","url":"https://connorwithhonor.com"},"publisher":{"@type":"Organization","name":"Sellers Only Agent","logo":{"@type":"ImageObject","url":"https://assets.cdn.filesafe.space/A3obe1MUpPzAdHhfzx3I/media/69a39808167da44f788ab7db.png"}},"datePublished":"2026-05-17","description":"Probability of closing dominates price. The expected-value math behind choosing the right offer on a Santa Clarita listing."}</script>
+<link rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"><link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png"></head>
+<body>
+
+<nav class="blog-nav"><div class="blog-nav-inner"><a href="https://sellersonlyagent.com" class="blog-nav-brand"><img src="https://assets.cdn.filesafe.space/A3obe1MUpPzAdHhfzx3I/media/69a39808167da44f788ab7db.png" alt="Sellers Only Agent logo"><span>SellersOnlyAgent.com</span></a><div class="blog-nav-links"><a href="https://sellersonlyagent.com/why">Philosophy</a><a href="https://sellersonlyagent.com/blog/">Blog</a><a href="https://sellersonlyagent.com/#consult" class="blog-nav-cta">Book Strategy Call</a></div></div></nav>
+
+<header class="blog-hero">
+  <div class="category">Offer Strategy &middot; Expected Value</div>
+  <h1>Why the Highest Offer Often Isn't the Winning Offer</h1>
+  <div class="meta"><span>Connor MacIvor</span><span>&middot;</span><span>May 2026</span><span>&middot;</span><span>8 min read</span></div>
+</header>
+
+<article class="blog-body">
+
+<p>Three offers are in. The top offer is $1,250,000. The middle offer is $1,200,000. The lowest offer is $1,175,000 in cash with a 10-day close. Most sellers instinctively pick the top number. Most sellers, in that scenario, would be wrong &mdash; and the math shows it.</p>
+
+<h2>The expected value framework</h2>
+
+<p>Every offer has two components that determine the seller's actual outcome: the price on the page, and the probability that the deal closes at that price.</p>
+
+<p>Expected value of an offer = price &times; probability of closing</p>
+
+<p>This is the same calculation a sophisticated investor runs on any uncertain transaction. The headline number is half the equation. The probability is the other half. And probability is the half most sellers leave out entirely.</p>
+
+<h2>The three-offer scenario, scored</h2>
+
+<div class="scenario-box">
+  <h4>The three offers in detail</h4>
+  <table>
+    <thead><tr><th>Offer</th><th>Price</th><th>Financing</th><th>Contingencies</th><th>Close</th><th>Probability</th><th>Expected Value</th></tr></thead>
+    <tbody>
+      <tr><td>A &mdash; Top number</td><td>$1,250,000</td><td>Conventional, 10% down, marginal pre-approval</td><td>17/21/17 days, no gap coverage</td><td>45 days</td><td>~60%</td><td>$750,000</td></tr>
+      <tr><td>B &mdash; Middle</td><td>$1,200,000</td><td>Conventional, 25% down, strong pre-approval</td><td>10/17/gap coverage to $30K</td><td>30 days</td><td>~90%</td><td>$1,080,000</td></tr>
+      <tr class="winner"><td>C &mdash; Lowest, cash</td><td>$1,175,000</td><td>Cash, full POF</td><td>7-day inspection only, no loan or appraisal</td><td>14 days</td><td>~98%</td><td>$1,151,500</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<p>The expected value math says Offer C &mdash; the lowest headline number &mdash; is the strongest offer by $71,500 over Offer B and $401,500 over Offer A. The seller who picks Offer A is statistically choosing a 40% probability of a deal failure, a return to active marketing, and a much lower net at close.</p>
+
+<h2>Why probabilities differ this much</h2>
+
+<h3>Offer A: ~60% probability</h3>
+
+<ul>
+  <li>10% down on a conventional loan creates appraisal exposure (no buffer if appraisal comes in low).</li>
+  <li>17/21/17 day contingencies give the buyer three weeks of exit ramps.</li>
+  <li>"Marginal pre-approval" means the lender's conditions list may have meaningful items still to clear.</li>
+  <li>No gap coverage means a low appraisal triggers full renegotiation.</li>
+  <li>45-day close means more time for buyer circumstances to change.</li>
+</ul>
+
+<p>This is not a bad offer. It is simply a high-risk offer.</p>
+
+<h3>Offer B: ~90% probability</h3>
+
+<ul>
+  <li>25% down provides loan-to-value buffer.</li>
+  <li>Strong pre-approval suggests the lender has fully vetted the buyer.</li>
+  <li>Tightened contingencies (10/17 days) shrink exit windows.</li>
+  <li>$30K gap coverage neutralizes most appraisal scenarios.</li>
+  <li>30-day close is reasonable.</li>
+</ul>
+
+<h3>Offer C: ~98% probability</h3>
+
+<ul>
+  <li>Cash eliminates loan and appraisal contingencies entirely.</li>
+  <li>Full proof of funds verified.</li>
+  <li>Only inspection contingency remains, and only for 7 days.</li>
+  <li>14-day close minimizes the window for anything to change.</li>
+</ul>
+
+<p>The 2% residual risk on Offer C is essentially the buyer changing their mind during the 7-day inspection contingency. That is the cleanest deal a seller can find.</p>
+
+<h2>What "the highest offer fell out" actually costs</h2>
+
+<p>The cost of choosing Offer A when it fails is not just "the deal didn't close." The cascade:</p>
+
+<ul>
+  <li><strong>25-45 days off-market.</strong> The listing was unavailable to other buyers while Offer A was in escrow.</li>
+  <li><strong>Original offer pool dispersed.</strong> The buyers who would have written competing offers in week one have bought other properties or moved on.</li>
+  <li><strong>Days on market accumulated.</strong> The listing returns to active showing 30+ days. Buyers and agents notice. The narrative shifts from "fresh listing" to "what's wrong with it?"</li>
+  <li><strong>Lower second-round offers.</strong> The new offers that come in are usually 3-7% below the first round &mdash; sometimes more. For a $1.2M property, that's $36,000-$84,000+ lower.</li>
+  <li><strong>Seller carrying costs.</strong> Insurance, mortgage, taxes, utilities continuing through the off-market period.</li>
+  <li><strong>Emotional and operational tax.</strong> The seller has packed, planned, and prepared for a move that isn't happening on schedule.</li>
+</ul>
+
+<p>The full cost of accepting Offer A and watching it fail is often $50,000 to $100,000+ relative to accepting Offer C cleanly. That gap is invisible to sellers who only look at the headline number.</p>
+
+<h2>How probability is estimated</h2>
+
+<p>The probability number is not a precise measurement &mdash; nobody runs Monte Carlo simulations on real estate offers &mdash; but it is reasonably consistent based on a handful of signals Connor scores on every offer:</p>
+
+<ul>
+  <li><strong>Loan type.</strong> Cash 98%, conventional 25%+ down 90%, conventional 10-20% down 75-85%, FHA/VA 65-80%, jumbo 70-85%.</li>
+  <li><strong>Pre-approval quality.</strong> Fully underwritten with credible lender +5-10%; vague pre-approval from unfamiliar lender -10-15%.</li>
+  <li><strong>Contingency tightness.</strong> Tightened contingencies +5-10%; standard contingencies neutral; extended contingencies -5-10%.</li>
+  <li><strong>Appraisal protection.</strong> Gap coverage clause +5-10%; waived appraisal +10-15%; standard appraisal contingency neutral.</li>
+  <li><strong>Buyer agent quality.</strong> Experienced, communicative agent +5%; problematic agent -10%.</li>
+  <li><strong>Deposit size.</strong> Robust deposit (3%+) +3-5%; minimal deposit -5%.</li>
+  <li><strong>Contingent-on-sale.</strong> Major drag, often -20-30% even with kick-out clause.</li>
+</ul>
+
+<p>The starting point for a "clean" conventional offer is around 80-85%. Each signal adjusts up or down. Cash with no contingencies caps near 98%; the residual 2% is the inspection contingency window.</p>
+
+<h2>The seller's emotional bias</h2>
+
+<p>The reason most sellers pick the highest number is not analytical. It is emotional. The top offer feels like winning. Accepting the lower offer feels like leaving money on the table.</p>
+
+<p>The reframe: the seller who picks Offer C is not leaving $75,000 on the table. They are picking the offer most likely to actually pay out. The seller who picks Offer A is picking the offer most likely to look great on paper and pay out at zero.</p>
+
+<p>Connor's job, every time, is to walk the seller through the math &mdash; not the feeling. Once the math is on the table, sellers consistently choose the higher expected value offer.</p>
+
+<h2>When the highest offer is the right offer</h2>
+
+<p>The framework does not say "always pick the lower number." It says "score every offer on price times probability." Sometimes the highest offer is also the most certain &mdash; a cash buyer at $1,250,000 with full proof of funds and a 10-day close is both the top number and the top probability. That offer wins on every axis.</p>
+
+<p>The trap is the higher number with weaker terms. That offer wins only on the headline.</p>
+
+<h2>The practical application</h2>
+
+<p>Every offer Connor presents to a seller comes with:</p>
+
+<ul>
+  <li>The headline price</li>
+  <li>The decomposition across the four levers (price, terms, timeline, certainty)</li>
+  <li>A probability estimate based on the signals above</li>
+  <li>An expected-value calculation</li>
+  <li>A comparison across all active offers</li>
+</ul>
+
+<p>The seller sees the same analysis Connor sees. The decision is informed. The choice is the seller's; the framework is what makes it the right choice.</p>
+
+<blockquote>"The dollar that lands in your bank account at close is the dollar that matters. The dollar on the first page of the offer is a dollar with a probability attached. Multiply them. The offer with the highest product is the offer that wins &mdash; not the offer with the loudest first page." &mdash; Connor MacIvor</blockquote>
+
+<div class="blog-cta">
+  <h3>Score Every Offer on Expected Value</h3>
+  <p>Connor walks every seller through the price-times-probability framework before the first offer arrives. The decision when the offers come is fast, analytical, and right.</p>
+  <a href="https://sellersonlyagent.com/#consult" class="cta-btn">Book Seller Strategy Call</a>
+  <div class="cta-phone"><a href="tel:+16614001720">661-400-1720</a></div>
+</div>
+
+<div class="disclosure">Probability estimates in this article are illustrative and based on Connor's experience in Santa Clarita Valley real estate; actual close probabilities vary by deal, market, and circumstances. This article is general information, not legal, financial, or investment advice. The $17K Fair Fixed Fee covers Connor MacIvor's listing-side representation only, including offer analysis, expected-value scoring, and negotiation through close. Other closing costs &mdash; escrow, title insurance, HOA transfer fees, county transfer taxes, withholding, inspections, mandatory disclosures, and any buyer-side cooperating compensation offered &mdash; are not included in the $17K and are the seller's responsibility, though Connor negotiates these on the seller's behalf to minimize total seller cost. Connor MacIvor, REALTOR &middot; CA DRE #01238257 &middot; SYNC Brokerage. Sellers Only Agent&trade; is a trademark of Connor MacIvor (USPTO #99738462). All real estate commissions are negotiable per California Business and Professions Code Section 10140.6. If your home is currently listed for sale, this is not a solicitation.</div>
+
+<div class="cross-links">
+  <h4>Related Reading</h4>
+  <a href="https://sellersonlyagent.com/blog/offer-strategy-negotiation-santa-clarita">The Complete Offer Strategy &amp; Negotiation Playbook &mdash; Pillar Guide</a>
+  <a href="https://sellersonlyagent.com/blog/multiple-offer-strategy-sellers">Multiple Offer Scenarios: How to Read, Compare, and Choose</a>
+  <a href="https://sellersonlyagent.com/blog/appraisal-gap-strategy-sellers">The Appraisal Gap: Strategy When the Number Comes In Low</a>
+</div>
+
+<div class="faq-section">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-item"><div class="faq-q">Why isn't highest = winning?</div><div class="faq-a">Because cash at close is price &times; probability. A higher offer with weak financing and long contingencies often has 60-70% close probability vs. 95-98% on a slightly lower clean offer.</div></div>
+  <div class="faq-item"><div class="faq-q">What if the top offer falls out?</div><div class="faq-a">25-45 days off-market, days-on-market shows on the listing, original buyer pool dispersed, next offers typically 3-7% lower. Often $50K-$100K+ worse than choosing the certain offer.</div></div>
+  <div class="faq-item"><div class="faq-q">How is probability estimated?</div><div class="faq-a">By scoring loan type, pre-approval quality, contingency tightness, appraisal protection, buyer agent quality, deposit size, and contingent-on-sale provisions. Qualitative but reasonably consistent.</div></div>
+  <div class="faq-item"><div class="faq-q">Accept lower price for terms?</div><div class="faq-a">Yes, regularly. Cash at $30K below top number with no contingencies and 14-day close often nets more than a stretched financed offer at the top with 30% fall-out risk.</div></div>
+</div>
+
+<div class="author-box"><img src="https://assets.cdn.filesafe.space/A3obe1MUpPzAdHhfzx3I/media/69a39808167da44f788ab7db.png" alt="Connor MacIvor"><div class="author-info"><h4>Connor MacIvor &middot; The Seller's Agent</h4><p>27+ years in real estate. Sellers only. $17K Fair Fixed Fee. Santa Clarita Valley.<br>CA DRE #01238257 &middot; SYNC Brokerage</p></div></div>
+
+</article>
+
+<footer class="blog-footer"><div class="footer-brand"><a href="https://honorelevate.com">Coded by Connor with Honor</a> | AI Growth Architect</div><div class="footer-legal">Connor T. MacIvor &middot; The Seller's Agent &middot; SellersOnlyAgent.com<br>25060 Avenue Stanford, Suite 150, Santa Clarita CA 91355<br>CA DRE #01238257 &middot; SYNC Brokerage &middot; <a href="tel:+16614001720">661-400-1720</a><br>Seller representation only. No buyer agency.<br><br><a href="https://sellersonlyagent.com/privacy">Privacy Policy</a> &middot; <a href="https://sellersonlyagent.com/terms">Terms of Service</a></div></footer>
+
+<script>document.querySelectorAll('.faq-q').forEach(q=>{q.addEventListener('click',()=>{const item=q.parentElement;document.querySelectorAll('.faq-item').forEach(i=>{if(i!==item)i.classList.remove('open')});item.classList.toggle('open');});});</script>
+</body>
+</html>

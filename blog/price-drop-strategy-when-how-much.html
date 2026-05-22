@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Price Drop Strategy: When, How Much, and How to Avoid the Death Spiral | Sellers Only Agent™</title>
+<meta name="description" content="If your Santa Clarita listing needs a price reduction, the size, timing, and threshold of that drop determine whether you recover momentum or slide further. Here is the price-drop math that actually works.">
+<meta name="author" content="Connor MacIvor">
+<meta property="og:title" content="Price Drop Strategy: When, How Much, and How to Avoid the Death Spiral | Sellers Only Agent™">
+<meta property="og:description" content="The size, timing, and threshold of a price reduction determine whether you recover momentum or slide further.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://sellersonlyagent.com/blog/price-drop-strategy-when-how-much">
+<meta property="og:image" content="https://assets.cdn.filesafe.space/A3obe1MUpPzAdHhfzx3I/media/69a39808167da44f788ab7db.png">
+<link rel="canonical" href="https://sellersonlyagent.com/blog/price-drop-strategy-when-how-much">
+<link rel="icon" href="https://assets.cdn.filesafe.space/wGQNykcwXU4XZhG6toH7/media/69d4269da7dcb4cff0f0099a.svg" type="image/svg+xml">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0b0b0f;--bg2:#111118;--bg3:#18181f;--card:#141420;--text:#e8e6e3;--text2:#a09e9a;--text3:#6b6966;--accent:#c9a84c;--accent2:#d4b65a;--border:#2a2a35;--border2:#1e1e28;--max:780px}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Source Sans 3',sans-serif;font-weight:400;line-height:1.75;font-size:17px;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none;transition:color .2s}
+a:hover{color:var(--accent2)}
+.blog-nav{position:sticky;top:0;z-index:100;background:rgba(11,11,15,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border2);padding:14px 0}
+.blog-nav-inner{max-width:1100px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
+.blog-nav-brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.blog-nav-brand img{height:36px;width:auto}
+.blog-nav-brand span{color:var(--text2);font-size:13px;letter-spacing:.5px;text-transform:uppercase}
+.blog-nav-links{display:flex;gap:20px;align-items:center}
+.blog-nav-links a{color:var(--text2);font-size:14px;letter-spacing:.3px}
+.blog-nav-links a:hover{color:var(--accent)}
+.blog-nav-cta{background:var(--accent);color:#0b0b0f;padding:8px 18px;border-radius:4px;font-weight:600;font-size:13px;letter-spacing:.4px;text-transform:uppercase}
+.blog-nav-cta:hover{background:var(--accent2);color:#0b0b0f}
+.blog-hero{max-width:var(--max);margin:0 auto;padding:80px 24px 40px}
+.blog-hero .category{color:var(--accent);font-size:12px;letter-spacing:2px;text-transform:uppercase;font-weight:600;margin-bottom:16px}
+.blog-hero h1{font-family:'Playfair Display',serif;font-size:clamp(28px,5vw,42px);font-weight:700;line-height:1.2;color:#fff;margin-bottom:20px}
+.blog-hero .meta{color:var(--text3);font-size:14px;display:flex;gap:16px;flex-wrap:wrap}
+.blog-body{max-width:var(--max);margin:0 auto;padding:0 24px 60px}
+.blog-body h2{font-family:'Playfair Display',serif;font-size:clamp(22px,3.5vw,28px);font-weight:600;color:#fff;margin:48px 0 16px;line-height:1.3}
+.blog-body h3{font-size:18px;font-weight:600;color:var(--accent);margin:32px 0 12px;letter-spacing:.3px}
+.blog-body p{margin-bottom:16px;color:var(--text)}
+.blog-body ul,.blog-body ol{margin:0 0 16px 20px;color:var(--text)}
+.blog-body li{margin-bottom:8px}
+.blog-body blockquote{border-left:3px solid var(--accent);padding:16px 20px;margin:24px 0;background:var(--bg2);border-radius:0 6px 6px 0;font-style:italic;color:var(--text2)}
+.blog-body strong{color:#fff;font-weight:600}
+.rule{padding:20px 24px;background:var(--bg2);border:1px solid var(--border);border-radius:6px;margin:16px 0}
+.rule .rule-num{display:inline-block;color:var(--accent);font-family:'Playfair Display',serif;font-size:24px;font-weight:700;margin-right:8px}
+.rule h3{display:inline-block;color:#fff;margin:0;font-size:17px}
+.rule p{margin-top:10px;margin-bottom:0;color:var(--text2);font-size:15px}
+.spiral-box{margin:24px 0;padding:24px;background:rgba(231,76,60,.05);border:1px solid rgba(231,76,60,.25);border-radius:8px}
+.spiral-box h4{color:#e74c3c;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:12px}
+.spiral-box p{color:var(--text);font-size:15px;margin-bottom:8px}
+.spiral-box p:last-child{margin-bottom:0}
+.faq-section{margin:48px 0;padding:40px 0;border-top:1px solid var(--border)}
+.faq-section h2{margin-top:0}
+.faq-item{border:1px solid var(--border);border-radius:6px;margin-bottom:12px;background:var(--bg2);overflow:hidden}
+.faq-q{padding:16px 20px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-weight:500;color:#fff;font-size:16px}
+.faq-q::after{content:'+';color:var(--accent);font-size:20px;font-weight:300;transition:transform .2s}
+.faq-item.open .faq-q::after{transform:rotate(45deg)}
+.faq-a{padding:0 20px 16px;color:var(--text2);font-size:15px;line-height:1.7;display:none}
+.faq-item.open .faq-a{display:block}
+.blog-cta{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:40px;text-align:center;margin:48px 0}
+.blog-cta h3{font-family:'Playfair Display',serif;font-size:24px;color:#fff;margin-bottom:12px}
+.blog-cta p{color:var(--text2);margin-bottom:20px;font-size:15px}
+.blog-cta .cta-btn{display:inline-block;background:var(--accent);color:#0b0b0f;padding:14px 32px;border-radius:4px;font-weight:600;font-size:14px;letter-spacing:.5px;text-transform:uppercase}
+.blog-cta .cta-btn:hover{background:var(--accent2);color:#0b0b0f}
+.blog-cta .cta-phone{color:var(--text3);font-size:14px;margin-top:12px}
+.cross-links{margin:40px 0;padding:24px;background:var(--bg2);border:1px solid var(--border);border-radius:6px}
+.cross-links h4{font-size:13px;color:var(--accent);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:16px}
+.cross-links a{display:block;padding:8px 0;color:var(--text);border-bottom:1px solid var(--border2);font-size:15px}
+.cross-links a:last-child{border-bottom:none}
+.cross-links a:hover{color:var(--accent)}
+.author-box{display:flex;gap:16px;align-items:flex-start;margin:40px 0;padding:24px;background:var(--bg2);border:1px solid var(--border);border-radius:6px}
+.author-box img{width:56px;height:56px;border-radius:50%;border:2px solid var(--accent)}
+.author-box .author-info h4{color:#fff;font-size:16px;margin-bottom:4px}
+.author-box .author-info p{color:var(--text3);font-size:14px;line-height:1.5}
+.blog-footer{border-top:1px solid var(--border2);padding:40px 24px;text-align:center;max-width:1100px;margin:0 auto}
+.blog-footer .footer-brand{color:var(--text3);font-size:13px;margin-bottom:8px}
+.blog-footer .footer-legal{color:var(--text3);font-size:12px;line-height:1.6}
+.blog-footer a{color:var(--text3)}
+.blog-footer a:hover{color:var(--accent)}
+.disclosure{margin:32px 0;padding:16px 20px;background:rgba(201,168,76,.06);border:1px solid rgba(201,168,76,.15);border-radius:6px;font-size:13px;color:var(--text3);line-height:1.7}
+@media(max-width:600px){.blog-nav-links{display:none}.blog-hero{padding:60px 16px 32px}.blog-body{padding:0 16px 40px}.blog-cta{padding:28px 20px}}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"When should you drop the price on a listing?","acceptedAnswer":{"@type":"Answer","text":"If the listing has had strong showing activity but no offers after 14-21 days, the price is the variable. If activity has been weak from the start, the diagnosis may be either price or presentation — both should be reviewed before committing to a drop."}},{"@type":"Question","name":"How much should you drop the price?","acceptedAnswer":{"@type":"Answer","text":"A meaningful drop is at least 3% and ideally across a search-bracket threshold. Multiple small drops of 1-2% rarely recover momentum and signal weakness. One decisive drop re-triggers MLS alerts and portal email blasts, restoring some of the initial 7-day attention burst."}},{"@type":"Question","name":"What is a search-bracket threshold?","acceptedAnswer":{"@type":"Answer","text":"Buyers search in round-number price bands: under $750K, $750K-$1M, $1M-$1.25M, and so on. A listing at $1,049,000 is invisible to buyers searching 'under $1M.' Dropping to $999,000 exposes the listing to a completely new search bracket and a new buyer pool."}},{"@type":"Question","name":"What is the price-drop death spiral?","acceptedAnswer":{"@type":"Answer","text":"The pattern of multiple small price reductions over weeks that train buyers to expect more drops. Each reduction signals weakness and motivates buyers to wait for the next one. The listing eventually closes well below where a single decisive reduction would have produced a sale."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Price Drop Strategy: When, How Much, and How to Avoid the Death Spiral","author":{"@type":"Person","name":"Connor MacIvor","url":"https://connorwithhonor.com"},"publisher":{"@type":"Organization","name":"Sellers Only Agent","logo":{"@type":"ImageObject","url":"https://assets.cdn.filesafe.space/A3obe1MUpPzAdHhfzx3I/media/69a39808167da44f788ab7db.png"}},"datePublished":"2026-05-17","description":"If your Santa Clarita listing needs a price reduction, the size, timing, and threshold of that drop determine whether you recover momentum or slide further."}</script>
+<link rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"><link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png"></head>
+<body>
+
+<nav class="blog-nav">
+  <div class="blog-nav-inner">
+    <a href="https://sellersonlyagent.com" class="blog-nav-brand">
+      <img src="https://assets.cdn.filesafe.space/A3obe1MUpPzAdHhfzx3I/media/69a39808167da44f788ab7db.png" alt="Sellers Only Agent logo">
+      <span>SellersOnlyAgent.com</span>
+    </a>
+    <div class="blog-nav-links">
+      <a href="https://sellersonlyagent.com/why">Philosophy</a>
+      <a href="https://sellersonlyagent.com/blog/">Blog</a>
+      <a href="https://sellersonlyagent.com/#consult" class="blog-nav-cta">Book Strategy Call</a>
+    </div>
+  </div>
+</nav>
+
+<header class="blog-hero">
+  <div class="category">Pricing Strategy · Price Drops</div>
+  <h1>Price Drop Strategy: When, How Much, and How to Avoid the Death Spiral</h1>
+  <div class="meta">
+    <span>Connor MacIvor</span>
+    <span>·</span>
+    <span>May 2026</span>
+    <span>·</span>
+    <span>7 min read</span>
+  </div>
+</header>
+
+<article class="blog-body">
+
+<p>Pricing correctly the first time is always cheaper than fixing it later. But sometimes the market shifts, the initial read was off, or activity simply stalls — and a price reduction becomes the right move. The question is not whether to drop. The question is when, by how much, and through what threshold.</p>
+
+<p>Get the price-drop strategy right and you recover meaningful momentum. Get it wrong — usually by dropping too little, too often, too late — and you trigger the death spiral that costs sellers far more than the original overpricing ever would have.</p>
+
+<h2>The diagnostic: what is week one telling you?</h2>
+<p>Before deciding on a price drop, separate the symptom from the cause. Two patterns produce stalled listings, and they require different responses:</p>
+
+<ul>
+  <li><strong>Strong showing activity, no offers.</strong> The marketing is working — buyers are touring. But no offers are landing. Diagnosis: the price is too high relative to what buyers are seeing at competing listings. A meaningful price drop is the fix.</li>
+  <li><strong>Weak showing activity from day one.</strong> Buyers are not even touring. Diagnosis: the price may be the issue, but so might the photography, the listing description, the staging, or the launch timing. Investigate all of these before dropping price — a drop on a presentation problem just makes the listing cheaper while keeping the underlying issue.</li>
+</ul>
+
+<p>This is why every Sellers Only Agent™ listing tracks weekly metrics from the launch: total online views per portal, saved-to-favorites count, showing requests, showings completed, and feedback from buyer agents. The data tells you whether you have a price problem, a presentation problem, or both.</p>
+
+<h2>The four price-drop rules that actually work</h2>
+
+<div class="rule">
+  <span class="rule-num">1</span><h3>One meaningful drop beats three small ones</h3>
+  <p>A single reduction of 3% or more re-triggers MLS saved-search alerts, portal new-price emails, and agent hot-sheet notifications. Three reductions of 1% each fire alert systems weakly and train buyers to wait for the next one. The math: one decisive drop produces more new buyer attention than three small drops combined.</p>
+</div>
+
+<div class="rule">
+  <span class="rule-num">2</span><h3>Drop across a search-bracket threshold</h3>
+  <p>Buyers search in round-number price brackets: under $750K, $750K-$1M, $1M-$1.25M. A listing at $1,049,000 is invisible to every buyer who set their max at $1M. Dropping to $999,000 exposes the listing to a completely new buyer pool. The right drop is not "what feels reasonable" — it is the number that clears the next threshold below the current list.</p>
+</div>
+
+<div class="rule">
+  <span class="rule-num">3</span><h3>Time the drop to a Thursday</h3>
+  <p>Saved-search alerts and weekend showing planning peak on Thursday and Friday. A Thursday price drop hits buyers as they are planning the weekend, gives buyer agents Friday to book showings, and captures the Saturday-Sunday traffic surge. Monday and Tuesday drops lose 3 days of momentum before the weekend even arrives.</p>
+</div>
+
+<div class="rule">
+  <span class="rule-num">4</span><h3>Pair the drop with a refresh</h3>
+  <p>A price drop alone is a signal of weakness. A price drop paired with a listing refresh — updated lead photo, refreshed description, new staging detail in photos, or an open house announcement — reads as renewed energy. Buyers respond differently to "the price came down because we are motivated" versus "the price came down and look how this property is presenting now."</p>
+</div>
+
+<h2>The death spiral pattern</h2>
+
+<div class="spiral-box">
+  <h4>How the death spiral looks</h4>
+  <p><strong>Week 1:</strong> Listed at $1,099,000. Tour activity. No offers.</p>
+  <p><strong>Week 3:</strong> Drop to $1,079,000 (-1.8%). Modest re-attention. Still no offers.</p>
+  <p><strong>Week 5:</strong> Drop to $1,059,000 (-1.9%). Diminishing re-attention. One low offer arrives at $980K.</p>
+  <p><strong>Week 7:</strong> Drop to $1,029,000 (-2.8%). Buyers now expect more drops and wait.</p>
+  <p><strong>Week 10:</strong> Drop to $999,000 (-2.9%). Finally clears the $1M threshold. New offers arrive at $950K-$970K.</p>
+  <p><strong>Outcome:</strong> Sells at $952,000 after 95 days. Same home, listed correctly at $1,025,000 from day one, would have closed in 14 days at $1,015,000-$1,030,000. Real cost: ~$70K and 80 extra days.</p>
+</div>
+
+<p>The death spiral is not caused by any single decision. It is caused by the pattern: too many small drops, too far apart, none of which decisively re-triggers buyer attention. Each drop conditions the buyer pool to expect another drop. By the time the price finally hits the level the market supports, the listing has been "training" buyers for weeks to come in low.</p>
+
+<h2>The right price-drop, modeled</h2>
+<p>Same scenario, different strategy:</p>
+
+<ul>
+  <li><strong>Week 1:</strong> Listed at $1,099,000. Strong tour activity. No offers.</li>
+  <li><strong>Week 3:</strong> Decisive Thursday drop to $999,000 (-9.1%). Crosses search-bracket threshold. Re-triggers MLS alerts, portal blasts, and buyer-agent hot sheets. Paired with refreshed lead photo and Sunday open house announcement.</li>
+  <li><strong>Week 4:</strong> Three offers arrive over the weekend. Multiple-offer review yields $1,015,000 accepted.</li>
+  <li><strong>Outcome:</strong> Sells at $1,015,000 after 28 days. Same home, same property, dramatically better outcome than the death-spiral pattern would have produced.</li>
+</ul>
+
+<p>The difference between the two scenarios is approximately $63,000 in retained sale price plus 67 fewer days on market — purely from the decision to drop decisively rather than incrementally.</p>
+
+<h2>The hardest decision: how big to go</h2>
+<p>Sellers usually want to drop as little as possible, hoping the smallest reduction will be enough. This is the most expensive instinct in pricing. The right size of drop is determined by:</p>
+
+<ol>
+  <li><strong>Search-bracket position.</strong> Where does the listing sit relative to the next round-number threshold below? If the listing is at $1,049,000, dropping to $999,000 is structurally more powerful than dropping to $1,029,000 — even though the dollar reduction is larger.</li>
+  <li><strong>Competing inventory.</strong> What are similar homes listed at? The drop needs to take you below the most directly competitive comp, not just slightly below your current price.</li>
+  <li><strong>Recent closed comps.</strong> If recent closed comps are running at $980,000, dropping to $1,030,000 still leaves you above where buyers are agreeing to pay. The drop must reach defensible market.</li>
+  <li><strong>Market direction.</strong> In a softening market, drop further than you would in a stable one. In a tightening market, smaller drops can suffice — though if a tightening market is not producing offers at your current price, the issue is likely not market direction.</li>
+</ol>
+
+<blockquote>"A price drop is not an apology. It is a strategic re-entry into the buyer pool. The goal is to make the listing competitive against current inventory and recent closed comps, in one decisive move, paired with a refresh that signals renewed energy. Get all three of those right and you will recover the listing. Get any of them wrong and the spiral continues." — Connor MacIvor</blockquote>
+
+<h2>When NOT to drop the price</h2>
+<p>Two situations warrant pausing on a drop:</p>
+
+<ul>
+  <li><strong>The listing has not yet completed its 14-day window.</strong> Patience matters here. The first 7-14 days is the proper attention window. Reductions inside that window are premature and waste the launch.</li>
+  <li><strong>Activity has been weak from day one and the diagnosis is presentation.</strong> If the photos are weak, the description is bland, or the staging is poor, fix those first. A price drop on a presentation problem just gives buyers a cheaper version of the same off-putting listing.</li>
+</ul>
+
+<h2>Connor's price-drop framework</h2>
+<p>Every Sellers Only Agent™ listing tracks the data needed to make a defensible drop decision:</p>
+
+<ul>
+  <li>Weekly portal view counts and saved-to-favorites trends</li>
+  <li>Showing requests vs showings completed (a divergence here suggests a price-pushback issue)</li>
+  <li>Direct feedback collected from buyer agents after showings</li>
+  <li>Competing-inventory tracking (new listings, price changes, closed sales in real time)</li>
+  <li>Days-on-market trend in the submarket and price band</li>
+</ul>
+
+<p>When a drop is warranted, the recommendation includes the size, the timing (Thursday in nearly every case), the threshold target, and the listing refresh paired with the drop. No incremental reductions. No drift. One decisive move, modeled to restore week-one-style attention.</p>
+
+<div class="blog-cta">
+  <h3>Avoid the Death Spiral Before It Starts</h3>
+  <p>The best price drop is the one you never have to make. Connor's pricing process is built to price correctly the first time, and to drop decisively if conditions require it.</p>
+  <a href="https://sellersonlyagent.com/#consult" class="cta-btn">Book Seller Strategy Call</a>
+  <div class="cta-phone"><a href="tel:+16614001720">661-400-1720</a></div>
+</div>
+
+<div class="disclosure">Outcomes vary by property, submarket, and listing strategy. Modeled scenarios above are illustrative of common patterns and not guarantees. The $17K Fair Fixed Fee covers Connor MacIvor's listing-side representation only. Other closing costs — escrow, title, HOA transfer, county transfer taxes, withholding, inspections, mandatory disclosures, and any buyer-side cooperating compensation offered — are not included in the $17K and are the seller's responsibility, though Connor negotiates these on the seller's behalf to minimize total seller cost. Connor MacIvor, REALTOR · CA DRE #01238257 · SYNC Brokerage. Sellers Only Agent™ is a trademark of Connor MacIvor (USPTO #99738462). All real estate commissions are negotiable per California Business and Professions Code Section 10140.6. If your home is currently listed for sale, this is not a solicitation.</div>
+
+<div class="cross-links">
+  <h4>Related Reading</h4>
+  <a href="https://sellersonlyagent.com/blog/pricing-your-santa-clarita-home-2026">The Complete Pricing Strategy Guide for Santa Clarita Sellers</a>
+  <a href="https://sellersonlyagent.com/blog/real-cost-overpricing-santa-clarita-home">The Real Cost of Overpricing Your Santa Clarita Home</a>
+  <a href="https://sellersonlyagent.com/blog/pricing-rising-vs-falling-inventory">How to Price When Inventory Is Rising (and When It's Falling)</a>
+</div>
+
+<div class="faq-section">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-item"><div class="faq-q">When should you drop the price?</div><div class="faq-a">If the listing has had strong showing activity but no offers after 14-21 days, the price is the variable. If activity has been weak from the start, review presentation before committing to a drop.</div></div>
+  <div class="faq-item"><div class="faq-q">How much should you drop?</div><div class="faq-a">A meaningful drop is at least 3% and ideally across a search-bracket threshold. Multiple small drops of 1-2% rarely recover momentum and signal weakness.</div></div>
+  <div class="faq-item"><div class="faq-q">What is a search-bracket threshold?</div><div class="faq-a">Buyers search in round-number price bands. A listing at $1,049,000 is invisible to buyers searching 'under $1M.' Dropping to $999,000 exposes the listing to a new buyer pool.</div></div>
+  <div class="faq-item"><div class="faq-q">What is the death spiral?</div><div class="faq-a">The pattern of multiple small reductions over weeks that train buyers to expect more drops. Each reduction signals weakness. The listing eventually closes well below where a single decisive reduction would have produced a sale.</div></div>
+</div>
+
+<div class="author-box">
+  <img src="https://assets.cdn.filesafe.space/A3obe1MUpPzAdHhfzx3I/media/69a39808167da44f788ab7db.png" alt="Connor MacIvor">
+  <div class="author-info">
+    <h4>Connor MacIvor · The Seller's Agent</h4>
+    <p>27+ years in real estate. Sellers only. $17K Fair Fixed Fee. Santa Clarita Valley.<br>CA DRE #01238257 · SYNC Brokerage</p>
+  </div>
+</div>
+
+</article>
+
+<footer class="blog-footer">
+  <div class="footer-brand"><a href="https://honorelevate.com">Coded by Connor with Honor</a> | AI Growth Architect</div>
+  <div class="footer-legal">
+    Connor T. MacIvor · The Seller's Agent · SellersOnlyAgent.com<br>
+    25060 Avenue Stanford, Suite 150, Santa Clarita CA 91355<br>
+    CA DRE #01238257 · SYNC Brokerage · <a href="tel:+16614001720">661-400-1720</a><br>
+    Seller representation only. No buyer agency.<br><br>
+    <a href="https://sellersonlyagent.com/privacy">Privacy Policy</a> · <a href="https://sellersonlyagent.com/terms">Terms of Service</a>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.faq-q').forEach(q=>{q.addEventListener('click',()=>{const item=q.parentElement;document.querySelectorAll('.faq-item').forEach(i=>{if(i!==item)i.classList.remove('open')});item.classList.toggle('open');});});
+</script>
+</body>
+</html>

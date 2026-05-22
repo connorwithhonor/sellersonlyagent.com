@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zillow Optimization: What to Adjust After the Auto-Feed Pulls In | Sellers Only Agent™</title>
+<meta name="description" content="The Zillow auto-feed is the starting line, not the finish. Photo order, amenity tags, video, feature flags, and price-strategy adjustments that move a Santa Clarita listing higher in Zillow search rankings.">
+<meta name="author" content="Connor MacIvor">
+<meta property="og:title" content="Zillow Optimization: What to Adjust After the Auto-Feed Pulls In">
+<meta property="og:description" content="The Zillow auto-feed is the starting line, not the finish.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://sellersonlyagent.com/blog/zillow-optimization-after-auto-feed">
+<meta property="og:image" content="https://assets.cdn.filesafe.space/A3obe1MUpPzAdHhfzx3I/media/69a39808167da44f788ab7db.png">
+<link rel="canonical" href="https://sellersonlyagent.com/blog/zillow-optimization-after-auto-feed">
+<link rel="icon" href="https://assets.cdn.filesafe.space/wGQNykcwXU4XZhG6toH7/media/69d4269da7dcb4cff0f0099a.svg" type="image/svg+xml">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0b0b0f;--bg2:#111118;--bg3:#18181f;--text:#e8e6e3;--text2:#a09e9a;--text3:#6b6966;--accent:#c9a84c;--accent2:#d4b65a;--border:#2a2a35;--border2:#1e1e28;--max:780px}
+html{scroll-behavior:smooth}body{background:var(--bg);color:var(--text);font-family:'Source Sans 3',sans-serif;line-height:1.75;font-size:17px;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none;transition:color .2s}a:hover{color:var(--accent2)}
+.blog-nav{position:sticky;top:0;z-index:100;background:rgba(11,11,15,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border2);padding:14px 0}
+.blog-nav-inner{max-width:1100px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
+.blog-nav-brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.blog-nav-brand img{height:36px;width:auto}
+.blog-nav-brand span{color:var(--text2);font-size:13px;letter-spacing:.5px;text-transform:uppercase}
+.blog-nav-links{display:flex;gap:20px;align-items:center}
+.blog-nav-links a{color:var(--text2);font-size:14px;letter-spacing:.3px}
+.blog-nav-links a:hover{color:var(--accent)}
+.blog-nav-cta{background:var(--accent);color:#0b0b0f;padding:8px 18px;border-radius:4px;font-weight:600;font-size:13px;letter-spacing:.4px;text-transform:uppercase}
+.blog-nav-cta:hover{background:var(--accent2);color:#0b0b0f}
+.blog-hero{max-width:var(--max);margin:0 auto;padding:80px 24px 40px}
+.blog-hero .category{color:var(--accent);font-size:12px;letter-spacing:2px;text-transform:uppercase;font-weight:600;margin-bottom:16px}
+.blog-hero h1{font-family:'Playfair Display',serif;font-size:clamp(28px,5vw,42px);font-weight:700;line-height:1.2;color:#fff;margin-bottom:20px}
+.blog-hero .meta{color:var(--text3);font-size:14px;display:flex;gap:16px;flex-wrap:wrap}
+.blog-body{max-width:var(--max);margin:0 auto;padding:0 24px 60px}
+.blog-body h2{font-family:'Playfair Display',serif;font-size:clamp(22px,3.5vw,28px);font-weight:600;color:#fff;margin:48px 0 16px;line-height:1.3}
+.blog-body h3{font-size:18px;font-weight:600;color:var(--accent);margin:32px 0 12px;letter-spacing:.3px}
+.blog-body p{margin-bottom:16px;color:var(--text)}
+.blog-body ul,.blog-body ol{margin:0 0 16px 20px;color:var(--text)}
+.blog-body li{margin-bottom:8px}
+.blog-body blockquote{border-left:3px solid var(--accent);padding:16px 20px;margin:24px 0;background:var(--bg2);border-radius:0 6px 6px 0;font-style:italic;color:var(--text2)}
+.blog-body strong{color:#fff;font-weight:600}
+.checklist{margin:24px 0;padding:24px;background:var(--bg2);border:1px solid var(--border);border-radius:6px}
+.checklist h4{color:var(--accent);font-size:13px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:14px}
+.checklist ul{list-style:none;padding:0;margin:0}
+.checklist li{padding:8px 0 8px 28px;border-bottom:1px solid var(--border2);font-size:15px;color:var(--text);position:relative}
+.checklist li:last-child{border-bottom:none}
+.checklist li::before{content:'✓';position:absolute;left:0;color:var(--accent);font-weight:600}
+.faq-section{margin:48px 0;padding:40px 0;border-top:1px solid var(--border)}
+.faq-section h2{margin-top:0}
+.faq-item{border:1px solid var(--border);border-radius:6px;margin-bottom:12px;background:var(--bg2);overflow:hidden}
+.faq-q{padding:16px 20px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-weight:500;color:#fff;font-size:16px}
+.faq-q::after{content:'+';color:var(--accent);font-size:20px;font-weight:300;transition:transform .2s}
+.faq-item.open .faq-q::after{transform:rotate(45deg)}
+.faq-a{padding:0 20px 16px;color:var(--text2);font-size:15px;line-height:1.7;display:none}
+.faq-item.open .faq-a{display:block}
+.blog-cta{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:40px;text-align:center;margin:48px 0}
+.blog-cta h3{font-family:'Playfair Display',serif;font-size:24px;color:#fff;margin-bottom:12px}
+.blog-cta p{color:var(--text2);margin-bottom:20px;font-size:15px}
+.blog-cta .cta-btn{display:inline-block;background:var(--accent);color:#0b0b0f;padding:14px 32px;border-radius:4px;font-weight:600;font-size:14px;letter-spacing:.5px;text-transform:uppercase}
+.blog-cta .cta-btn:hover{background:var(--accent2);color:#0b0b0f}
+.blog-cta .cta-phone{color:var(--text3);font-size:14px;margin-top:12px}
+.cross-links{margin:40px 0;padding:24px;background:var(--bg2);border:1px solid var(--border);border-radius:6px}
+.cross-links h4{font-size:13px;color:var(--accent);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:16px}
+.cross-links a{display:block;padding:8px 0;color:var(--text);border-bottom:1px solid var(--border2);font-size:15px}
+.cross-links a:last-child{border-bottom:none}
+.cross-links a:hover{color:var(--accent)}
+.author-box{display:flex;gap:16px;align-items:flex-start;margin:40px 0;padding:24px;background:var(--bg2);border:1px solid var(--border);border-radius:6px}
+.author-box img{width:56px;height:56px;border-radius:50%;border:2px solid var(--accent)}
+.author-box .author-info h4{color:#fff;font-size:16px;margin-bottom:4px}
+.author-box .author-info p{color:var(--text3);font-size:14px;line-height:1.5}
+.blog-footer{border-top:1px solid var(--border2);padding:40px 24px;text-align:center;max-width:1100px;margin:0 auto}
+.blog-footer .footer-brand{color:var(--text3);font-size:13px;margin-bottom:8px}
+.blog-footer .footer-legal{color:var(--text3);font-size:12px;line-height:1.6}
+.blog-footer a{color:var(--text3)}
+.blog-footer a:hover{color:var(--accent)}
+.disclosure{margin:32px 0;padding:16px 20px;background:rgba(201,168,76,.06);border:1px solid rgba(201,168,76,.15);border-radius:6px;font-size:13px;color:var(--text3);line-height:1.7}
+@media(max-width:600px){.blog-nav-links{display:none}.blog-hero{padding:60px 16px 32px}.blog-body{padding:0 16px 40px}.blog-cta{padding:28px 20px}}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does Zillow do automatically from the MLS feed?","acceptedAnswer":{"@type":"Answer","text":"Zillow pulls price, address, square footage, beds/baths, MLS public remarks, and photo gallery from the MLS feed automatically. It also generates its own Zestimate, populates basic amenity tags it can infer, and sorts photos in upload order or by its own logic. Agent-side adjustments after the feed pulls in are what differentiate strong Zillow listings from weak ones."}},{"@type":"Question","name":"Can agents change Zillow listing details?","acceptedAnswer":{"@type":"Answer","text":"Yes, within limits. Agents claim and verify Zillow listings through their professional Zillow account, then can reorder photos, confirm amenity tags, add video, manage open house events, and reply to inquiries. Some core data (price, address, beds/baths) flows from MLS and must be corrected at the MLS source."}},{"@type":"Question","name":"Does Zillow ranking affect listing visibility?","acceptedAnswer":{"@type":"Answer","text":"Yes. Zillow uses internal ranking signals — listing completeness, photo quality, agent claim status, recency of update, click-through rate — to decide which listings surface in default search results. A fully optimized listing ranks higher in default sort and produces more views."}},{"@type":"Question","name":"How often should the Zillow listing be checked?","acceptedAnswer":{"@type":"Answer","text":"Connor checks every active listing on Zillow at minimum weekly, with daily checks during the critical 7-day launch window. Status changes, price adjustments, and amenity changes get reflected immediately. Stale listings drop in Zillow ranking."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Zillow Optimization: What to Adjust After the Auto-Feed Pulls In","author":{"@type":"Person","name":"Connor MacIvor","url":"https://connorwithhonor.com"},"publisher":{"@type":"Organization","name":"Sellers Only Agent","logo":{"@type":"ImageObject","url":"https://assets.cdn.filesafe.space/A3obe1MUpPzAdHhfzx3I/media/69a39808167da44f788ab7db.png"}},"datePublished":"2026-05-17","description":"The Zillow auto-feed is the starting line, not the finish. Photo order, amenity tags, video, feature flags, and price-strategy adjustments."}</script>
+<link rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"><link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png"></head>
+<body>
+
+<nav class="blog-nav"><div class="blog-nav-inner"><a href="https://sellersonlyagent.com" class="blog-nav-brand"><img src="https://assets.cdn.filesafe.space/A3obe1MUpPzAdHhfzx3I/media/69a39808167da44f788ab7db.png" alt="Sellers Only Agent logo"><span>SellersOnlyAgent.com</span></a><div class="blog-nav-links"><a href="https://sellersonlyagent.com/why">Philosophy</a><a href="https://sellersonlyagent.com/blog/">Blog</a><a href="https://sellersonlyagent.com/#consult" class="blog-nav-cta">Book Strategy Call</a></div></div></nav>
+
+<header class="blog-hero">
+  <div class="category">MLS &amp; Syndication · Zillow</div>
+  <h1>Zillow Optimization: What to Adjust After the Auto-Feed Pulls In</h1>
+  <div class="meta"><span>Connor MacIvor</span><span>·</span><span>May 2026</span><span>·</span><span>6 min read</span></div>
+</header>
+
+<article class="blog-body">
+
+<p>Zillow receives roughly 90% of all online real estate traffic in Southern California. Buyers, agents, neighbors, and curious parties all start there. A Santa Clarita listing that performs well on Zillow drives the downstream funnel. A listing that performs poorly on Zillow rarely recovers anywhere else. The auto-feed gets the listing onto the platform; the optimization pass determines whether it actually performs there.</p>
+
+<h2>What the auto-feed delivers and what it does not</h2>
+
+<p>The MLS feed populates Zillow with the core data — price, address, square footage, beds, baths, public remarks, photo gallery. Zillow generates its Zestimate, applies its own inferred amenity tags, and renders the listing in its standard template. What it does not do without agent intervention:</p>
+
+<ul>
+  <li>Curate the photo order for maximum scroll-through</li>
+  <li>Verify all amenity tags are populated</li>
+  <li>Add video content via Zillow's direct video upload</li>
+  <li>Flag price reductions, open houses, or virtual tour availability</li>
+  <li>Connect the listing to the agent's Zillow professional profile for credibility signals</li>
+  <li>Reply to buyer inquiries that arrive through Zillow's contact form</li>
+</ul>
+
+<p>All of these require agent action. Most listings never get them.</p>
+
+<h2>The Zillow polish checklist</h2>
+
+<div class="checklist">
+  <h4>Photo gallery</h4>
+  <ul>
+    <li>Reorder so the strongest 5 photos sit in positions 1-5</li>
+    <li>Verify lead photo is the strongest exterior (twilight or golden-hour front)</li>
+    <li>Confirm photo count matches MLS (no missing images)</li>
+    <li>Verify photos render correctly on mobile (where most Zillow traffic happens)</li>
+    <li>Remove any low-quality or duplicate shots</li>
+  </ul>
+</div>
+
+<div class="checklist">
+  <h4>Listing details</h4>
+  <ul>
+    <li>Confirm Zillow's beds/baths/sqft match MLS exactly</li>
+    <li>Verify lot size displays correctly</li>
+    <li>Check year built accuracy</li>
+    <li>Review HOA fee and frequency</li>
+    <li>Confirm school district assignment is correct</li>
+  </ul>
+</div>
+
+<div class="checklist">
+  <h4>Amenity tags</h4>
+  <ul>
+    <li>Pool, spa, view, fireplace, garage spaces, parking type</li>
+    <li>Heating and cooling type</li>
+    <li>Flooring types per room (Zillow's facts table)</li>
+    <li>Appliances included</li>
+    <li>Special features (smart home, solar, EV charger, etc.)</li>
+  </ul>
+</div>
+
+<div class="checklist">
+  <h4>Description rendering</h4>
+  <ul>
+    <li>Confirm the MLS description shows in full</li>
+    <li>Check that line breaks render correctly</li>
+    <li>Verify no truncation at a critical sentence</li>
+    <li>Confirm fair housing compliance</li>
+    <li>Spot-check for any portal-specific filtering or scrubbing</li>
+  </ul>
+</div>
+
+<div class="checklist">
+  <h4>Video and tours</h4>
+  <ul>
+    <li>Upload walkthrough video directly to Zillow's video field</li>
+    <li>Embed 3D virtual tour if produced (Matterport or similar)</li>
+    <li>Add drone footage if available</li>
+    <li>Confirm video plays correctly on mobile and desktop</li>
+  </ul>
+</div>
+
+<div class="checklist">
+  <h4>Events and flags</h4>
+  <ul>
+    <li>Add upcoming open house dates with full details</li>
+    <li>Confirm "New Listing" flag is active</li>
+    <li>Flag price reductions when applicable (drives "Recent Price Cut" alerts)</li>
+    <li>Verify the listing is set to actively accept showing requests</li>
+    <li>Check virtual tour availability flag</li>
+  </ul>
+</div>
+
+<h2>The agent profile credibility layer</h2>
+<p>Zillow listings claimed and verified by an active agent profile rank higher in default search results. Connor's listings are claimed within minutes of activation, with the agent profile fully populated (headshot, bio, license number, years of experience, customer reviews). This is a credibility signal Zillow uses to differentiate listings — and it costs nothing to capture.</p>
+
+<h2>Reviewing the Zestimate context</h2>
+<p>Zillow displays the Zestimate prominently on every listing. If the list price is well above the Zestimate, buyers may anchor to the lower number. If well below, buyers may assume there is something wrong with the property.</p>
+
+<p>The Zestimate is not the pricing strategy — the CMA is. But the Zestimate visibility on Zillow is a context factor every Santa Clarita seller should be aware of, and Connor reviews it for every listing before launch. In a small number of cases the Zestimate is meaningfully off (typically because the algorithm missed recent upgrades), and Zillow allows agents to add context that helps inform buyers.</p>
+
+<h2>Inbound inquiry routing</h2>
+<p>Every Zillow inquiry routes through Connor's AI Voice Agent and his direct line within minutes. The inquiry form is checked daily; unanswered inquiries cost leads. Auto-responses confirm receipt while Connor or the AI follows up substantively.</p>
+
+<h2>Ongoing maintenance during the listing</h2>
+<p>The Zillow optimization is not a one-time event. Throughout the listing period, the listing gets:</p>
+
+<ul>
+  <li>Weekly photo refresh if any update applies (newly added open house, completed touch-up)</li>
+  <li>Daily inquiry response checks</li>
+  <li>Price-reduction announcements timed to Thursday for maximum re-attention</li>
+  <li>Open house events refreshed each weekend</li>
+  <li>Final status update when the listing moves to pending or closed</li>
+</ul>
+
+<blockquote>"Zillow is not a passive distribution channel. It is an active marketing platform with ranking signals, agent claim mechanics, and dozens of fields most listings never populate. The difference between a fully optimized Zillow listing and an auto-fed one is the difference between 8,000 weekly views and 1,200." — Connor MacIvor</blockquote>
+
+<div class="blog-cta">
+  <h3>See Your Listing Optimized on Zillow</h3>
+  <p>Connor walks you through the Zillow polish pass on a recent listing. The checklist is concrete and the impact is measurable.</p>
+  <a href="https://sellersonlyagent.com/#consult" class="cta-btn">Book Seller Strategy Call</a>
+  <div class="cta-phone"><a href="tel:+16614001720">661-400-1720</a></div>
+</div>
+
+<div class="disclosure">Zillow features, ranking signals, and amenity tag structures are controlled by Zillow Group and subject to change. The $17K Fair Fixed Fee covers Connor MacIvor's listing-side representation only, including Zillow optimization. Other closing costs are the seller's responsibility, though Connor negotiates them on the seller's behalf to minimize total seller cost. Connor MacIvor, REALTOR · CA DRE #01238257 · SYNC Brokerage. Sellers Only Agent™ is a trademark of Connor MacIvor (USPTO #99738462). All real estate commissions are negotiable per California Business and Professions Code Section 10140.6. If your home is currently listed for sale, this is not a solicitation.</div>
+
+<div class="cross-links">
+  <h4>Related Reading</h4>
+  <a href="https://sellersonlyagent.com/blog/mls-syndication-listing-optimization">The Complete MLS & Syndication Playbook</a>
+  <a href="https://sellersonlyagent.com/blog/mls-listing-description-words-that-sell">The MLS Listing Description: Words That Sell</a>
+  <a href="https://sellersonlyagent.com/blog/redfin-realtor-polish-pass">Redfin and Realtor.com: The Polish Pass</a>
+</div>
+
+<div class="faq-section">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-item"><div class="faq-q">What does Zillow do automatically?</div><div class="faq-a">Pulls price, address, beds/baths, public remarks, and photos from MLS. Generates Zestimate, populates inferred amenity tags, renders in standard template. Agent-side adjustments differentiate strong from weak.</div></div>
+  <div class="faq-item"><div class="faq-q">Can agents change Zillow details?</div><div class="faq-a">Yes, within limits. Agents reorder photos, confirm amenity tags, add video, manage events, reply to inquiries. Core data flows from MLS.</div></div>
+  <div class="faq-item"><div class="faq-q">Does Zillow ranking affect visibility?</div><div class="faq-a">Yes. Zillow uses completeness, photo quality, agent claim, recency, and click-through to rank. Fully optimized listings rank higher in default sort.</div></div>
+  <div class="faq-item"><div class="faq-q">How often should Zillow be checked?</div><div class="faq-a">Weekly minimum, daily during the 7-day launch window. Status, price, and amenity changes reflected immediately.</div></div>
+</div>
+
+<div class="author-box"><img src="https://assets.cdn.filesafe.space/A3obe1MUpPzAdHhfzx3I/media/69a39808167da44f788ab7db.png" alt="Connor MacIvor"><div class="author-info"><h4>Connor MacIvor · The Seller's Agent</h4><p>27+ years in real estate. Sellers only. $17K Fair Fixed Fee. Santa Clarita Valley.<br>CA DRE #01238257 · SYNC Brokerage</p></div></div>
+
+</article>
+
+<footer class="blog-footer"><div class="footer-brand"><a href="https://honorelevate.com">Coded by Connor with Honor</a> | AI Growth Architect</div><div class="footer-legal">Connor T. MacIvor · The Seller's Agent · SellersOnlyAgent.com<br>25060 Avenue Stanford, Suite 150, Santa Clarita CA 91355<br>CA DRE #01238257 · SYNC Brokerage · <a href="tel:+16614001720">661-400-1720</a><br>Seller representation only. No buyer agency.<br><br><a href="https://sellersonlyagent.com/privacy">Privacy Policy</a> · <a href="https://sellersonlyagent.com/terms">Terms of Service</a></div></footer>
+
+<script>document.querySelectorAll('.faq-q').forEach(q=>{q.addEventListener('click',()=>{const item=q.parentElement;document.querySelectorAll('.faq-item').forEach(i=>{if(i!==item)i.classList.remove('open')});item.classList.toggle('open');});});</script>
+</body>
+</html>

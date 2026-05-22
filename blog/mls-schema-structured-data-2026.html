@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MLS Schema and Structured Data: Why It Matters in 2026 | Sellers Only Agent™</title>
+<meta name="description" content="Schema.org structured data is what lets Google and AI engines understand your listing. Properly marked-up listings rank higher, surface in rich results, and get cited by AI assistants. Here is how it works.">
+<meta name="author" content="Connor MacIvor">
+<meta property="og:title" content="MLS Schema and Structured Data: Why It Matters in 2026">
+<meta property="og:description" content="Schema.org structured data is what lets Google and AI engines understand your listing.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://sellersonlyagent.com/blog/mls-schema-structured-data-2026">
+<meta property="og:image" content="https://assets.cdn.filesafe.space/A3obe1MUpPzAdHhfzx3I/media/69a39808167da44f788ab7db.png">
+<link rel="canonical" href="https://sellersonlyagent.com/blog/mls-schema-structured-data-2026">
+<link rel="icon" href="https://assets.cdn.filesafe.space/wGQNykcwXU4XZhG6toH7/media/69d4269da7dcb4cff0f0099a.svg" type="image/svg+xml">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0b0b0f;--bg2:#111118;--bg3:#18181f;--text:#e8e6e3;--text2:#a09e9a;--text3:#6b6966;--accent:#c9a84c;--accent2:#d4b65a;--border:#2a2a35;--border2:#1e1e28;--max:780px}
+html{scroll-behavior:smooth}body{background:var(--bg);color:var(--text);font-family:'Source Sans 3',sans-serif;line-height:1.75;font-size:17px;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none;transition:color .2s}a:hover{color:var(--accent2)}
+.blog-nav{position:sticky;top:0;z-index:100;background:rgba(11,11,15,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border2);padding:14px 0}
+.blog-nav-inner{max-width:1100px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
+.blog-nav-brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.blog-nav-brand img{height:36px;width:auto}
+.blog-nav-brand span{color:var(--text2);font-size:13px;letter-spacing:.5px;text-transform:uppercase}
+.blog-nav-links{display:flex;gap:20px;align-items:center}
+.blog-nav-links a{color:var(--text2);font-size:14px;letter-spacing:.3px}
+.blog-nav-links a:hover{color:var(--accent)}
+.blog-nav-cta{background:var(--accent);color:#0b0b0f;padding:8px 18px;border-radius:4px;font-weight:600;font-size:13px;letter-spacing:.4px;text-transform:uppercase}
+.blog-nav-cta:hover{background:var(--accent2);color:#0b0b0f}
+.blog-hero{max-width:var(--max);margin:0 auto;padding:80px 24px 40px}
+.blog-hero .category{color:var(--accent);font-size:12px;letter-spacing:2px;text-transform:uppercase;font-weight:600;margin-bottom:16px}
+.blog-hero h1{font-family:'Playfair Display',serif;font-size:clamp(28px,5vw,42px);font-weight:700;line-height:1.2;color:#fff;margin-bottom:20px}
+.blog-hero .meta{color:var(--text3);font-size:14px;display:flex;gap:16px;flex-wrap:wrap}
+.blog-body{max-width:var(--max);margin:0 auto;padding:0 24px 60px}
+.blog-body h2{font-family:'Playfair Display',serif;font-size:clamp(22px,3.5vw,28px);font-weight:600;color:#fff;margin:48px 0 16px;line-height:1.3}
+.blog-body h3{font-size:18px;font-weight:600;color:var(--accent);margin:32px 0 12px;letter-spacing:.3px}
+.blog-body p{margin-bottom:16px;color:var(--text)}
+.blog-body ul,.blog-body ol{margin:0 0 16px 20px;color:var(--text)}
+.blog-body li{margin-bottom:8px}
+.blog-body blockquote{border-left:3px solid var(--accent);padding:16px 20px;margin:24px 0;background:var(--bg2);border-radius:0 6px 6px 0;font-style:italic;color:var(--text2)}
+.blog-body strong{color:#fff;font-weight:600}
+.blog-body code{background:var(--bg3);padding:2px 6px;border-radius:3px;font-size:14px;color:var(--accent2);font-family:'Courier New',monospace}
+.schema-card{padding:18px;background:var(--bg2);border:1px solid var(--border);border-radius:6px;margin:14px 0}
+.schema-card h4{color:var(--accent);font-size:14px;margin-bottom:8px}
+.schema-card p{margin:0;font-size:14px;color:var(--text2);line-height:1.6}
+.faq-section{margin:48px 0;padding:40px 0;border-top:1px solid var(--border)}
+.faq-section h2{margin-top:0}
+.faq-item{border:1px solid var(--border);border-radius:6px;margin-bottom:12px;background:var(--bg2);overflow:hidden}
+.faq-q{padding:16px 20px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-weight:500;color:#fff;font-size:16px}
+.faq-q::after{content:'+';color:var(--accent);font-size:20px;font-weight:300;transition:transform .2s}
+.faq-item.open .faq-q::after{transform:rotate(45deg)}
+.faq-a{padding:0 20px 16px;color:var(--text2);font-size:15px;line-height:1.7;display:none}
+.faq-item.open .faq-a{display:block}
+.blog-cta{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:40px;text-align:center;margin:48px 0}
+.blog-cta h3{font-family:'Playfair Display',serif;font-size:24px;color:#fff;margin-bottom:12px}
+.blog-cta p{color:var(--text2);margin-bottom:20px;font-size:15px}
+.blog-cta .cta-btn{display:inline-block;background:var(--accent);color:#0b0b0f;padding:14px 32px;border-radius:4px;font-weight:600;font-size:14px;letter-spacing:.5px;text-transform:uppercase}
+.blog-cta .cta-btn:hover{background:var(--accent2);color:#0b0b0f}
+.blog-cta .cta-phone{color:var(--text3);font-size:14px;margin-top:12px}
+.cross-links{margin:40px 0;padding:24px;background:var(--bg2);border:1px solid var(--border);border-radius:6px}
+.cross-links h4{font-size:13px;color:var(--accent);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:16px}
+.cross-links a{display:block;padding:8px 0;color:var(--text);border-bottom:1px solid var(--border2);font-size:15px}
+.cross-links a:last-child{border-bottom:none}
+.cross-links a:hover{color:var(--accent)}
+.author-box{display:flex;gap:16px;align-items:flex-start;margin:40px 0;padding:24px;background:var(--bg2);border:1px solid var(--border);border-radius:6px}
+.author-box img{width:56px;height:56px;border-radius:50%;border:2px solid var(--accent)}
+.author-box .author-info h4{color:#fff;font-size:16px;margin-bottom:4px}
+.author-box .author-info p{color:var(--text3);font-size:14px;line-height:1.5}
+.blog-footer{border-top:1px solid var(--border2);padding:40px 24px;text-align:center;max-width:1100px;margin:0 auto}
+.blog-footer .footer-brand{color:var(--text3);font-size:13px;margin-bottom:8px}
+.blog-footer .footer-legal{color:var(--text3);font-size:12px;line-height:1.6}
+.blog-footer a{color:var(--text3)}
+.blog-footer a:hover{color:var(--accent)}
+.disclosure{margin:32px 0;padding:16px 20px;background:rgba(201,168,76,.06);border:1px solid rgba(201,168,76,.15);border-radius:6px;font-size:13px;color:var(--text3);line-height:1.7}
+@media(max-width:600px){.blog-nav-links{display:none}.blog-hero{padding:60px 16px 32px}.blog-body{padding:0 16px 40px}.blog-cta{padding:28px 20px}}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is schema markup?","acceptedAnswer":{"@type":"Answer","text":"Schema markup is structured data using the schema.org vocabulary that tells search engines and AI assistants exactly what a page is about. For real estate, schema identifies a listing as a property, with structured fields for price, beds, baths, address, photos, and features."}},{"@type":"Question","name":"Does schema markup help my listing rank higher?","acceptedAnswer":{"@type":"Answer","text":"Schema does not directly increase rankings, but it makes pages eligible for rich results (image carousels, price displays, ratings) in Google search and citation by AI assistants. Eligible listings get more visible placement and higher click-through rates than unmarked listings."}},{"@type":"Question","name":"What schema types apply to real estate listings?","acceptedAnswer":{"@type":"Answer","text":"Primary types: RealEstateListing, Place, House (or appropriate subtype), Article (for blog content about a listing), FAQPage (for property FAQs), BreadcrumbList (for navigation), and ImageObject (for each photo). Each provides structured signals to search and AI engines."}},{"@type":"Question","name":"Where does the schema actually live?","acceptedAnswer":{"@type":"Answer","text":"Schema is embedded as JSON-LD inside the HTML head of the AI Property Page. It is invisible to human viewers but machine-readable. Google's Rich Results test, Schema.org validator, and similar tools confirm the markup is valid and complete."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"MLS Schema and Structured Data: Why It Matters in 2026","author":{"@type":"Person","name":"Connor MacIvor","url":"https://connorwithhonor.com"},"publisher":{"@type":"Organization","name":"Sellers Only Agent","logo":{"@type":"ImageObject","url":"https://assets.cdn.filesafe.space/A3obe1MUpPzAdHhfzx3I/media/69a39808167da44f788ab7db.png"}},"datePublished":"2026-05-17","description":"Schema.org structured data is what lets Google and AI engines understand your listing."}</script>
+<link rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"><link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png"></head>
+<body>
+
+<nav class="blog-nav"><div class="blog-nav-inner"><a href="https://sellersonlyagent.com" class="blog-nav-brand"><img src="https://assets.cdn.filesafe.space/A3obe1MUpPzAdHhfzx3I/media/69a39808167da44f788ab7db.png" alt="Sellers Only Agent logo"><span>SellersOnlyAgent.com</span></a><div class="blog-nav-links"><a href="https://sellersonlyagent.com/why">Philosophy</a><a href="https://sellersonlyagent.com/blog/">Blog</a><a href="https://sellersonlyagent.com/#consult" class="blog-nav-cta">Book Strategy Call</a></div></div></nav>
+
+<header class="blog-hero">
+  <div class="category">MLS &amp; Syndication · Schema</div>
+  <h1>MLS Schema and Structured Data: Why It Matters in 2026</h1>
+  <div class="meta"><span>Connor MacIvor</span><span>·</span><span>May 2026</span><span>·</span><span>6 min read</span></div>
+</header>
+
+<article class="blog-body">
+
+<p>Search engines and AI assistants do not read web pages the way humans do. They read structured data — machine-readable tags that explicitly identify what every piece of content represents. For real estate listings, structured data is what tells Google that a page is a property for sale at a specific address, at a specific price, with specific features. Without it, the engines guess. With it, the engines know.</p>
+
+<p>In 2026, with AI assistants citing web content in their responses, structured data has moved from "nice to have" to "table stakes" for any listing that wants to be discoverable beyond the major portals.</p>
+
+<h2>What schema.org is</h2>
+<p>Schema.org is a shared vocabulary created jointly by Google, Microsoft, Yahoo, and Yandex to standardize structured data on the web. It defines types (Person, Place, Product, Event, RealEstateListing, etc.) and properties (name, address, price, image, etc.) that web publishers can use to mark up their content in a way all major search engines understand.</p>
+
+<p>The markup is embedded as JSON-LD (JavaScript Object Notation for Linked Data) inside the HTML head of a page. It is invisible to human readers but machine-readable. A properly marked-up real estate listing tells the search engine:</p>
+
+<ul>
+  <li>This is a real estate listing</li>
+  <li>The address is X</li>
+  <li>The asking price is Y</li>
+  <li>It has Z beds and W baths</li>
+  <li>These are the photos</li>
+  <li>These are the features</li>
+  <li>This is the agent of record</li>
+</ul>
+
+<h2>The schema types every AI Property Page should include</h2>
+
+<div class="schema-card"><h4>RealEstateListing</h4><p>The primary schema type. Identifies the page as a property for sale, with structured fields for price, address, beds, baths, square footage, lot size, year built, and listing date.</p></div>
+
+<div class="schema-card"><h4>Place / House (or appropriate subtype)</h4><p>Identifies the physical property. Address, geo-coordinates, amenity features, accessibility features.</p></div>
+
+<div class="schema-card"><h4>ImageObject (per photo)</h4><p>Each listing photo gets its own structured data with caption, contentUrl, and relationship to the parent RealEstateListing. Makes photos eligible for Google Image Search ranking.</p></div>
+
+<div class="schema-card"><h4>VideoObject (if video produced)</h4><p>Walkthrough video gets structured data identifying it as a property tour. Drives Google video search visibility.</p></div>
+
+<div class="schema-card"><h4>FAQPage</h4><p>Property-specific Q&A marked up as FAQPage schema. Direct fuel for AI assistant citation when buyers ask questions about the property or neighborhood.</p></div>
+
+<div class="schema-card"><h4>BreadcrumbList</h4><p>Identifies the page's position in the site hierarchy (Home › Blog/Listings › Specific Listing). Helps Google understand site structure.</p></div>
+
+<div class="schema-card"><h4>Person (Connor)</h4><p>Connor's agent profile is marked up as a Person schema, with role, license, brokerage, and authoritative URL pointing to his identity hub.</p></div>
+
+<div class="schema-card"><h4>Organization (SYNC Brokerage)</h4><p>The brokerage of record is identified with its own Organization schema, completing the responsible-party chain required by California disclosure law.</p></div>
+
+<h2>What this changes in search results</h2>
+
+<p>Listings with complete schema are eligible for:</p>
+
+<ul>
+  <li><strong>Rich results in Google:</strong> Image carousels, price displays, rating stars, and structured property cards instead of plain blue links.</li>
+  <li><strong>Google AI Overview citation:</strong> When buyers ask Google "what does X cost in Santa Clarita," the AI Overview pulls from structured-data-rich pages.</li>
+  <li><strong>ChatGPT, Claude, Perplexity, Gemini citation:</strong> AI assistants prefer structured, citation-friendly content when answering buyer queries.</li>
+  <li><strong>Google Image Search ranking:</strong> Each properly marked-up photo can appear in image-based queries.</li>
+  <li><strong>Google Maps and local search integration:</strong> Place schema connects to Maps when buyers search neighborhood-level queries.</li>
+</ul>
+
+<h2>What MLS feeds typically deliver vs what is needed</h2>
+<p>MLS data carries the raw property information. Portal pages (Zillow, Redfin, Realtor.com) generate their own schema from that feed, with varying completeness. Connor's AI Property Page is built from scratch with full, validated schema markup — every field complete, every photo identified, every FAQ tagged.</p>
+
+<p>The result: properties where the AI Property Page outranks portal pages for the specific address, surfaces in AI assistant responses, and captures buyer attention through discovery channels portal listings do not access.</p>
+
+<h2>How to verify schema is working</h2>
+<p>Three tools confirm schema validity:</p>
+
+<ul>
+  <li><strong>Google Rich Results Test</strong> — verifies the page is eligible for rich results in Google search</li>
+  <li><strong>Schema.org Validator</strong> — confirms the JSON-LD is syntactically valid and complete</li>
+  <li><strong>Google Search Console</strong> — reports schema errors and rich result impressions over time</li>
+</ul>
+
+<p>Every Sellers Only Agent™ AI Property Page is validated through these tools before activation. Errors get corrected. Warnings get reviewed. Confirmation of clean structured data is part of the standard launch.</p>
+
+<blockquote>"Schema is the difference between a search engine that has to guess what your page is and one that knows. In 2026, with AI engines citing structured content, that difference is no longer optional. It is the baseline for any listing that wants to be found outside the major portals." — Connor MacIvor</blockquote>
+
+<div class="blog-cta">
+  <h3>See the Schema Build on a Sample Listing</h3>
+  <p>Connor walks through the JSON-LD structure on a recent AI Property Page. Concrete, verifiable, and part of every listing.</p>
+  <a href="https://sellersonlyagent.com/#consult" class="cta-btn">Book Seller Strategy Call</a>
+  <div class="cta-phone"><a href="tel:+16614001720">661-400-1720</a></div>
+</div>
+
+<div class="disclosure">Schema markup, JSON-LD validation, and rich result eligibility are controlled by Google and the schema.org community and subject to change. The $17K Fair Fixed Fee covers Connor MacIvor's listing-side representation only, including AI Property Page schema build. Other closing costs are the seller's responsibility, though Connor negotiates them on the seller's behalf to minimize total seller cost. Connor MacIvor, REALTOR · CA DRE #01238257 · SYNC Brokerage. Sellers Only Agent™ is a trademark of Connor MacIvor (USPTO #99738462). All real estate commissions are negotiable per California Business and Professions Code Section 10140.6. If your home is currently listed for sale, this is not a solicitation.</div>
+
+<div class="cross-links">
+  <h4>Related Reading</h4>
+  <a href="https://sellersonlyagent.com/blog/mls-syndication-listing-optimization">The Complete MLS & Syndication Playbook</a>
+  <a href="https://sellersonlyagent.com/blog/ai-property-page-listing-website">The Custom AI Property Page</a>
+  <a href="https://sellersonlyagent.com/blog/image-level-seo-listing-photos">Image-Level SEO for Listing Photos</a>
+</div>
+
+<div class="faq-section">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-item"><div class="faq-q">What is schema markup?</div><div class="faq-a">Structured data using schema.org vocabulary that tells search engines and AI assistants what a page is. For real estate, identifies a listing as a property with structured fields for price, beds, baths, address, photos.</div></div>
+  <div class="faq-item"><div class="faq-q">Does schema help my listing rank?</div><div class="faq-a">Not directly, but makes pages eligible for rich results and AI citation. Eligible listings get more visible placement and higher click-through.</div></div>
+  <div class="faq-item"><div class="faq-q">What schema types apply?</div><div class="faq-a">RealEstateListing, Place/House, Article, FAQPage, BreadcrumbList, ImageObject, VideoObject. Each provides structured signals to search and AI engines.</div></div>
+  <div class="faq-item"><div class="faq-q">Where does the schema live?</div><div class="faq-a">Embedded as JSON-LD inside the HTML head. Invisible to humans, machine-readable. Validated via Google Rich Results test before publishing.</div></div>
+</div>
+
+<div class="author-box"><img src="https://assets.cdn.filesafe.space/A3obe1MUpPzAdHhfzx3I/media/69a39808167da44f788ab7db.png" alt="Connor MacIvor"><div class="author-info"><h4>Connor MacIvor · The Seller's Agent</h4><p>27+ years in real estate. Sellers only. $17K Fair Fixed Fee. Santa Clarita Valley.<br>CA DRE #01238257 · SYNC Brokerage</p></div></div>
+
+</article>
+
+<footer class="blog-footer"><div class="footer-brand"><a href="https://honorelevate.com">Coded by Connor with Honor</a> | AI Growth Architect</div><div class="footer-legal">Connor T. MacIvor · The Seller's Agent · SellersOnlyAgent.com<br>25060 Avenue Stanford, Suite 150, Santa Clarita CA 91355<br>CA DRE #01238257 · SYNC Brokerage · <a href="tel:+16614001720">661-400-1720</a><br>Seller representation only. No buyer agency.<br><br><a href="https://sellersonlyagent.com/privacy">Privacy Policy</a> · <a href="https://sellersonlyagent.com/terms">Terms of Service</a></div></footer>
+
+<script>document.querySelectorAll('.faq-q').forEach(q=>{q.addEventListener('click',()=>{const item=q.parentElement;document.querySelectorAll('.faq-item').forEach(i=>{if(i!==item)i.classList.remove('open')});item.classList.toggle('open');});});</script>
+</body>
+</html>
