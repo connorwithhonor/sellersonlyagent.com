@@ -5,6 +5,14 @@ never have to re-discover where this work lives. The IDX work itself is NOT code
 it's an email + paperwork process (CRMLS support ticket **API-127**) plus the lead-gen sites it
 will feed._
 
+## Key IDs (CONFIRMED 2026-06-02 from a SYNC MLS listing detail sheet)
+- **SYNC Brokerage CRMLS Office ID: `SR207023513`** ← this is the **Trestle "Broker ID"** to enter.
+- **SYNC broker-of-record DRE (LO State License): `02031490`** ← fallback for the Broker ID field.
+- Connor agent: CRMLS User ID `F210006440`, DRE `01238257`.
+- Trestle wizard: Business Type = **Broker**, Multiple Listing Organization = **California Regional MLS**.
+- DO NOT USE (old brokerage Realty One Group): Office ID `SRf7001242`, Office DRE `01015471`.
+  Also dead: `02113158` (didn't match SYNC).
+
 ## Players
 - **Matt Coonis** — Licensing Supervisor at **REcore** (recore.net), `licensing@recore.net`,
   909.859.2040. The gatekeeper for the CRMLS API/IDX feed. Friendly and helpful.
