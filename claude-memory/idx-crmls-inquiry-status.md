@@ -8,6 +8,8 @@ will feed._
 ## Key IDs (CONFIRMED 2026-06-02 from a SYNC MLS listing detail sheet)
 - **SYNC Brokerage CRMLS Office ID: `SR207023513`** ← this is the **Trestle "Broker ID"** to enter.
 - **SYNC broker-of-record DRE (LO State License): `02031490`** ← fallback for the Broker ID field.
+- **Andres Hoyos (broker of record) DRE: `01879623`** (per Jeannine, 2026-06-02). Try this in
+  Trestle's Broker ID field. Still may need Andres's CRMLS *member* ID (F-number) — NOT yet in hand.
 - Connor agent: CRMLS User ID `F210006440`, DRE `01238257`.
 - Trestle wizard: Business Type = **Broker**, Multiple Listing Organization = **California Regional MLS**.
 - DO NOT USE (old brokerage Realty One Group): Office ID `SRf7001242`, Office DRE `01015471`.
