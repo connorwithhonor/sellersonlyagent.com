@@ -1,13 +1,13 @@
 # Mkocen.com Listing Microsites
 
-Two standalone, high-converting single-property landing pages for Marcela Kocen
+Two standalone, high-converting single-property landing pages for Marcela Slavik
 (Mkocen.com). All buyer traffic is driven to **call or text 661-877-1017**.
 
 Each folder is a fully self-contained Netlify publish root (HTML + `/photos` +
 `netlify.toml` + `robots.txt` + `sitemap.xml`). They are intentionally NOT part
 of the sellersonlyagent.com site — they deploy as their own Netlify sites on
 subdomains of aipropertysite.com. (Buyer-facing branding still points to
-Marcela Kocen / Mkocen.com throughout.)
+Marcela Slavik / Mkocen.com throughout.)
 
 | Folder | Listing | Price | Intended subdomain |
 | --- | --- | --- | --- |
@@ -21,12 +21,11 @@ Marcela Kocen / Mkocen.com throughout.)
 - `tel:` and pre-filled `sms:` links to 661-877-1017 throughout
 - Live mortgage payment estimator
 - Property facts, feature breakdowns, location, and SEO/JSON-LD schema
-- Branded to Marcela Kocen / Mkocen.com with a "list your home" cross-sell
+- Branded to Marcela Slavik / Mkocen.com with a "list your home" cross-sell
 
-## ⚠️ Before going live (compliance)
-Replace the `[DRE — pending]` placeholder in each `index.html` footer with
-Marcela's actual CalDRE license number. California requires the license number
-on advertised listings.
+## Compliance
+Footer carries the required CA advertising info: **Marcela Slavik, REALTOR® ·
+Radius Agent Realty · CalDRE #01074602**. Buyer-facing brand/website is Mkocen.com.
 
 ## Deploy (each folder = its own Netlify site)
 Point a new Netlify site's **base/publish directory** at the folder, then add the
