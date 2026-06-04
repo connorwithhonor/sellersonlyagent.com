@@ -18,33 +18,32 @@ managed inside HonorElevate**, in the "AI Property Site" subaccount
 
 ---
 
-## STEP 1 — Deploy each folder as its own Netlify site
+## STEP 1 — Link each (already-created) Netlify site to GitHub
 
-Run from the repo root on your machine. Use predictable site names so the DNS
-targets below are known in advance.
+✅ **Both sites are already created** on the **Connor with Honor** team
+(`connormacivor`), named to match the DNS targets:
 
-```bash
-npm i -g netlify-cli      # if needed
-netlify login
+| Site | Becomes | Site ID |
+| --- | --- | --- |
+| `32146-aipropertysite` | `32146-aipropertysite.netlify.app` | `5a0f141e-4fd3-41a3-895b-47ef6f80a80c` |
+| `30668-aipropertysite` | `30668-aipropertysite.netlify.app` | `ce2ad1cd-7a69-4746-a281-c21690f7be60` |
 
-# Site A — Green Hill  → creates 32146-aipropertysite.netlify.app
-netlify sites:create --name 32146-aipropertysite
-netlify deploy --prod --dir="mkocen-listings/32146-green-hill" \
-  --site=32146-aipropertysite --message="32146 Green Hill live"
+They have no content yet. For **each** site, link it to the repo so Netlify pulls
++ deploys the files (no terminal, no local clone needed):
 
-# Site B — Tick Canyon → creates 30668-aipropertysite.netlify.app
-netlify sites:create --name 30668-aipropertysite
-netlify deploy --prod --dir="mkocen-listings/30668-tick-canyon" \
-  --site=30668-aipropertysite --message="30668 Tick Canyon live"
-```
+1. Netlify → open the site → **Site configuration → Build & deploy →
+   Continuous deployment → Link repository**.
+2. Choose **GitHub** → `connorwithhonor/sellersonlyagent.com` (authorize if asked).
+3. **Branch to deploy:** `claude/zealous-curie-sOQ30`
+4. **Build command:** *(leave empty)*
+5. **Publish directory:**
+   - `32146-aipropertysite` → `mkocen-listings/32146-green-hill`
+   - `30668-aipropertysite` → `mkocen-listings/30668-tick-canyon`
+6. **Save / Deploy.** First deploy runs in ~30s → the `.netlify.app` URL goes live.
 
-> Create these on the **same Netlify team that owns aipropertysite.netlify.app** so
-> everything lives together. If a name is taken, pick another and use that exact
-> name as the CNAME target in Step 3.
+(Later, when this branch is merged to `main`, switch each site's production branch
+to `main` so pushes keep auto-deploying.)
 
-Alternatively (auto-deploy on every git push): Netlify → Add new site → Import
-from GitHub → `connorwithhonor/sellersonlyagent.com`; per site set **Base
-directory** = the folder above, **Publish directory** = `.`.
 
 ## STEP 2 — Add each subdomain as a custom domain in Netlify
 
