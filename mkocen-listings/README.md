@@ -6,12 +6,13 @@ Two standalone, high-converting single-property landing pages for Marcela Kocen
 Each folder is a fully self-contained Netlify publish root (HTML + `/photos` +
 `netlify.toml` + `robots.txt` + `sitemap.xml`). They are intentionally NOT part
 of the sellersonlyagent.com site — they deploy as their own Netlify sites on
-subdomains of mkocen.com.
+subdomains of aipropertysite.com. (Buyer-facing branding still points to
+Marcela Kocen / Mkocen.com throughout.)
 
 | Folder | Listing | Price | Intended subdomain |
 | --- | --- | --- | --- |
-| `32146-green-hill/` | 32146 Green Hill Dr, Castaic 91384 · MLS SR26106203 | $679,999 | `32146.mkocen.com` |
-| `30668-tick-canyon/` | 30668½ Tick Canyon Rd, Canyon Country 91387 · MLS SR26106632 | $699,999 | `30668.mkocen.com` |
+| `32146-green-hill/` | 32146 Green Hill Dr, Castaic 91384 · MLS SR26106203 | $679,999 | `32146.aipropertysite.com` |
+| `30668-tick-canyon/` | 30668½ Tick Canyon Rd, Canyon Country 91387 · MLS SR26106632 | $699,999 | `30668.aipropertysite.com` |
 
 ## Features
 - Mobile-first, dark/light theming matched to each property's mood
@@ -30,10 +31,10 @@ on advertised listings.
 ## Deploy (each folder = its own Netlify site)
 Point a new Netlify site's **base/publish directory** at the folder, then add the
 custom domain:
-- Site A publish dir `mkocen-listings/32146-green-hill` → domain `32146.mkocen.com`
-- Site B publish dir `mkocen-listings/30668-tick-canyon` → domain `30668.mkocen.com`
+- Site A publish dir `mkocen-listings/32146-green-hill` → domain `32146.aipropertysite.com`
+- Site B publish dir `mkocen-listings/30668-tick-canyon` → domain `30668.aipropertysite.com`
 
-Add the matching `CNAME` records on mkocen.com's DNS:
+Add the matching `CNAME` records on aipropertysite.com's DNS:
 ```
 32146  CNAME  <site-a>.netlify.app
 30668  CNAME  <site-b>.netlify.app

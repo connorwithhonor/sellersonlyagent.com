@@ -1,4 +1,4 @@
-# 32146.mkocen.com — standalone Netlify site (publish root = this folder)
+# 32146.aipropertysite.com — standalone Netlify site (publish root = this folder)
 [build]
   publish = "."
 [build.processing]
