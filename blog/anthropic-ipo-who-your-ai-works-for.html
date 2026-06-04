@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<!--
+  /blogify OUTPUT v2 — LONG-FORM (3,000+ words). Staged drop-in post.
+  ROUTED TO: AI/commentary property (recommend connorwithhonorai or darkopsai.com — confirmed repos;
+  honornewsnow.com if a primary repo exists). Swap CANONICAL/OG domain to the site you choose.
+  NOT real estate — general disclaimer, no CRMLS footer.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anthropic Is Going Public — and the Day It Does, Your AI Stops Working for You</title>
+<meta name="description" content="Anthropic filed for a ~$965B IPO and OpenAI is days behind. Here's the part nobody on the investor call will mention: the day an AI company goes public, the law (fiduciary duty) quietly changes who it works for — you, or the shareholders. A plain-English, kitchen-table breakdown.">
+<link rel="canonical" href="https://connorwithhonorai.com/anthropic-ipo-who-your-ai-works-for/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The Day Your AI Starts Working for Wall Street Instead of You">
+<meta property="og:description" content="Anthropic's ~$965B IPO filing explained at the kitchen table — and the hidden legal switch that flips the moment AI goes public.">
+<meta property="og:url" content="https://connorwithhonorai.com/anthropic-ipo-who-your-ai-works-for/">
+<meta property="og:image" content="https://connorwithhonorai.com/img/anthropic-ipo-social.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article",
+"headline":"Anthropic Is Going Public — and the Day It Does, Your AI Stops Working for You",
+"description":"Anthropic filed for a ~$965B IPO. The hidden legal switch — fiduciary duty — that changes who an AI company works for, explained plainly.",
+"author":{"@type":"Person","name":"Connor MacIvor","alternateName":"Connor with Honor","jobTitle":"AI Growth Architect & REALTOR®"},
+"publisher":{"@type":"Organization","name":"Connor with Honor"},
+"datePublished":"2026-06-01","keywords":"Anthropic IPO, OpenAI IPO, fiduciary duty, AI for everyone, AI and jobs, public benefit corporation, AI safety, AI regulation"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What does it mean that Anthropic filed to go public?","acceptedAnswer":{"@type":"Answer","text":"Anthropic filed an IPO — an initial public offering — meaning the private company will begin selling shares to the public. Investors value it near $965 billion, larger than OpenAI, which is expected to follow within days. Both target going public by fall 2026."}},
+{"@type":"Question","name":"What is fiduciary duty in plain English?","acceptedAnswer":{"@type":"Answer","text":"Fiduciary duty is the legal obligation of a public company's leaders to act in the shareholders' financial interest. It can make the cautious, ethical choice the legally risky one and rushing products out the legally safe one."}},
+{"@type":"Question","name":"Why does an IPO change who an AI company works for?","acceptedAnswer":{"@type":"Answer","text":"While private, a company answers to owners who can choose mission over money. Once public, leaders are legally bound to shareholders whose primary goal is a rising share price — shifting the company's loyalty from users to investors."}},
+{"@type":"Question","name":"Does going public make AI safer or more dangerous?","acceptedAnswer":{"@type":"Answer","text":"Both arguments are real. Public companies face more disclosure and 'sunlight' and must earn real revenue, which kills junk. But they also face legal pressure to prioritize share price over safety. The structure has a known weak spot we're about to stress-test on high-stakes technology."}},
+{"@type":"Question","name":"What happened with Sam Altman and the OpenAI board?","acceptedAnswer":{"@type":"Answer","text":"In November 2023, OpenAI's mission-focused board fired CEO Sam Altman over concerns about candor and safety. Within five days he returned — backed by investors and employee-shareholders — and the board that fired him was replaced. It shows how quickly money can override a mission board, even at a private company."}},
+{"@type":"Question","name":"Will AI replace my job after these IPOs?","acceptedAnswer":{"@type":"Answer","text":"The risk isn't malice, it's math. When a public company's legal duty is to maximize shareholder returns and a machine can do a task far cheaper, keeping the human becomes the expensive, optional choice. Policy floors, worker ownership, and retraining laws are the realistic counterweights."}},
+{"@type":"Question","name":"What is a public benefit corporation?","acceptedAnswer":{"@type":"Answer","text":"A public benefit corporation is a company legally allowed to weigh public good alongside profit. Anthropic was built as one, with a trust structure meant to protect its mission. It's a 'wall' against pure profit pressure — though few large companies adopt it voluntarily."}},
+{"@type":"Question","name":"What can ordinary people actually do about it?","acceptedAnswer":{"@type":"Answer","text":"The rules were written by people and can be rewritten: support public-benefit structures, back laws that set a floor (worker warning and retraining, slowing replacement), and push for worker ownership so companies are legally bound to serve workers too. It's a fight at the kitchen table and the voting booth."}},
+{"@type":"Question","name":"How is AI different from past technology shifts?","acceptedAnswer":{"@type":"Answer","text":"Three ways: speed (a decision ships to a billion phones before the next earnings call), self-improvement (AI builds better AI, so corner-cutting snowballs), and oversight blindness (boards can read the share price but can't evaluate whether a model is safe)."}},
+{"@type":"Question","name":"Why should I trust this breakdown?","acceptedAnswer":{"@type":"Answer","text":"It's written by Connor MacIvor — 'Connor with Honor' — a retired LAPD officer, licensed REALTOR®, and AI Growth Architect who uses these tools daily in real businesses. The goal is plain-English clarity for everyday people, not hype for shareholders."}}
+]}
+</script>
+<style>
+  :root{--bg:#0c0f16;--panel:#141a26;--line:#222c3d;--text:#e7ecf3;--muted:#9aa7ba;--gold:#f0b32a;--gold-d:#c9941d;--max:760px}
+  *{box-sizing:border-box}html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.78}
+  h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.22;color:#fff;letter-spacing:-.01em}
+  a{color:var(--gold)}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 22px}
+  header.bar{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(12,15,22,.9);backdrop-filter:blur(8px);z-index:10}
+  .bar-in{max-width:980px;margin:0 auto;padding:0 22px;height:60px;display:flex;align-items:center;justify-content:space-between}
+  .brand{font-family:Georgia,serif;font-weight:700;color:#fff;text-decoration:none}.brand b{color:var(--gold)}
+  .bar-in a.sub{background:var(--gold);color:#0c0f16;text-decoration:none;font-weight:700;padding:8px 16px;border-radius:999px;font-size:.88rem}
+  article{padding:46px 0 20px}
+  .kicker{color:var(--gold);font-weight:700;text-transform:uppercase;letter-spacing:.14em;font-size:.74rem}
+  h1{font-size:clamp(2rem,4.8vw,2.9rem);margin:.5rem 0 .7rem}
+  .byline{color:var(--muted);font-size:.95rem;border-bottom:1px solid var(--line);padding-bottom:20px}
+  .qa{background:var(--panel);border:1px solid var(--line);border-left:5px solid var(--gold);border-radius:12px;padding:20px 24px;margin:26px 0}
+  .qa b{color:#fff}
+  article p{font-size:1.1rem}
+  article h2{font-size:1.55rem;margin:2.4rem 0 .5rem}
+  article h3{font-size:1.2rem;margin:1.6rem 0 .3rem;color:#fff}
+  blockquote{margin:24px 0;padding:14px 22px;border-left:4px solid var(--gold);background:var(--panel);border-radius:0 10px 10px 0;font-family:Georgia,serif;font-size:1.2rem;color:#fff}
+  ul,ol{font-size:1.1rem}
+  table{width:100%;border-collapse:collapse;margin:22px 0;font-size:.98rem}
+  th,td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+  th{background:var(--panel);color:#fff}
+  .video{position:relative;aspect-ratio:16/9;background:#000;border:1px solid var(--line);border-radius:12px;margin:30px 0;display:grid;place-items:center;color:var(--muted);font-size:.9rem}
+  .author{display:flex;gap:16px;align-items:flex-start;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px;margin:34px 0}
+  .author .av{flex:0 0 56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold-d));display:grid;place-items:center;color:#0c0f16;font-weight:800;font-family:Georgia,serif;font-size:1.2rem}
+  .author h3{margin:0 0 .25rem;font-size:1.1rem}.author p{margin:0;color:var(--muted);font-size:.95rem}
+  .cta{background:linear-gradient(150deg,#16203a,#0c0f16);border:1px solid var(--line);border-radius:16px;padding:30px;text-align:center;margin:34px 0}
+  .cta h2{margin:.2rem 0 .5rem}.cta p{color:var(--muted);margin:0 auto 16px;max-width:440px}
+  .cta a{display:inline-block;background:var(--gold);color:#0c0f16;font-weight:700;text-decoration:none;padding:13px 26px;border-radius:999px}
+  .faq h3{font-size:1.12rem;margin:1.4rem 0 .2rem}.faq p{color:var(--muted);margin:.2rem 0 0}
+  footer{border-top:1px solid var(--line);margin-top:30px;padding:26px 0;color:#76829a;font-size:.82rem}
+</style>
+</head>
+<body>
+<header class="bar"><div class="bar-in">
+  <a class="brand" href="/">Connor <b>with Honor</b></a>
+  <a class="sub" href="#subscribe">Get the Show</a>
+</div></header>
+
+<article><div class="wrap">
+  <span class="kicker">AI &amp; You · The Real Story</span>
+  <h1>Anthropic Is Going Public — and the Day It Does, Your AI Stops Working for You</h1>
+  <div class="byline">By <strong>Connor MacIvor</strong> · "Connor with Honor" · AI Growth Architect &amp; REALTOR® · June 1, 2026</div>
+
+  <div class="qa"><b>The quick answer:</b> This morning Anthropic — the company behind the Claude AI — filed to go public at a valuation near <b>$965 billion</b>, bigger than OpenAI, which is only days behind. Everyone will cover the money. The part nobody's covering: the day an AI company sells shares to the public, a legal rule called <b>fiduciary duty</b> quietly changes who it actually works for — from <em>you, the person using it</em>, to <em>the shareholders</em>. Let me explain what that means at your kitchen table... because this is the part that matters for the plumber, the hairstylist, and the person reading this on their lunch break.</div>
+
+  <p>I do this because it helps me understand — and honestly, it helps me wrap my mind around what's coming. AI is going to be the most important thing most of us ever live through, and this morning it took its first real step toward Wall Street. So let's get into what actually happened today, in plain English, and why you should care even if you've never bought a share of anything in your life.</p>
+
+  <h2>First — what even is an IPO?</h2>
+  <p>"Going public" has a fancy name: an <strong>initial public offering</strong>, or IPO. Strip away the jargon and it just means this: a private company starts selling small pieces of itself — called shares — to anybody who wants to buy them. You, me, a retired teacher, a hedge fund, anybody with an account.</p>
+  <p>Anthropic is the company that makes Claude, the large language model. Its paperwork went to the SEC this morning, June 1st. The SEC is the government agency whose job is to watch over the stock market and keep companies honest. The number attached to Anthropic is hard to even say out loud: investors think it's worth about <strong>$965 billion</strong>. That's bigger than its main rival, OpenAI — and OpenAI is only days behind with the same move. Both want to be selling shares to the public by this fall.</p>
+  <blockquote>The headline will be the money: who's worth more, who wins the race. The story is what happens to the tool in your pocket the day its owner answers to the stock market instead of to you.</blockquote>
+
+  <h2>Who does a company actually work for?</h2>
+  <p>Start with a simple question — because the whole thing hinges on it. When a company is <strong>private</strong>, who does it work for? Whoever owns it. The founders, the early backers, the people who put money in. People who, at least in theory, can choose to do the right thing even when it costs them.</p>
+  <p>Anthropic was even built as something with a special name — a <strong>public benefit corporation</strong>. That means the company is allowed, on paper, to weigh what's good for people against what makes the most money. They set up a trust that holds a special kind of share, one that lets the board pick its own members. The whole point was to protect the mission from being run over by the money. Think of it as a wall, built on purpose, by people who saw the pressure coming.</p>
+  <p><strong>So what's the pressure?</strong> It's the day you go public. Because when you sell shares to millions of strangers, those strangers all share one goal: they want the share price to go up. They didn't buy in to make the technology good for the world. They bought in to make money. That's not evil — that's literally what buying a share <em>is</em>. You buy hoping it's worth more later.</p>
+
+  <h2>The rule that changes everything: fiduciary duty</h2>
+  <p>Here's where it gets real for you and me. Once a company is public, the law tightens its grip on the people running it. There's a legal rule called <strong>fiduciary duty</strong>. Say it with me — fiduciary. It sounds worse every time you say it, and it kind of is.</p>
+  <p>In plain English, fiduciary duty means the people in charge are <em>legally required</em> to act in the financial interest of the shareholders. Not the people using the product. Not "the company" in some noble sense. The shareholders. Their money.</p>
+  <p><strong>What does that actually do?</strong> Watch. Right now, while these companies are still private, a leader can stand up and say, "We're going to spend a year and a half testing this before we release it, because it could be dangerous." A private company can swallow that cost — the mission justifies it. But a <em>public</em> company that says the same thing watches a rival ship first... watches its share price drop... and watches the board show that leader the door.</p>
+  <blockquote>Caution becomes a liability. Slowing down to get it right becomes the thing that gets you fired. Read that twice: the behavior we should want most becomes the behavior that ends your career.</blockquote>
+
+  <h2>This isn't a guess — it already happened</h2>
+  <p>Let me make it real with a name. In November 2023, OpenAI's own board of directors fired CEO Sam Altman. A board of directors is the small group that sits above the chief executive and is supposed to keep watch. They said they'd lost confidence in him — that he hadn't been straight with them about safety, and that they weren't even given a heads-up before some big launches. So the board fired him over <em>exactly</em> the stuff we should care about: honesty and safety.</p>
+  <p>Here's the twist: five days later, he was back. Money came roaring in to save him. His giant business partner and the company's own employees — who held shares — forced the board to reinstate him. And the board that fired him? It got replaced instead.</p>
+  <p>Sit with that. This was the board built <em>specifically</em> to protect the mission over the money. They pulled the trigger for the right reasons. And the money reversed it in five days — <strong>while the company was still private.</strong></p>
+  <p><strong>Now imagine that same fight after an IPO</strong>, with fiduciary duty locked in and a share price flashing on a screen every single day. The mission-minded board doesn't lose in five days. It never gets to swing at all — because everyone in those seats answers to the share price, and rushing the product out is what makes the share price go up.</p>
+
+  <h2>Three kinds of leaders, one broken incentive</h2>
+  <p>Let me give you the three leaders we're handing this technology to, because once you see them side by side, the problem stops being abstract.</p>
+  <h3>1) The leader the money protects — even when he's reckless</h3>
+  <p>This is the Altman story. Push fast, cut corners, and the money has your back because speed lifts the share price. The safety brakes get overruled.</p>
+  <h3>2) The leader the money could punish — for doing the right thing</h3>
+  <p>Imagine a CEO who says no to the government when it wants the technology for spying on regular people, or for weapons that pick their own targets with no human pulling the trigger. While private, he can say "no, too dangerous," and the mission backs him. After the IPO, saying no to a giant pile of government money is the exact thing that gets him in legal trouble — because he's legally bound to chase the shareholders' money. A shareholder can turn around and say, "You left money on the table. You broke your duty to us." He becomes someone who can be <em>sued</em> for making the right moral choice.</p>
+  <h3>3) The leader the money can't touch at all</h3>
+  <p>The founder who runs on force of personality and holds enough voting power that shareholders simply can't remove him, no matter how strange things get. That's not the tyranny of the share price — it's the tyranny of one man. Different failure, same result.</p>
+  <blockquote>Going public doesn't put the right person in charge of the most powerful tool ever made. It just turns up the volume on the wrong incentive.</blockquote>
+
+  <h2>We've seen this movie before — social media</h2>
+  <p>We don't have to guess how this plays out, because we watched it for 15 years. The companies that ran the feeds had their <em>own</em> research. Their own people told them the machine that kept you scrolling was hurting kids. And the machine kept running anyway. Why?</p>
+  <p>Because the thing they were legally rewarded to grow was <strong>attention</strong>. Attention was the number shareholders paid for. The kids' wellbeing was the number nobody got paid to protect. That's the last decade and a half in one sentence: <em>the company grew the thing it got paid to grow — and the thing it got paid to grow wasn't your wellbeing.</em></p>
+  <p>Now take that exact machine and point it at a technology smart enough to study how your own mind works, in real time, while you use it. That's the deep end. So let's go there.</p>
+
+  <h2>Why AI is a different animal</h2>
+  <p>Three reasons this isn't just "social media 2.0." It's faster, it compounds, and the people steering it are flying blind.</p>
+  <h3>Speed</h3>
+  <p>A cigarette doesn't get more addictive overnight. But a bad decision inside one of these companies ships to a <strong>billion phones</strong> before the next time they report numbers to investors. There's no factory to slow it down. It's instant, and it's everywhere at once.</p>
+  <h3>It builds itself</h3>
+  <p>The technology is being used to make better versions of itself. So the pressure to cut corners to stay ahead doesn't just add up — it <em>snowballs</em>. Every company knows slowing down might mean losing the lead forever. Smart people call this a <strong>collective action problem</strong>: everybody would be safer if they all slowed down together, but not a single one can afford to be the only one who does. So everybody races — even the ones who know better.</p>
+  <h3>The board can only read the fuel gauge</h3>
+  <p>This is the one that should keep you up at night. After a company goes public, the people technically in charge are the shareholders and the board. And those people <em>cannot actually judge whether the technology is safe.</em> They don't have the training. Nobody on an investor board can read the inside of one of these systems and tell you it's dangerous. They can see exactly one thing: did the number go up?</p>
+  <blockquote>It's like handing the controls of a jet to a room full of people who can only read the fuel gauge. As long as there's gas... full speed ahead. They can't see the mountain coming.</blockquote>
+
+  <h2>Let me be fair — the case FOR going public</h2>
+  <p>I'm not here to doom you just to scare you, and there's a real other side. Going public also means <strong>sunlight</strong>. Private companies can do a lot in the dark. A public company has to open its books, file reports, and answer to regulators. Some very smart people argue, with a straight face, that this daylight makes these companies <em>safer</em>, not more dangerous. That's a fair point and I won't pretend it isn't.</p>
+  <p>There's more: needing to make real money kills junk. A public company can't burn billions forever while a small group of insiders decides what's good for you with nobody checking them. Sometimes the "mission-only" version becomes its own kind of unchecked power — we got a flash of that in the Altman saga. So it's not as simple as "public bad, private good." It's that the structure about to take over has a <em>known weak spot</em> — and we're about to test that weak spot on the highest-stakes technology we've ever built.</p>
+
+  <h2>The wave nobody's talking about — you, at work</h2>
+  <p>Here's the bigger thing almost nobody is saying out loud. Forget the AI companies for a second. Think about every <em>other</em> big company — the insurer, the bank, the hospital chain, the store where you shop, the customer service line. Every one of them has shareholders. Every one of them lives under the same rule: make shareholders more money now.</p>
+  <p>Now hand each of them a technology that can do work a human used to do — cheaper, faster, with no paycheck, no health insurance, no sick days, no vacation, no lawsuits. Here's the trap in one sentence:</p>
+  <blockquote>The same law that says "make shareholders more money now" also says, by simple math, "replace the human."</blockquote>
+  <p>It's not a choice some cruel boss makes in a smoky room. It's what the structure demands. If a machine does the job for one-tenth the price and your legal duty is to the shareholders' money, then keeping that person is the thing you can get <em>sued</em> for. The human becomes the expensive, optional part — and "expensive and optional" is exactly what gets cut.</p>
+
+  <table>
+    <tr><th>Who the company answers to</th><th>What the rule rewards</th><th>What that means for you</th></tr>
+    <tr><td>Private owners / mission</td><td>Can choose caution &amp; people</td><td>Room to do the right thing</td></tr>
+    <tr><td>Public shareholders</td><td>Share price, now</td><td>Speed over safety; human as cost</td></tr>
+  </table>
+
+  <h2>So how does it actually get fixed?</h2>
+  <p>This is the question you should be asking, and I'll be honest: there's no magic answer. But there are real ways, and some are far stronger than others.</p>
+  <h3>The weakest way: hope companies just choose to be nice</h3>
+  <p>This fails for the reason we already covered. A company that keeps expensive humans while its rivals switch to machines gets punished, and the board replaces the leadership. Niceness cannot beat the rule.</p>
+  <h3>A stronger way: change the kind of company itself</h3>
+  <p>Remember Anthropic's wall — the public benefit corporation? More companies could be built that way, with "we do right by people" written into the rulebook so leaders <em>can't be sued</em> for it. The catch: almost no big company chooses this on its own.</p>
+  <h3>The strongest near-term way: a law that sets a floor</h3>
+  <p>Here's the key to the whole thing. If the law forces <em>every</em> company to do something, the money rule stops fighting it — because you can't be punished for following a rule your rival also has to follow. Picture laws that require warning and retraining before a machine replaces a worker, or that fund the people who lose work, or that simply slow the speed of replacement so people can catch up. Whether any of it passes is a fight in the voting booth — not a problem with the technology.</p>
+  <h3>My favorite way: give the workers a piece of the machine</h3>
+  <p>This one doesn't fight the money rule — it <em>uses</em> it. If the technology makes a company 10x more productive, let the workers own a share of that. Now the workers are <em>also</em> shareholders, and the company is legally bound to serve them too. You turn the very rule that was cutting people into a rule that pulls them back in.</p>
+
+  <h2>What you can do this week</h2>
+  <ul>
+    <li><strong>Learn the tools.</strong> The best defense against being replaced by AI is being the person who wields it. Pick one tool and use it on something real this week.</li>
+    <li><strong>Watch the vote.</strong> When you hear "AI regulation" and it sounds boring and far away — that's the fight over whether these tools work <em>for</em> you or <em>on</em> you. Pay attention to who supports floors for workers.</li>
+    <li><strong>Ask the better question.</strong> The market asks "did the number go up?" In your own life and business, ask "does this actually serve the person on the other end?"</li>
+    <li><strong>Own a piece where you can.</strong> Equity, ownership, a stake in the productivity — wherever it's offered, take it seriously.</li>
+  </ul>
+
+  <div class="video"><!-- PASTE YOUTUBE EMBED HERE (responsive iframe) --> ▶ Watch the full breakdown — paste your YouTube embed</div>
+
+  <h2>Why I'm the one telling you this</h2>
+  <p>I've been saying this long before this morning's filing, and here's why: I use these tools every single day — in real estate, in voice technology, in software for small businesses. I'm not watching from the cheap seats; I've got my hands in the machine. And the machine is <em>good</em> — the best leverage a one-person operation has ever had. But I never forget who built it or who they're about to answer to.</p>
+  <p>This morning was the starting gun. Anthropic first, OpenAI right behind, both aiming for this fall. By the end of the year, the most powerful technology on earth will be owned in part by the stock market — and the stock market asks exactly one question: did the number go up? So we'll ask the one they won't ask on the investor call: <strong>does this actually work for the person reading this on their lunch break?</strong> That's the whole game. AI for everyone — not just the people who can afford to buy the shares. Let's be careful out there.</p>
+
+  <div class="author">
+    <div class="av">C</div>
+    <div><h3>Connor MacIvor — "Connor with Honor"</h3><p>Hon. Ret. LAPD, REALTOR® (CalDRE #01238257), and AI Growth Architect who uses these tools in the real world every day. Plain-English AI for everyone — not just shareholders.</p></div>
+  </div>
+
+  <div class="cta" id="subscribe">
+    <span class="kicker">Don't watch from the cheap seats</span>
+    <h2>Get the show — AI explained at the kitchen table</h2>
+    <p>Plain-English breakdowns of the technology reshaping your money, your work, and your life. One clear episode at a time.</p>
+    <a href="#">Subscribe &amp; Get the Next Episode →</a>
+  </div>
+
+  <div class="faq">
+    <h2>Frequently asked questions</h2>
+    <h3>What does it mean that Anthropic filed to go public?</h3>
+    <p>It filed an IPO — selling shares to the public for the first time. Investors value it near $965 billion, larger than OpenAI, which is days behind. Both target fall 2026.</p>
+    <h3>What is fiduciary duty in plain English?</h3>
+    <p>The legal obligation of a public company's leaders to act in the shareholders' financial interest — which can make the cautious, ethical choice the legally risky one.</p>
+    <h3>Why does an IPO change who an AI company works for?</h3>
+    <p>Private owners can choose mission over money. Public shareholders are focused on the share price, and the law binds leaders to them — shifting loyalty from users to investors.</p>
+    <h3>Does going public make AI safer or more dangerous?</h3>
+    <p>Both. Public companies face more disclosure and must earn real revenue (which kills junk), but they also face legal pressure to put share price over safety.</p>
+    <h3>What happened with Sam Altman and the OpenAI board?</h3>
+    <p>In Nov 2023 the mission board fired him over candor/safety concerns; five days later investors and employee-shareholders forced his return and the board was replaced.</p>
+    <h3>Will AI replace my job after these IPOs?</h3>
+    <p>The risk is math, not malice: if a machine is far cheaper and the legal duty is to shareholders, keeping the human becomes the costly, optional choice. Policy floors and worker ownership are the counterweights.</p>
+    <h3>What is a public benefit corporation?</h3>
+    <p>A company legally allowed to weigh public good alongside profit. Anthropic was built as one, with a trust to protect its mission — a "wall" against pure profit pressure.</p>
+    <h3>How is AI different from past tech shifts?</h3>
+    <p>Speed (ships to a billion phones before the next earnings call), self-improvement (AI builds better AI, so risk snowballs), and oversight blindness (boards can read the price, not the model).</p>
+    <h3>What can ordinary people actually do?</h3>
+    <p>Support public-benefit structures, back laws that set a floor (warning + retraining, slowing replacement), push for worker ownership, and learn to wield the tools yourself.</p>
+    <h3>Why should I trust this breakdown?</h3>
+    <p>It's from Connor MacIvor — "Connor with Honor" — a retired LAPD officer, REALTOR®, and AI Growth Architect using these tools daily, writing for everyday people rather than shareholders.</p>
+  </div>
+</div></article>
+
+<footer><div class="wrap">
+  © <span id="yr"></span> Connor with Honor. Commentary and general information, not financial or legal advice. Valuations and filing details reflect reporting as of June 1, 2026.
+</div></footer>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>

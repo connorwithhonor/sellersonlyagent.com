@@ -58,8 +58,12 @@ Article + FAQPage + BreadcrumbList + RealEstateAgent/LocalBusiness; add **VideoO
 - 🍌 **Nano Banana prompt — SOCIAL/OG** (1200×630), text-safe composition.
 - Give each: the paste-ready prompt + target filename + alt text. Wire the <img>/OG refs to those
   filenames so Connor just drops the generated files in.
-- **Video:** insert a responsive embed block with a clear `<!-- PASTE YOUTUBE EMBED -->` slot +
-  VideoObject schema stub. If Connor pasted a URL, wire it in.
+- **Video (Loom OR YouTube):** Connor records on Loom for some pieces and YouTube for others, and
+  YouTube lives across SEVERAL channels chosen by content vertical (AI/show vs real estate, etc.).
+  ASK which link(s) for this post + which channel. Insert the correct responsive embed (Loom = its
+  share/embed iframe; YouTube = privacy-friendly youtube-nocookie iframe) + a VideoObject schema entry
+  (embedUrl + the right channel as author/publisher). If both exist, feature one and link the other.
+  Until a link is given, leave a clearly-marked `<!-- PASTE LOOM OR YOUTUBE EMBED -->` slot.
 
 ## STEP 6 — Meta
 Title tag, meta description (~155 chars, click-optimized), canonical, OG + Twitter card tags.
