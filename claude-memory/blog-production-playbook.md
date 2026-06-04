@@ -45,6 +45,19 @@ carries the click, not the URL).
 | AI / business / automation | honorelevate / darkopsai / scvbots |
 Tie-break: best topical-authority match; note the runner-up for Connor to override.
 
+## SITEMAP-AWARE LINKING (internal + cross-site — "all entwined")
+Read `sitemap.xml` + `blog/index.html` first to inventory every page, then:
+- Relevance-matched internal links with descriptive, keyword-rich anchor text (matches the TARGET's
+  topic — never "click here").
+- Pillar/cluster linking for topical authority.
+- ONE inbound link inserted into the 1–3 most relevant existing posts (only permitted edit to an
+  existing post; single link, shown in diff).
+- One money/lead-page link with descriptive anchor.
+- **Cross-site network effect:** interlink Connor's properties (buyer ↔ seller, SCV ↔ SFV) with natural
+  anchors to compound authority + exposure across the whole ecosystem; keep canonicals clean, no
+  duplicate content.
+- Add new `<url>` + `<lastmod>` to sitemap. Anchor text doubles as an AEO/AIEO/GEO relationship signal.
+
 ## ANTI-CHOKE PUBLISHING PROTOCOL (never wipe the archive)
 - New post = **+1 new file**. Index update = **INSERT one card** (never regenerate index).
 - Also additive: one `sitemap.xml` <url>, one `llms.txt` entry, optional homepage feature.

@@ -35,8 +35,8 @@ never generic. If the dump is thin, ask Connor 1 sharp question; otherwise proce
 - **Geo-local** signals woven naturally: Santa Clarita + neighborhoods (Valencia, Saugus, Newhall,
   Canyon Country, Stevenson Ranch, Castaic) / SFV where relevant; zips/"near me" phrasing.
 - **AIEO:** clear declarative, entity-rich sentences AI can lift verbatim; attribute to Connor by name.
-- **SEO:** primary keyword in title/H1/URL/first 100 words/an H2/image alt; semantic variants; 2–3
-  internal links to related posts + 1 money page; 1 authority outbound link.
+- **SEO:** primary keyword in title/H1/URL/first 100 words/an H2/image alt; semantic variants;
+  internal links per the Linking Protocol below; 1 authority outbound link.
 - **E-E-A-T author box** (Connor's credentials) near the end.
 - **CTA** to the site's lead magnet (Buyer Intel Kit / seller consult / net sheet).
 - Match the destination site's existing template/CSS exactly — reuse its header/footer.
@@ -67,8 +67,10 @@ On a NEW branch:
 3. Add one `<url>` to `sitemap.xml`. Add one entry to `llms.txt`.
 4. Feature on the homepage only if it's a flagship piece (additive edit).
 5. Commit, push, open a PR. Report the diff as "**+N new files, +M inserted lines**."
-6. **GUARDRAIL:** if the diff modifies MORE THAN 2 existing files, or shows any existing post file
-   changed, STOP and flag it — do not merge. Existing posts must stay byte-identical.
+6. **GUARDRAIL:** expected edits = new post file(s) + one inserted card in `blog/index.html` +
+   `sitemap.xml` + `llms.txt` + optional homepage feature + one inbound link inserted into ≤3 existing
+   posts (one link each). If the diff goes BEYOND that — any existing post altered beyond a single
+   inserted link, a post rewritten/deleted, or the index regenerated — STOP and flag; do not merge.
 7. Confirm the deploy went green.
 
 ## STEP 9 — Report back
@@ -76,6 +78,26 @@ PR/preview link · chosen title · the 2 Nano Banana prompts to run · where to 
 the social pack. One tight summary so Connor approves in 30 seconds.
 
 ---
+
+## LINKING PROTOCOL (sitemap-aware — internal + cross-site)
+Before writing any link, READ the destination site's `sitemap.xml` and `blog/index.html` to inventory
+every existing URL + topic. Then link with intent:
+- **Relevance-matched internal links** — link to the 3–5 most topically related existing pages with
+  **descriptive, keyword-rich anchor text matching the TARGET page's topic** (never "click here").
+- **Cluster/pillar** — link the post up to its pillar page and across to sibling cluster posts to build
+  topical authority.
+- **Inbound links** — insert ONE contextual link FROM the 1–3 most relevant existing posts TO the new
+  post. This is the ONLY permitted edit to an existing post: a single inserted link, content otherwise
+  byte-identical, shown plainly in the diff.
+- **Money/lead pages** — one descriptive-anchor link to the matching conversion page (Buyer Intel Kit /
+  seller consult / net sheet).
+- **Cross-site network effect** — when relevant, link across Connor's site network with natural anchor
+  text (buyer post on santaclaritaopenhouses.com → seller resource on sellersonlyagent.com/scv123.com,
+  and vice-versa) to compound authority + exposure ecosystem-wide. Never duplicate content across
+  domains; keep canonicals correct.
+- **Sitemap** — add the new `<url>` + `<lastmod>`; keep the file valid.
+- Anchor text doubles as an **AEO/AIEO/GEO** signal: entity-rich, geo-aware anchors teach Google AND the
+  AI engines how pages relate → stronger topical authority and citations.
 
 ## SITE ROUTER
 - **Buyer intent + Santa Clarita** (buying process, financing, open houses, first-time buyer, down
