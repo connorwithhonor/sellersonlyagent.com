@@ -86,9 +86,13 @@ On a NEW branch:
    inserted link, a post rewritten/deleted, or the index regenerated — STOP and flag; do not merge.
 7. Confirm the deploy went green.
 
-## STEP 9 — Report back
-PR/preview link · chosen title · the 2 Nano Banana prompts to run · where to paste the video embed ·
-the social pack. One tight summary so Connor approves in 30 seconds.
+## STEP 9 — Report back (ALWAYS include a CLICKABLE LIVE LINK)
+Post IN CHAT a **clickable, rendered preview URL** Connor can open immediately:
+- Prefer the **Netlify/CF deploy-preview** URL from the PR (true site render), OR
+- a **raw.githack.com** link to the committed file by commit SHA (renders inline CSS correctly):
+  `https://raw.githack.com/<owner>/<repo>/<COMMIT_SHA>/<path>` (use the SHA, not the slashed branch).
+Then: chosen title · the 2 Nano Banana prompts · where to paste the Loom/YouTube embed · the social
+pack. One tight summary so Connor reviews + approves fast. NEVER end without a working live link.
 
 ---
 
