@@ -1,0 +1,9 @@
+# 32146.mkocen.com — standalone Netlify site (publish root = this folder)
+[build]
+  publish = "."
+[build.processing]
+  skip_processing = true
+[[headers]]
+  for = "/photos/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
