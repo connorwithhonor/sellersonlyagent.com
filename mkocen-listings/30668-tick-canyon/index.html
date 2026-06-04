@@ -19,22 +19,75 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "SingleFamilyResidence",
-  "name": "30668 1/2 Tick Canyon Rd, Canyon Country CA 91387",
-  "address": { "@type": "PostalAddress", "streetAddress": "30668 1/2 Tick Canyon Rd", "addressLocality": "Canyon Country", "addressRegion": "CA", "postalCode": "91387" },
-  "numberOfBedrooms": 2,
-  "numberOfBathroomsTotal": 1,
-  "floorSize": { "@type": "QuantitativeValue", "value": 1050, "unitCode": "FTK" },
-  "lotSize": { "@type": "QuantitativeValue", "value": 9.9, "unitText": "acres" },
-  "yearBuilt": "1959",
-  "url": "https://30668.aipropertysite.com/",
-  "offers": {
-    "@type": "Offer",
-    "price": "699999",
-    "priceCurrency": "USD",
-    "availability": "https://schema.org/InStock",
-    "seller": { "@type": "RealEstateAgent", "name": "Marcela Slavik", "url": "https://mkocen.com", "telephone": "+16618771017" }
-  }
+  "@graph": [
+    {
+      "@type": ["RealEstateListing", "Product"],
+      "@id": "https://30668.aipropertysite.com/#listing",
+      "url": "https://30668.aipropertysite.com/",
+      "name": "30668½ Tick Canyon Rd, Canyon Country CA 91387 — For Sale",
+      "headline": "Off-Grid Hilltop Cabin on 9.9 Acres with Panoramic Views",
+      "description": "Fully renovated 2024 off-grid hilltop cabin on 9.9 acres (two parcels) in Tick Canyon with panoramic city-light, hill, and mountain views, solar power, horse stalls, and a detached studio. Offered at $699,999.",
+      "datePosted": "2026-05-12",
+      "image": [
+        "https://30668.aipropertysite.com/photos/hero.jpg",
+        "https://30668.aipropertysite.com/photos/01-cabin-hills.jpg",
+        "https://30668.aipropertysite.com/photos/03-glass-porch-view.jpg",
+        "https://30668.aipropertysite.com/photos/07-kitchen.jpg",
+        "https://30668.aipropertysite.com/photos/19-sunset.jpg"
+      ],
+      "offers": {
+        "@type": "Offer",
+        "price": "699999",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://30668.aipropertysite.com/",
+        "seller": { "@id": "https://mkocen.com/#agent" }
+      },
+      "about": { "@id": "https://30668.aipropertysite.com/#home" }
+    },
+    {
+      "@type": "SingleFamilyResidence",
+      "@id": "https://30668.aipropertysite.com/#home",
+      "name": "30668½ Tick Canyon Rd",
+      "address": { "@type": "PostalAddress", "streetAddress": "30668 1/2 Tick Canyon Rd", "addressLocality": "Canyon Country", "addressRegion": "CA", "postalCode": "91387", "addressCountry": "US" },
+      "numberOfRooms": 3,
+      "numberOfBedrooms": 2,
+      "numberOfBathroomsTotal": 1,
+      "numberOfFullBathrooms": 1,
+      "floorSize": { "@type": "QuantitativeValue", "value": 1050, "unitCode": "FTK" },
+      "lotSize": { "@type": "QuantitativeValue", "value": 9.9, "unitText": "acres" },
+      "yearBuilt": "1959",
+      "numberOfAccommodationUnits": 1,
+      "amenityFeature": [
+        { "@type": "LocationFeatureSpecification", "name": "Off-grid solar electricity", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Fully renovated 2024", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Panoramic views", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Horse property (2 stalls)", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Detached studio with heat pump", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Wood-stove heat & heat-pump cooling", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Two parcels included", "value": true }
+      ]
+    },
+    {
+      "@type": "RealEstateAgent",
+      "@id": "https://mkocen.com/#agent",
+      "name": "Marcela Slavik",
+      "jobTitle": "REALTOR®",
+      "telephone": "+16618771017",
+      "url": "https://mkocen.com",
+      "areaServed": "Santa Clarita Valley, CA",
+      "memberOf": { "@type": "RealEstateOrganization", "name": "Radius Agent Realty" },
+      "identifier": { "@type": "PropertyValue", "name": "CalDRE", "value": "01074602" }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://30668.aipropertysite.com/#website",
+      "url": "https://30668.aipropertysite.com/",
+      "name": "30668½ Tick Canyon Rd — Marcela Slavik",
+      "inLanguage": "en-US",
+      "publisher": { "@id": "https://mkocen.com/#agent" }
+    }
+  ]
 }
 </script>
 <style>
@@ -176,6 +229,13 @@
     .mobilebar{display:grid}
     .nav-cta{display:none}
     section{padding:48px 0}
+  }
+  @media(max-width:560px){
+    .hero-cta{flex-direction:column;align-items:stretch}
+    .hero-cta .btn{width:100%}
+    .hero h1{font-size:2rem}
+    .hero .price{font-size:2rem}
+    .cta-row .btn{flex:1 1 100%}
   }
 </style>
 </head>

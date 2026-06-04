@@ -19,21 +19,74 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "SingleFamilyResidence",
-  "name": "32146 Green Hill Dr, Castaic CA 91384",
-  "address": { "@type": "PostalAddress", "streetAddress": "32146 Green Hill Dr", "addressLocality": "Castaic", "addressRegion": "CA", "postalCode": "91384" },
-  "numberOfBedrooms": 2,
-  "numberOfBathroomsTotal": 2,
-  "floorSize": { "@type": "QuantitativeValue", "value": 1046, "unitCode": "FTK" },
-  "yearBuilt": "1986",
-  "url": "https://32146.aipropertysite.com/",
-  "offers": {
-    "@type": "Offer",
-    "price": "679999",
-    "priceCurrency": "USD",
-    "availability": "https://schema.org/InStock",
-    "seller": { "@type": "RealEstateAgent", "name": "Marcela Slavik", "url": "https://mkocen.com", "telephone": "+16618771017" }
-  }
+  "@graph": [
+    {
+      "@type": ["RealEstateListing", "Product"],
+      "@id": "https://32146.aipropertysite.com/#listing",
+      "url": "https://32146.aipropertysite.com/",
+      "name": "32146 Green Hill Dr, Castaic CA 91384 — For Sale",
+      "headline": "Charming & Updated Single-Story Oasis in the Hidden Lake Tract",
+      "description": "Beautifully updated 2-bed, 2-bath single-story home in Castaic's Hidden Lake Tract with a standalone A/C cottage, rose pergola, garden, and chicken coop. Offered at $679,999.",
+      "datePosted": "2026-05-11",
+      "image": [
+        "https://32146.aipropertysite.com/photos/hero.jpg",
+        "https://32146.aipropertysite.com/photos/01-front.jpg",
+        "https://32146.aipropertysite.com/photos/03-living-fireplace.jpg",
+        "https://32146.aipropertysite.com/photos/08-kitchen.jpg",
+        "https://32146.aipropertysite.com/photos/15-cottage.jpg"
+      ],
+      "offers": {
+        "@type": "Offer",
+        "price": "679999",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://32146.aipropertysite.com/",
+        "seller": { "@id": "https://mkocen.com/#agent" }
+      },
+      "about": { "@id": "https://32146.aipropertysite.com/#home" }
+    },
+    {
+      "@type": "SingleFamilyResidence",
+      "@id": "https://32146.aipropertysite.com/#home",
+      "name": "32146 Green Hill Dr",
+      "address": { "@type": "PostalAddress", "streetAddress": "32146 Green Hill Dr", "addressLocality": "Castaic", "addressRegion": "CA", "postalCode": "91384", "addressCountry": "US" },
+      "numberOfRooms": 4,
+      "numberOfBedrooms": 2,
+      "numberOfBathroomsTotal": 2,
+      "numberOfFullBathrooms": 2,
+      "floorSize": { "@type": "QuantitativeValue", "value": 1046, "unitCode": "FTK" },
+      "lotSize": { "@type": "QuantitativeValue", "value": 7504, "unitCode": "FTK" },
+      "yearBuilt": "1986",
+      "numberOfAccommodationUnits": 1,
+      "amenityFeature": [
+        { "@type": "LocationFeatureSpecification", "name": "Brick fireplace", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Updated kitchen", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Detached A/C cottage / she-shed", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Central air conditioning", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Whole-house fan", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Attached 2-car garage", "value": true }
+      ]
+    },
+    {
+      "@type": "RealEstateAgent",
+      "@id": "https://mkocen.com/#agent",
+      "name": "Marcela Slavik",
+      "jobTitle": "REALTOR®",
+      "telephone": "+16618771017",
+      "url": "https://mkocen.com",
+      "areaServed": "Santa Clarita Valley, CA",
+      "memberOf": { "@type": "RealEstateOrganization", "name": "Radius Agent Realty" },
+      "identifier": { "@type": "PropertyValue", "name": "CalDRE", "value": "01074602" }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://32146.aipropertysite.com/#website",
+      "url": "https://32146.aipropertysite.com/",
+      "name": "32146 Green Hill Dr — Marcela Slavik",
+      "inLanguage": "en-US",
+      "publisher": { "@id": "https://mkocen.com/#agent" }
+    }
+  ]
 }
 </script>
 <style>
@@ -179,6 +232,13 @@
     .mobilebar{display:grid}
     .nav-cta{display:none}
     section{padding:48px 0}
+  }
+  @media(max-width:560px){
+    .hero-cta{flex-direction:column;align-items:stretch}
+    .hero-cta .btn{width:100%}
+    .hero h1{font-size:2rem}
+    .price-bar .price,.hero .price{font-size:2rem}
+    .cta-row .btn{flex:1 1 100%}
   }
 </style>
 </head>
