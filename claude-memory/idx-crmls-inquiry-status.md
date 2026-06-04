@@ -1,9 +1,35 @@
 # CRMLS IDX / API Inquiry — Status & Strategy
 
-_Last updated: 2026-06-02. Owner: Connor MacIvor (CalDRE #01238257). This note exists so we
-never have to re-discover where this work lives. The IDX work itself is NOT code in this repo —
-it's an email + paperwork process (CRMLS support ticket **API-127**) plus the lead-gen sites it
-will feed._
+_Last updated: 2026-06-03 PM. Owner: Connor MacIvor (CalDRE #01238257). The IDX work is an
+email/paperwork process (CRMLS ticket **API-127**) PLUS the lead-gen sites it will feed._
+
+## ▶ RESUME HERE — first thing 2026-06-04 AM
+**Two tracks running:**
+
+**Track 1 — Get the IDX feed live (waiting on Matt @ REcore):**
+- Combined reply to Matt is in Gmail drafts (corrected page-2 URLs + Trestle Broker-ID question).
+  Connor was assembling page1(signed)+page2(corrected) PDF to attach. STATUS: send it / confirm sent.
+- Trestle Subscription Wizard rejects ALL broker IDs ("not matching… contact your MLS"). Conclusion:
+  CRMLS must provision SYNC first — that's why it fails. Matt's reply unblocks it.
+- A Trestle **verification email went to ANDRES's inbox** (not Connor's) — Andres must click it.
+  Andres not answering texts; he IS emailing. NEXT: email Andres to click the Trestle verify link.
+
+**Track 2 — Build the buyer-traffic engine (santaclaritaopenhouses.com + scvhomebuyer.com):**
+- Strategy: reposition SCOH as honest BUYER-INTEL hub from a SELLERS-ONLY agent. "The buck starts
+  at Santa Clarita Open Houses." Keep existing blog (it's LIVE + indexed — preserve all URLs).
+- BIG BLOCKER: this session is scoped to `sellersonlyagent.com` ONLY. The real site repos
+  (`connorwithhonor/santaclaritaopenhouses.com` EXISTS; `scvhomebuyer.com` has NO repo yet) are
+  access-DENIED. **FIRST AM ACTION: add those repos to a session so we build in the real codebase.**
+- Existing SCOH live blog posts (DO NOT CLOBBER — directory URLs /blog/post-name/):
+  zillow-vs-local…, the-ultimate-2025-guide-to-buying-your-first-home…, down-payment-assistance…,
+  valencia-ca-real-estate-update…, santa-clarita-real-estate-recon…
+- Prototypes built (reference/design only, in THIS repo at `_prototypes/santaclaritaopenhouses/`):
+  repositioned homepage `index.html`, blog `blog/index.html`, post `blog/how-home-buying-works-santa-clarita.html`.
+- TODO once repo access granted: preserve blog+URLs, layer repositioning on homepage, scaffold
+  Cloudflare Worker (Trestle OAuth + Property query), build programmatic neighborhood/open-house
+  pages, mirror to scvhomebuyer.com, AEO via llms.txt.
+- Trestle build docs: https://trestle-documentation.corelogic.com/webapi.html (OAuth2 client-creds
+  → token POST https://api.cotality.com/trestle/oidc/connect/token; query GET .../trestle/odata/Property).
 
 ## Key IDs (CONFIRMED 2026-06-02 from a SYNC MLS listing detail sheet)
 - **SYNC Brokerage CRMLS Office ID: `SR207023513`** ← this is the **Trestle "Broker ID"** to enter.
