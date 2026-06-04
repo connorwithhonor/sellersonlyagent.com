@@ -11,88 +11,84 @@ CalDRE #01074602 · all CTAs → 661-877-1017) and committed to branch
 - `32146-green-hill/`  → **32146.aipropertysite.com**
 - `30668-tick-canyon/` → **30668.aipropertysite.com**
 
+**Confirmed infra:** aipropertysite.com is hosted on **Netlify** and its **DNS is
+managed inside HonorElevate**, in the "AI Property Site" subaccount
+(location `ffl9iZQwLW2OAQ7nvine`). Existing records: `A @ → 75.2.60.5`,
+`CNAME www → aipropertysite.netlify.app`.
+
 ---
 
-## 1) Deploy to Netlify (two sites)
+## STEP 1 — Deploy each folder as its own Netlify site
 
-**Easiest — Netlify CLI (run from repo root, on your machine):**
+Run from the repo root on your machine. Use predictable site names so the DNS
+targets below are known in advance.
+
 ```bash
-npm i -g netlify-cli            # if not installed
+npm i -g netlify-cli      # if needed
 netlify login
 
-# Site A — Green Hill
-netlify deploy --prod \
-  --dir="mkocen-listings/32146-green-hill" \
-  --message="32146 Green Hill live"
-#   (when prompted: Create & configure a new site → your team → name e.g. "32146-aipropertysite")
+# Site A — Green Hill  → creates 32146-aipropertysite.netlify.app
+netlify sites:create --name 32146-aipropertysite
+netlify deploy --prod --dir="mkocen-listings/32146-green-hill" \
+  --site=32146-aipropertysite --message="32146 Green Hill live"
 
-# Site B — Tick Canyon
-netlify deploy --prod \
-  --dir="mkocen-listings/30668-tick-canyon" \
-  --message="30668 Tick Canyon live"
-#   (name e.g. "30668-aipropertysite")
+# Site B — Tick Canyon → creates 30668-aipropertysite.netlify.app
+netlify sites:create --name 30668-aipropertysite
+netlify deploy --prod --dir="mkocen-listings/30668-tick-canyon" \
+  --site=30668-aipropertysite --message="30668 Tick Canyon live"
 ```
-Note each site's `*.netlify.app` URL — you'll need it for DNS.
 
-**Alternative — Git-connected (auto-deploy on push):** In Netlify, "Add new site →
-Import from GitHub → connorwithhonor/sellersonlyagent.com", then per site set
-**Base directory** = the folder above and **Publish directory** = `.`. Pick the
-branch you want to track.
+> Create these on the **same Netlify team that owns aipropertysite.netlify.app** so
+> everything lives together. If a name is taken, pick another and use that exact
+> name as the CNAME target in Step 3.
 
----
+Alternatively (auto-deploy on every git push): Netlify → Add new site → Import
+from GitHub → `connorwithhonor/sellersonlyagent.com`; per site set **Base
+directory** = the folder above, **Publish directory** = `.`.
 
-## 2) DNS — point the subdomains at the Netlify sites
+## STEP 2 — Add each subdomain as a custom domain in Netlify
 
-In **Netlify → each site → Domain management**, add the custom domain
-(`32146.aipropertysite.com` / `30668.aipropertysite.com`). Then add the records
-wherever **aipropertysite.com**'s DNS is managed:
+Netlify → Site A → Domain management → Add domain → `32146.aipropertysite.com`.
+Repeat on Site B with `30668.aipropertysite.com`. Netlify will say "awaiting DNS"
+— that's Step 3. SSL auto-provisions once DNS resolves.
 
-**If aipropertysite.com DNS is in Cloudflare:**
-| Type | Name | Target | Proxy |
+## STEP 3 — Add the two CNAMEs in HonorElevate
+
+HE → "AI Property Site" subaccount → Settings → Domains & URL Redirects →
+**aipropertysite.com** → DNS records → **+ Add Record**:
+
+| Type | Name | Content | TTL |
 | --- | --- | --- | --- |
-| CNAME | `32146` | `<site-a>.netlify.app` | DNS only (grey cloud) |
-| CNAME | `30668` | `<site-b>.netlify.app` | DNS only (grey cloud) |
+| CNAME | `32146` | `32146-aipropertysite.netlify.app` | Auto |
+| CNAME | `30668` | `30668-aipropertysite.netlify.app` | Auto |
 
-> Keep proxy OFF (grey cloud) so Netlify can issue its own SSL. Once Netlify shows
-> the domain verified, it auto-provisions Let's Encrypt.
-
-**If aipropertysite.com DNS is inside HonorElevate** (like mkocen.com is):
-HE → Settings → Domains & URL Redirects → aipropertysite.com → DNS records →
-Add Record → same two CNAMEs above.
-
-(Quick CLI version if Cloudflare-managed — replace ZONE_ID + TARGET, token from your
-local env, never commit it:)
-```bash
-for sub in 32146 30668; do
-  curl -s -X POST "https://api.cloudflare.com/client/v4/zones/$CF_ZONE_ID_AIPROPERTYSITE/dns_records" \
-    -H "Authorization: Bearer $CF_API_TOKEN" -H "Content-Type: application/json" \
-    --data "{\"type\":\"CNAME\",\"name\":\"$sub\",\"content\":\"$sub-aipropertysite.netlify.app\",\"proxied\":false}"
-done
-```
+(If you used different Netlify site names in Step 1, use those `*.netlify.app`
+hostnames as the Content.) Give DNS a few minutes; Netlify flips to "Netlify
+certificate" automatically. Done — sites are live with HTTPS.
 
 ---
 
-## 3) AI voice + chat agent (HonorElevate — mkocen subaccount)
+## STEP 4 — AI voice + chat agent (HonorElevate)
 
-Subaccount location id: `hE5SldwnkkfLd7VjNyVb` (PIT stored in your local env).
+The "AI Property Site" subaccount (`ffl9iZQwLW2OAQ7nvine`) is the natural home
+since the domain lives there. (mkocen subaccount = `hE5SldwnkkfLd7VjNyVb` if you
+prefer to keep Marcela's leads in her own sub — your call.)
 
-**A. Web chat widget on each page**
-HE → the mkocen subaccount → Sites → Chat Widget → create/copy the embed snippet.
-Paste it right before `</body>` in **both** `index.html` files (look for the
-`<!-- LIGHTBOX -->` block; put it just below the closing `</script>`).
-Commit + redeploy. (Tell me when you have the snippet and I'll wire it in.)
+**A. Web chat widget** — HE → subaccount → Sites → Chat Widget → copy the embed
+snippet. Send it to me and I'll paste it before `</body>` in both `index.html`
+files and push. (Or paste it yourself just below the closing `</script>`.)
 
-**B. Conversation AI behavior** — set the bot's persona/goal to:
+**B. Conversation AI persona/goal:**
 
 > You are the listing assistant for Marcela Slavik (REALTOR®, Radius Agent Realty,
-> CalDRE #01074602). You answer buyer questions about ONE specific home, build
+> CalDRE #01074602). Answer buyer questions about ONE specific home, build
 > interest, capture name + phone, and push to book a showing. For anything you
 > can't answer, or any motivated buyer, say you'll have Marcela follow up and
-> **text/route the lead to 661-877-1017 immediately**. Never give legal/loan
-> advice. Be warm, concise, local to Santa Clarita Valley. Always end by offering
-> to connect them with Marcela by call or text.
+> **text/route the lead to 661-877-1017 immediately**. No legal/loan advice. Warm,
+> concise, local to Santa Clarita Valley. Always offer to connect them with
+> Marcela by call or text.
 
-**C. Knowledge base** — paste the facts so the bot answers accurately:
+**C. Knowledge base (paste so answers are accurate):**
 
 *32146 Green Hill Dr, Castaic 91384 — $679,999* — 2 bed / 2 bath, 1,046 sqft,
 7,504 sqft lot, single-story, built 1986, Hidden Lake Tract. Engineered hardwood,
@@ -114,12 +110,5 @@ Off-grid: solar electricity, conventional septic, water delivered by truck, Wi-F
 available. Private dirt-road access, 4WD recommended. **Showings escorted, by
 appointment only.** Wm. S. Hart Union School District. MLS SR26106632.
 
-**D. Routing** — set the workflow so a captured lead fires an SMS/notification to
-**661-877-1017** (Marcela's cell) with the buyer's name, number, and which listing.
-
----
-
-## What I still need from you to finish
-1. Where **aipropertysite.com** DNS is managed (Cloudflare or HonorElevate)?
-2. The **HE chat-widget embed snippet** (so I can drop it into both pages).
-3. A thumbs-up on the Netlify site names above (or your preferred names).
+**D. Routing** — workflow fires an SMS/notification to **661-877-1017** with the
+buyer's name, number, and which listing the moment a lead is captured.
