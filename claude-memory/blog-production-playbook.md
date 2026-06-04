@@ -23,6 +23,15 @@ dumps raw input → Kain routes, writes, optimizes, and ships via a safe additiv
 8. **Publish** additively (anti-choke protocol) on a branch → PR → merge → deploy.
 9. **Report** so Connor approves in ~30 seconds.
 
+## Content standard (NON-NEGOTIABLE)
+- **≥ 3,000 words**, longer when depth adds SEO/AEO/AIEO/GEO value. Long-form is the default.
+- **Conversational, kitchen-table Connor voice** — first person, short sentences, "..." pauses,
+  analogies, real examples.
+- **Q&A woven throughout** + a comprehensive **FAQ (8–12)** of real searched questions.
+- **Best attraction strategies always:** scroll-stopping hook, question subheads, pull-quotes, lists/
+  tables, share-worthy lines, strong internal + cross-site links, clear CTA — optimized for dwell time,
+  shares, and AI citation.
+
 ## The four optimization layers
 - **SEO** — keyword in title/H1/URL/first 100 words/H2/alt; semantic variants; internal links to
   related posts + a money page; one authority outbound; scannable structure.

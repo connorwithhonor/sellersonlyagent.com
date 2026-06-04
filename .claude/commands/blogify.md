@@ -29,9 +29,18 @@ never generic. If the dump is thin, ask Connor 1 sharp question; otherwise proce
 - **URL slug:** short, keyword-rich, honest (NOT clickbait — clean URLs protect trust + SEO).
 
 ## STEP 3 — Write the post (optimization spec)
+- **LENGTH & DEPTH (HARD RULE):** **minimum 3,000 words.** Go LONGER whenever more depth adds
+  SEO/AEO/AIEO/GEO value — never pad, but never thin. Long-form is the default; a short post is a miss.
+- **VOICE:** conversational, plain-spoken, first-person Connor throughout — like talking across a
+  kitchen table. Short sentences, "..." pauses, real examples, analogies, "let me explain."
+- **Q&A EVERYWHERE:** pose-and-answer real questions inline as you go (great for AEO/AIEO), PLUS a
+  comprehensive closing **FAQ of 8–12** real searched questions.
+- **ATTRACTION STRATEGIES (always):** scroll-stopping hook in the first 2 lines; subheads phrased as
+  questions; bold takeaways/pull-quotes; lists + tables for scannability; a "share this" worthy line
+  per section; strong internal/cross-site links; clear CTA. Optimize for dwell time + shares + citation.
 - **Quick Answer** TL;DR block at top (AEO snippet bait — 2–3 sentences answering the core question).
 - Scannable structure: strong hook intro → H2/H3 sections → short paragraphs → bullets/numbered lists.
-- **FAQ section** (3–6 Q&As) phrased as real searched questions (AEO/AIEO gold).
+- **FAQ section** (8–12 Q&As) phrased as real searched questions (AEO/AIEO gold) + inline Q&A throughout.
 - **Geo-local** signals woven naturally: Santa Clarita + neighborhoods (Valencia, Saugus, Newhall,
   Canyon Country, Stevenson Ranch, Castaic) / SFV where relevant; zips/"near me" phrasing.
 - **AIEO:** clear declarative, entity-rich sentences AI can lift verbatim; attribute to Connor by name.
