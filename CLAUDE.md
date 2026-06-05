@@ -23,6 +23,14 @@ See `claude-memory/connor-own-sites-git-canonical.md` for the full policy.
 - HE blog numbers are **browser-scraped visually** (canvas-rendered, not in DOM, no API). Recon runs on Mac-V (browser control + Netlify MCP). NOT reproducible from a plain Claude Code web session.
 - **CONFLICT to resolve**: historically GSC/GA4 were skipped per Talie's "no Google data" rule. Talie asked for GA on 2026-06-01; Connor asked for GSC on 2026-06-04. That reverses the rule — confirm Talie is OK with Google data in the report, and connect GSC/GA (not currently connected in Windsor).
 
+### Session resume state — 2026-06-05 (goodnight save)
+DONE: Talie "brand identity" question answered (data-backed: her own keyword research + live rankings say clarity / heart-centered is the lane, not "brand identity"). 3 handoff docs saved to Drive (Talie Knutson folder, id `1hcmFMCvLdr31SSmMbFyg1BWjLgGdT2uc`): `_START-HERE-Tomorrow-WHM-Tasks-2026-06-05.md`, `WHM-MacV-Run-Brief-Weekly-Report.md`, `WHM-Joy-ChatWidget-Build-Sheet.md`.
+OPEN / next actions (good-morning pickup):
+1. **WHM Weekly Report** must run on **Mac-V** (HE blog is browser-scrape only). Netlify confirmed still `6a0f69729345282933459b33` (May 21 build). Run brief in Drive.
+2. **Mint "Joy" widget in HonorElevate** to get the embed `<script>`, then install Widget A on Netlify (direct deploy, snapshot first, handle with care). Widgets B/C publish in HE.
+3. **git parity check** for withheart-marketing.com: needs the repo added to session scope + Netlify MCP up. Do NOT assume git == live (a repo named "...Netlify backup" exists).
+4. **DECISION OPEN**: is Talie OK with Google data (GSC/GA) in the report? If yes, connect GSC/GA first.
+
 ### Weekly recap report ("Friday recap") — what the report must include
 - **Include Google Search Console intel** in the report (added 2026-06-04 per Connor). Query/page impressions, clicks, positions.
 - **Include Google Analytics metrics** — site visits + user flow (where people go). (From 2026-06-01 call.)
