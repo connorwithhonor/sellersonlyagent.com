@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<!--
+  santaclaritaopenhouses.com — REPOSITIONED v1
+  Concept: A sellers-only agent giving buyers the honest truth about buying in Santa Clarita.
+  Hero function = real buyer information + intel + expert videos. Open houses feed the mission.
+  "The buck starts at Santa Clarita Open Houses."
+
+  IDX NOTE: Sections marked <!-- IDX:OPEN-HOUSES --> are where the Cloudflare Worker injects
+  live CRMLS/Trestle open-house + listing data once credentials are issued. Until then, the
+  cards render from mock data below. Every listing card carries broker attribution + the
+  compliance disclaimer in the footer (CRMLS Rules 12.20 / 19.2.5 / 19.2.13).
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Santa Clarita Open Houses — Honest Home-Buying Intel From a Sellers-Only Agent</title>
+<meta name="description" content="The honest place to learn how to buy a home in Santa Clarita. Real intel, expert videos, and this weekend's open houses — from Connor MacIvor, a sellers-only agent with nothing to sell you but the truth. SYNC Brokerage.">
+<meta name="theme-color" content="#0e1b2c">
+<link rel="canonical" href="https://santaclaritaopenhouses.com/">
+<!-- Open Graph -->
+<meta property="og:title" content="Santa Clarita Open Houses — Honest Buyer Intel">
+<meta property="og:description" content="A sellers-only agent arms Santa Clarita buyers with the real intel — then sends you into this weekend's open houses ready to win.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://santaclaritaopenhouses.com/">
+<style>
+  :root{
+    --ink:#0e1b2c; --ink2:#12243b; --gold:#c8a24a; --gold-d:#a9863a;
+    --paper:#faf8f4; --line:#e7e1d6; --muted:#5b6675; --white:#fff;
+    --maxw:1160px; --r:14px; --shadow:0 18px 50px rgba(14,27,44,.12);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink2);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.serif{font-family:Georgia,"Times New Roman",serif;color:var(--ink);line-height:1.15;letter-spacing:-.01em}
+  a{color:inherit}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+  .btn{display:inline-block;padding:14px 26px;border-radius:999px;font-weight:700;text-decoration:none;font-size:.98rem;transition:.18s;cursor:pointer;border:2px solid transparent}
+  .btn-gold{background:var(--gold);color:var(--ink)}
+  .btn-gold:hover{background:var(--gold-d)}
+  .btn-ghost{border-color:rgba(255,255,255,.5);color:#fff}
+  .btn-ghost:hover{background:rgba(255,255,255,.12)}
+  .btn-ink{background:var(--ink);color:#fff}
+  .btn-ink:hover{background:var(--ink2)}
+  .eyebrow{text-transform:uppercase;letter-spacing:.22em;font-size:.74rem;font-weight:700;color:var(--gold-d)}
+
+  /* NAV */
+  header.nav{position:sticky;top:0;z-index:50;background:rgba(250,248,244,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:Georgia,serif;font-weight:700;color:var(--ink);font-size:1.12rem}
+  .brand .dot{width:30px;height:30px;border-radius:8px;background:var(--ink);color:var(--gold);display:grid;place-items:center;font-size:.9rem;font-weight:800}
+  .nav-links{display:flex;gap:26px;align-items:center}
+  .nav-links a{text-decoration:none;font-weight:600;font-size:.92rem;color:var(--ink2)}
+  .nav-links a:hover{color:var(--gold-d)}
+  .nav-cta{padding:10px 18px;border-radius:999px;background:var(--gold);color:var(--ink)!important;font-weight:700}
+  .burger{display:none;background:none;border:0;font-size:1.6rem;color:var(--ink);cursor:pointer}
+
+  /* HERO */
+  .hero{position:relative;color:#fff;background:linear-gradient(150deg,#0e1b2c 0%,#16304d 55%,#1d3b5c 100%);overflow:hidden}
+  .hero:after{content:"";position:absolute;inset:0;background:radial-gradient(900px 400px at 80% -10%,rgba(200,162,74,.20),transparent 60%);pointer-events:none}
+  .hero-in{position:relative;z-index:2;padding:84px 0 92px;max-width:780px}
+  .hero h1{color:#fff;font-size:clamp(2.2rem,5vw,3.7rem);margin:.5rem 0 1rem}
+  .hero h1 .hl{color:var(--gold);font-style:italic}
+  .hero p.lead{font-size:1.22rem;color:#d7e0ec;max-width:640px}
+  .hero .cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
+  .trust-strip{display:flex;gap:26px;flex-wrap:wrap;margin-top:34px;color:#aebccd;font-size:.86rem}
+  .trust-strip b{color:#fff}
+
+  /* SECTIONS */
+  section{padding:74px 0}
+  .sec-head{max-width:720px;margin-bottom:34px}
+  .sec-head h2{font-size:clamp(1.7rem,3.5vw,2.5rem);margin:.4rem 0 .6rem}
+  .sec-head p{color:var(--muted);font-size:1.08rem}
+
+  /* POSITION / TRUST */
+  .position{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .pos-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:46px;align-items:center}
+  .pos-card{background:var(--paper);border:1px solid var(--line);border-left:5px solid var(--gold);border-radius:var(--r);padding:30px 30px}
+  .pos-card h3{font-size:1.25rem;margin:.2rem 0 .5rem}
+  .pos-card p{margin:0;color:var(--muted)}
+  .pledge{list-style:none;padding:0;margin:18px 0 0}
+  .pledge li{padding:9px 0 9px 32px;position:relative;border-top:1px dashed var(--line);font-weight:600}
+  .pledge li:before{content:"✓";position:absolute;left:0;top:8px;width:22px;height:22px;background:var(--ink);color:var(--gold);border-radius:50%;display:grid;place-items:center;font-size:.78rem}
+
+  /* INTEL CARDS */
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .card{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:26px;transition:.2s;text-decoration:none;color:inherit;display:block}
+  .card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:var(--gold)}
+  .card .ico{width:46px;height:46px;border-radius:12px;background:var(--ink);color:var(--gold);display:grid;place-items:center;font-size:1.3rem;margin-bottom:14px}
+  .card h3{font-size:1.16rem;margin:0 0 .4rem}
+  .card p{margin:0;color:var(--muted);font-size:.96rem}
+  .card .more{margin-top:12px;font-weight:700;color:var(--gold-d);font-size:.9rem}
+
+  /* VIDEOS */
+  .videos{background:var(--ink);color:#fff}
+  .videos .sec-head h2{color:#fff}
+  .videos .sec-head p{color:#aebccd}
+  .vgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .vcard{background:var(--ink2);border:1px solid rgba(255,255,255,.08);border-radius:var(--r);overflow:hidden}
+  .vthumb{aspect-ratio:16/9;background:linear-gradient(135deg,#1d3b5c,#27517d);display:grid;place-items:center;position:relative}
+  .vthumb .play{width:58px;height:58px;border-radius:50%;background:var(--gold);color:var(--ink);display:grid;place-items:center;font-size:1.3rem;box-shadow:0 8px 24px rgba(0,0,0,.3)}
+  .vthumb .tag{position:absolute;top:12px;left:12px;background:rgba(0,0,0,.5);color:#fff;font-size:.72rem;font-weight:700;letter-spacing:.05em;padding:5px 10px;border-radius:6px;text-transform:uppercase}
+  .vcard .vbody{padding:18px 20px}
+  .vcard h3{color:#fff;font-size:1.06rem;margin:0 0 .3rem}
+  .vcard p{color:#aebccd;margin:0;font-size:.9rem}
+
+  /* OPEN HOUSES */
+  .oh-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .listing{background:var(--white);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;transition:.2s}
+  .listing:hover{box-shadow:var(--shadow);transform:translateY(-3px)}
+  .listing .photo{aspect-ratio:4/3;background:linear-gradient(135deg,#dfe6ee,#c4d2e0);position:relative}
+  .listing .ohbadge{position:absolute;top:12px;left:12px;background:var(--gold);color:var(--ink);font-weight:800;font-size:.72rem;letter-spacing:.04em;padding:6px 11px;border-radius:7px;text-transform:uppercase}
+  .listing .body{padding:18px 20px}
+  .listing .price{font-family:Georgia,serif;font-size:1.4rem;color:var(--ink);font-weight:700}
+  .listing .addr{color:var(--ink2);font-weight:600;margin:.2rem 0}
+  .listing .meta{color:var(--muted);font-size:.9rem;display:flex;gap:14px;margin:.4rem 0 .2rem}
+  .listing .courtesy{font-size:.72rem;color:#8a93a1;margin-top:10px;border-top:1px solid var(--line);padding-top:10px}
+
+  /* LEAD */
+  .lead-band{background:linear-gradient(150deg,#16304d,#0e1b2c);color:#fff}
+  .lead-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:46px;align-items:center}
+  .lead-grid h2{color:#fff;font-size:clamp(1.7rem,3.4vw,2.4rem)}
+  .lead-grid p{color:#cdd8e6}
+  form.kit{background:var(--white);border-radius:18px;padding:28px;box-shadow:var(--shadow)}
+  form.kit label{display:block;font-weight:700;font-size:.86rem;color:var(--ink);margin:12px 0 6px}
+  form.kit input{width:100%;padding:13px 15px;border:1.5px solid var(--line);border-radius:10px;font-size:1rem}
+  form.kit input:focus{outline:none;border-color:var(--gold)}
+  form.kit .btn{width:100%;border:0;margin-top:18px;font-size:1.05rem}
+  form.kit .fine{font-size:.74rem;color:var(--muted);margin-top:12px}
+
+  /* MISSION */
+  .mission{text-align:center;background:var(--white);border-top:1px solid var(--line)}
+  .mission .eyebrow{display:block;margin-bottom:14px}
+  .mission h2{font-size:clamp(1.9rem,4.5vw,3rem);max-width:900px;margin:0 auto}
+  .mission h2 .hl{color:var(--gold-d);font-style:italic}
+  .mission p{max-width:640px;margin:18px auto 0;color:var(--muted);font-size:1.1rem}
+
+  /* FOOTER */
+  footer{background:var(--ink);color:#aebccd;padding:54px 0 30px;font-size:.9rem}
+  .foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:30px;margin-bottom:30px}
+  footer h4{color:#fff;font-family:Georgia,serif;margin:0 0 12px}
+  footer a{color:#aebccd;text-decoration:none;display:block;padding:4px 0}
+  footer a:hover{color:var(--gold)}
+  .compliance{border-top:1px solid rgba(255,255,255,.12);padding-top:20px;font-size:.78rem;color:#8a93a1;line-height:1.6}
+  .compliance strong{color:#c3ccd8}
+
+  @media(max-width:860px){
+    .nav-links{display:none}
+    .burger{display:block}
+    .pos-grid,.lead-grid{grid-template-columns:1fr}
+    .cards,.vgrid,.oh-grid{grid-template-columns:1fr}
+    .foot-grid{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="/"><span class="dot">SC</span> Santa Clarita Open Houses</a>
+    <nav class="nav-links">
+      <a href="#open-houses">This Weekend</a>
+      <a href="#intel">Buyer Intel</a>
+      <a href="#videos">Watch</a>
+      <a href="#why">Why Sellers-Only</a>
+      <a class="nav-cta" href="#get-intel">Get the Intel</a>
+    </nav>
+    <button class="burger" aria-label="Menu" onclick="document.querySelector('.nav-links').style.display='flex';this.style.display='none'">☰</button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-in">
+    <span class="eyebrow" style="color:var(--gold)">Santa Clarita · Open Houses + Real Buyer Intel</span>
+    <h1>The honest place to learn how to buy a home in Santa Clarita — <span class="hl">from an agent who only represents sellers.</span></h1>
+    <p class="lead">I don't represent buyers, so I have nothing to sell you but the truth. Get the real intel on the buying process, watch the expert videos, then walk into this weekend's open houses ready to win.</p>
+    <div class="cta-row">
+      <a class="btn btn-gold" href="#open-houses">See This Weekend's Open Houses</a>
+      <a class="btn btn-ghost" href="#get-intel">Get the Buyer Intel Kit</a>
+    </div>
+    <div class="trust-strip">
+      <span>⭐ <b>Sellers-Only Agent</b> — zero pressure to sign with me</span>
+      <span>🎥 <b>Expert videos</b> on every step of buying</span>
+      <span>🏠 <b>Live Santa Clarita</b> open houses &amp; listings</span>
+    </div>
+  </div>
+</section>
+
+<!-- WHY SELLERS-ONLY (TRUST / UNIQUE POSITION) -->
+<section class="position" id="why">
+  <div class="wrap pos-grid">
+    <div>
+      <span class="eyebrow">The unique position</span>
+      <h2 style="font-size:clamp(1.7rem,3.5vw,2.4rem);margin:.4rem 0 .8rem">Why is a sellers-only agent handing buyers the playbook?</h2>
+      <p style="color:var(--muted);font-size:1.08rem">Because I represent <strong>home sellers</strong> — and the best thing I can do for them is fill their open houses with <strong>strong, informed, ready buyers</strong>. I'm not trying to sign you as a client. That conflict doesn't exist here. So I can tell you the parts other agents won't.</p>
+      <p style="color:var(--muted);font-size:1.08rem">That makes this the one place in Santa Clarita where the buying intel is <strong>straight</strong>. The buck starts here — and so does the truth.</p>
+      <a class="btn btn-ink" href="#get-intel" style="margin-top:6px">Start with the Buyer Intel Kit →</a>
+    </div>
+    <div class="pos-card">
+      <h3>My pledge to Santa Clarita buyers</h3>
+      <p>No funnel. No bait. Just the real mechanics of buying a home here.</p>
+      <ul class="pledge">
+        <li>I won't pressure you to sign a buyer agreement with me</li>
+        <li>I'll tell you what a home is really worth — and what's wrong with it</li>
+        <li>I'll show you how offers actually win in Santa Clarita</li>
+        <li>I'll point you to a great buyer's agent when you're ready</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- BUYER INTEL HUB -->
+<section id="intel">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">The top function of this site</span>
+      <h2>Real intel about buying a home in Santa Clarita</h2>
+      <p>Not blog fluff — the working knowledge a buyer needs to move with confidence in this market. Pick your step.</p>
+    </div>
+    <div class="cards">
+      <a class="card" href="#get-intel"><div class="ico">🧭</div><h3>The Buying Process, Start to Keys</h3><p>Every stage from "thinking about it" to closing — what happens, when, and what trips buyers up.</p><div class="more">Get the walkthrough →</div></a>
+      <a class="card" href="#get-intel"><div class="ico">💵</div><h3>Financing &amp; Pre-Approval</h3><p>How much you really need, what lenders look for, and the pre-approval that makes sellers take you seriously.</p><div class="more">Learn the numbers →</div></a>
+      <a class="card" href="#get-intel"><div class="ico">📝</div><h3>Writing an Offer That Wins</h3><p>Post-NAR buyer-agent commissions, concessions, and the offer structure that beats the other buyers.</p><div class="more">See the strategy →</div></a>
+      <a class="card" href="#get-intel"><div class="ico">🔍</div><h3>Inspections &amp; Contingencies</h3><p>What to inspect, what's normal, and how to protect yourself without losing the home.</p><div class="more">Protect your purchase →</div></a>
+      <a class="card" href="#open-houses"><div class="ico">🚪</div><h3>How to Work an Open House</h3><p>The questions to ask, what to look for, and how to read a listing agent at the door.</p><div class="more">Open-house playbook →</div></a>
+      <a class="card" href="#get-intel"><div class="ico">📊</div><h3>Santa Clarita Market Intel</h3><p>Neighborhood-by-neighborhood reality — Valencia, Saugus, Newhall, Canyon Country, Stevenson Ranch, Castaic.</p><div class="more">Read the market →</div></a>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERT VIDEOS -->
+<section class="videos" id="videos">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow" style="color:var(--gold)">Watch &amp; learn</span>
+      <h2>Expert videos on the home-buying process</h2>
+      <p>Short, straight videos from Connor MacIvor — a sellers-only agent walking buyers through every step, with no angle.</p>
+    </div>
+    <div class="vgrid">
+      <div class="vcard"><div class="vthumb"><span class="tag">Episode 1</span><div class="play">▶</div></div><div class="vbody"><h3>How home buying actually works in Santa Clarita</h3><p>The full map, in 7 minutes.</p></div></div>
+      <div class="vcard"><div class="vthumb"><span class="tag">Episode 2</span><div class="play">▶</div></div><div class="vbody"><h3>Getting pre-approved the right way</h3><p>What makes a lender — and a seller — say yes.</p></div></div>
+      <div class="vcard"><div class="vthumb"><span class="tag">Episode 3</span><div class="play">▶</div></div><div class="vbody"><h3>Writing the offer that wins post-NAR</h3><p>Commissions, concessions, and contingencies.</p></div></div>
+    </div>
+    <div style="text-align:center;margin-top:30px"><a class="btn btn-gold" href="#get-intel">Get notified when new episodes drop</a></div>
+  </div>
+</section>
+
+<!-- THIS WEEKEND'S OPEN HOUSES (IDX) -->
+<section id="open-houses">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Now that you're ready</span>
+      <h2>This weekend's Santa Clarita open houses</h2>
+      <p>Live listings and open houses, updated from the MLS. Walk in informed — and meet the homes your intel just prepared you for.</p>
+    </div>
+    <!-- IDX:OPEN-HOUSES  (Cloudflare Worker injects live Trestle data here; mock cards below) -->
+    <div class="oh-grid">
+      <article class="listing"><div class="photo"><span class="ohbadge">Sat 1–4pm</span></div><div class="body"><div class="price">$899,000</div><div class="addr">24xxx Valley View Ct, Valencia</div><div class="meta"><span>4 bd</span><span>3 ba</span><span>2,410 sqft</span></div><div class="courtesy">Listing courtesy of CRMLS. Deemed reliable, not guaranteed.</div></div></article>
+      <article class="listing"><div class="photo"><span class="ohbadge">Sun 12–3pm</span></div><div class="body"><div class="price">$749,500</div><div class="addr">18xxx Open House Ln, Saugus</div><div class="meta"><span>3 bd</span><span>2 ba</span><span>1,780 sqft</span></div><div class="courtesy">Listing courtesy of CRMLS. Deemed reliable, not guaranteed.</div></div></article>
+      <article class="listing"><div class="photo"><span class="ohbadge">Sat 11–2pm</span></div><div class="body"><div class="price">$1,150,000</div><div class="addr">27xxx Ridge Rd, Stevenson Ranch</div><div class="meta"><span>5 bd</span><span>4 ba</span><span>3,050 sqft</span></div><div class="courtesy">Listing courtesy of CRMLS. Deemed reliable, not guaranteed.</div></div></article>
+    </div>
+    <div style="text-align:center;margin-top:30px"><a class="btn btn-ink" href="#get-intel">Get this weekend's full open-house list →</a></div>
+  </div>
+</section>
+
+<!-- LEAD CAPTURE -->
+<section class="lead-band" id="get-intel">
+  <div class="wrap lead-grid">
+    <div>
+      <span class="eyebrow" style="color:var(--gold)">Free · No pressure</span>
+      <h2>Get the Santa Clarita Buyer Intel Kit</h2>
+      <p>The honest buyer's guide + this weekend's open houses + new expert videos as they drop. From a sellers-only agent who just wants you ready.</p>
+      <p style="font-size:.92rem;color:#aebccd">No spam. No "let's get you signed up." Just the intel.</p>
+    </div>
+    <!-- Wire to Formspree (matches existing FSBO setup) — replace ACTION with the live endpoint -->
+    <form class="kit" action="https://formspree.io/f/REPLACE_WITH_ENDPOINT" method="POST">
+      <label for="name">First name</label>
+      <input id="name" name="name" type="text" placeholder="Your first name" required>
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" placeholder="you@email.com" required>
+      <input type="hidden" name="_subject" value="New Buyer Intel Kit request — santaclaritaopenhouses.com">
+      <button class="btn btn-gold" type="submit">Send Me the Buyer Intel Kit</button>
+      <p class="fine">By submitting, you agree to receive helpful buyer information from Connor MacIvor, SYNC Brokerage. Unsubscribe anytime.</p>
+    </form>
+  </div>
+</section>
+
+<!-- MISSION -->
+<section class="mission">
+  <div class="wrap">
+    <span class="eyebrow">The mission</span>
+    <h2>The buck starts at <span class="hl">Santa Clarita Open Houses.</span></h2>
+    <p>The best buyers for great Santa Clarita homes start here — informed, prepared, and treated honestly. That's good for buyers, and it's exactly what my sellers deserve.</p>
+  </div>
+</section>
+
+<!-- FOOTER + COMPLIANCE -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>Santa Clarita Open Houses</h4>
+        <p style="margin:0;max-width:340px">Honest home-buying intel and live open houses from Connor MacIvor — a sellers-only agent with SYNC Brokerage.</p>
+        <p style="margin:14px 0 0"><a href="mailto:connor@connorwithhonor.com" style="display:inline">connor@connorwithhonor.com</a> · <a href="tel:+16614001720" style="display:inline">661-400-1720</a></p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a href="#open-houses">This Weekend's Open Houses</a>
+        <a href="#intel">Buyer Intel</a>
+        <a href="#videos">Expert Videos</a>
+        <a href="#get-intel">Get the Intel Kit</a>
+      </div>
+      <div>
+        <h4>The Network</h4>
+        <a href="https://sellersonlyagent.com">SellersOnlyAgent.com</a>
+        <a href="https://scvhomebuyer.com">SCVHomeBuyer.com</a>
+        <a href="https://connorwithhonor.com">ConnorWithHonor.com</a>
+      </div>
+    </div>
+    <div class="compliance">
+      <strong>Connor MacIvor, REALTOR® · CalDRE #01238257 · SYNC Brokerage.</strong>
+      Open house and listing information is provided in part through the California Regional Multiple Listing Service (CRMLS) and is deemed reliable but not guaranteed. This site displays real estate listings to advertise the broker's services and is not a multiple listing service; consumers do not have direct access to the MLS database. This is not intended to solicit properties already listed with another broker. © <span id="yr"></span> Santa Clarita Open Houses.
+    </div>
+  </div>
+</footer>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>
